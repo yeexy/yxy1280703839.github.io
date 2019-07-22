@@ -1,0 +1,193 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day6-字符串"><span class="toc-number">1.</span> <span class="toc-text">day6-字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、认识字符串"><span class="toc-number">1.1.</span> <span class="toc-text">一、认识字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是字符串-str"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 什么是字符串(str)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-字符串中的内容"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 字符串中的内容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、字符串操作"><span class="toc-number">1.2.</span> <span class="toc-text">二、字符串操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-获取字符"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 获取字符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、字符串运算"><span class="toc-number">1.3.</span> <span class="toc-text">三、字符串运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-数学运算："><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 数学运算：+, *</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-比较运算"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 比较运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-in-not-in"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. in / not in</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-len"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. len()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-str-数据-将指定数据转换成字符串"><span class="toc-number">1.3.5.</span> <span class="toc-text">5. str(数据) - 将指定数据转换成字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-格式字符串：在字符串中用格式占位符来表示字符串中变化的部分"><span class="toc-number">1.3.6.</span> <span class="toc-text">6. 格式字符串：在字符串中用格式占位符来表示字符串中变化的部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-字符串相关的函数"><span class="toc-number">1.3.7.</span> <span class="toc-text">7. 字符串相关的函数</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day6-字符串"><a href="#day6-字符串" class="headerlink" title="day6-字符串"></a>day6-字符串</h2><hr>
+<h3 id="一、认识字符串"><a href="#一、认识字符串" class="headerlink" title="一、认识字符串"></a>一、认识字符串</h3><hr>
+<h4 id="1-什么是字符串-str"><a href="#1-什么是字符串-str" class="headerlink" title="1. 什么是字符串(str)"></a>1. 什么是字符串(str)</h4><ul>
+<li>定义：字符串属于容器型数据类型，又叫序列，将引号作为容器，字符是元素</li>
+<li>特点：不可变(字符个数和顺序都不可变)、有序(字符顺序影响值)</li>
+</ul>
+<hr>
+<h4 id="2-字符串中的内容"><a href="#2-字符串中的内容" class="headerlink" title="2. 字符串中的内容"></a>2. 字符串中的内容</h4><ul>
+<li>字符串中的每个基本单元是字符；python中有字符的概念，但是没有字符对应的数据类型</li>
+<li>1)普通字符：如，字母、数字、文字、符号</li>
+<li>2)转义字符：在指定的符号前加\来表示一些具有特殊功能或特殊意义的符号<ul>
+<li><code>\n</code>  -  换行</li>
+<li><code>\t</code>  -  制表符</li>
+<li><code>\&#39;</code>  -  一个单引号</li>
+<li><code>\&quot;</code>  -  一个双引号</li>
+<li><code>\\</code>  -  一个反斜杠 </li>
+</ul>
+</li>
+<li>3)编码字符：在\u后加四位十六进制编码值，表示一个编码值对应的字符</li>
+<li>4)编码：计算机存储字符的时候实质是字符对应的编码值，每个字符编码值是固定的<ul>
+<li>计算机本身只有存储数字的能力，而且存的是补码(二进制)</li>
+<li>字符和字符编码的一一对应关系就叫编码表。常见的编码表：ASCII、Unicode</li>
+<li>python中采用的是Unicode编码，中文范围：4e00-9fa5</li>
+<li><code>chr(编码值)</code> - 获取编码值对应的字符</li>
+<li><code>ord(字符)</code> - 获取字符的编码值</li>
+</ul>
+</li>
+<li>5)阻止转义：在字符串的最前面加r/R可以阻止当前字符串的所有的转义字符转义<ul>
+<li>一个转义字符和一个编码字符长度都是1</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="二、字符串操作"><a href="#二、字符串操作" class="headerlink" title="二、字符串操作"></a>二、字符串操作</h3><hr>
+<h4 id="1-获取字符"><a href="#1-获取字符" class="headerlink" title="1. 获取字符"></a>1. 获取字符</h4><ul>
+<li><p>获取单个字符</p>
+<ul>
+<li><blockquote>
+<p>a.语法</p>
+<p>字符串[下标] - 获取指定下标对应的字符</p>
+<p>b.说明</p>
+<p>字符串 - 可以是字符串值、字符串变量或结果是字符串的表达式</p>
+<p>[] - 固定写法</p>
+<p>下标 - 又叫索引，字符一旦确定，那么字符串中的每个字符位置就确定了，每个字符都会对应固定的下标来表示字符在字符中的位置</p>
+<p>下标值有两种：0<del>字符串长度-1、-1</del>-字符串的长度</p>
+<p>0对应的是第一个字符，-1对应最后一个字符</p>
+<p>c.注意：下标不能越界</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>获取部分字符(字符串切片)</p>
+<ul>
+<li><blockquote>
+<p>a.语法</p>
+<p>字符串[开始下标:结束下标:步长] - 从开始下标开始获取，每次增加步长去取下一个字符，直到获取结束下标为止</p>
+<p>b.说明</p>
+<p>字符串 - 字符串值或字符串变量</p>
+<p>[] - 固定写法</p>
+<p>开始下标，结束下标 - 范围内下标值</p>
+<p>步长 - 整数</p>
+<p>c.注意</p>
+<p>结束下标对应的字符永远都取不到</p>
+<p>当步长为正，开始下标到结束下标从前往后取，这时开始下标对应的字符必须在结束下标对应的字符的前面；否则取到的是空串</p>
+<p>当步长为负，开始下标到结束下标从后往前取，这时开始下标对应的字符必须在结束下标对应的字符的后面；否则取到的是空串</p>
+<p>获取部分下标可以越界</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>省略部分内容</p>
+<ul>
+<li>a)省略步长 - 默认步长为1</li>
+<li>字符串[开始下标:结束下标]</li>
+<li>b)省略开始下标</li>
+<li>字符串[:结束下标:步长] / 字符串[:结束下标]</li>
+<li>步长为正：从第一个字符开始往后取；步长为负：从最后一个字符往前取</li>
+<li>c)省略结束下标</li>
+<li>字符串[开始下标::步长] / 字符串[开始下标:]</li>
+<li>步长为正：从开始下标往后取到最后一个字符；步长为负：从开始下标往前取到第一个字符</li>
+<li>d)省略下标</li>
+<li>字符串[::步长] / 字符串[:]</li>
+</ul>
+</li>
+<li><p>遍历字符串</p>
+<ul>
+<li><blockquote>
+<p>a)直接遍历拿到每个字符<br>for 变量 in 字符串:</p>
+<p>​    循环体</p>
+<p>b)通过遍历下标来遍历字符串</p>
+<p><code>len(字符串)</code> - 获取字符串的长度</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="三、字符串运算"><a href="#三、字符串运算" class="headerlink" title="三、字符串运算"></a>三、字符串运算</h3><hr>
+<h4 id="1-数学运算："><a href="#1-数学运算：" class="headerlink" title="1. 数学运算：+, *"></a>1. 数学运算：+, *</h4><ul>
+<li>1)字符串1 + 字符串2 - 将两个字符串拼接在一起产生一个新的字符串</li>
+<li>注意：字符串只能和字符串相加</li>
+<li>2)字符串 * N - 字符串重复N次产生一个新的字符串</li>
+</ul>
+<hr>
+<h4 id="2-比较运算"><a href="#2-比较运算" class="headerlink" title="2. 比较运算"></a>2. 比较运算</h4><ul>
+<li>1)比较相等：==, !=</li>
+<li>2)比较大小：&gt;, &lt;, &lt;=, &gt;=</li>
+<li>比较字符串中每一对字符的编码值大小，如果相等就继续比较下一对，直到一对不相等为止</li>
+<li>应用：判断一个字符是否是大写字母，是否是小写字母，是否是中文，是否是数字等…</li>
+</ul>
+<hr>
+<h4 id="3-in-not-in"><a href="#3-in-not-in" class="headerlink" title="3. in / not in"></a>3. in / not in</h4><ul>
+<li>字符串1 in 字符串2 - 判断字符串2中是否包含字符串1</li>
+<li>字符串1 not in 字符串2 - 判断字符串2中是否不包含字符串1</li>
+</ul>
+<hr>
+<h4 id="4-len"><a href="#4-len" class="headerlink" title="4. len()"></a>4. len()</h4><ul>
+<li><code>len(序列)</code> - 获取序列的长度(序列中元素的个数)</li>
+</ul>
+<hr>
+<h4 id="5-str-数据-将指定数据转换成字符串"><a href="#5-str-数据-将指定数据转换成字符串" class="headerlink" title="5. str(数据) - 将指定数据转换成字符串"></a>5. str(数据) - 将指定数据转换成字符串</h4><ul>
+<li>所有的数据都可以转换成字符串；直接在数据外面加引号</li>
+</ul>
+<hr>
+<h4 id="6-格式字符串：在字符串中用格式占位符来表示字符串中变化的部分"><a href="#6-格式字符串：在字符串中用格式占位符来表示字符串中变化的部分" class="headerlink" title="6. 格式字符串：在字符串中用格式占位符来表示字符串中变化的部分"></a>6. 格式字符串：在字符串中用格式占位符来表示字符串中变化的部分</h4><ul>
+<li>语法：包含格式占位符的字符串 % (格式字符串对应的多个数据)<ul>
+<li>%s - 字符串</li>
+<li>%d - 整数</li>
+<li>%.Nf - 小数，N用来约束小数的位数</li>
+<li>%c - 字符(可以将数字转换成字符)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="7-字符串相关的函数"><a href="#7-字符串相关的函数" class="headerlink" title="7. 字符串相关的函数"></a>7. 字符串相关的函数</h4><ul>
+<li><p>格式：字符串.函数名()</p>
+</li>
+<li><p>1)对齐方式</p>
+<ul>
+<li><blockquote>
+<p>字符串.center(宽度, 填充字符) - 居中填充</p>
+<p>字符串.ljust(宽度, 填充字符) - 左对齐填充</p>
+<p>字符串.rjust(宽度, 填充字符) - 右对齐填充</p>
+<p>字符串.zfill(宽度) - 填充0</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>2)统计个数</p>
+<ul>
+<li>字符串1.count(字符串2) - 统计字符串1中字符串2的个数</li>
+</ul>
+</li>
+<li><p>3)join()函数</p>
+<ul>
+<li>字符串.join(序列) - 将序列中的元素用指定的字符串连接在一起产生一个新的字符串</li>
+<li>注意：序列的元素必须是字符串</li>
+</ul>
+</li>
+<li><p>4)去掉空白符</p>
+<ul>
+<li><blockquote>
+<p>字符串.lstrip() - 去掉字符串左边的空白</p>
+<p>字符串.rstrip() - 去掉字符串右边的空白</p>
+<p>字符串.strip() - 去掉字符串左边和右边的空白</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>5) 字符串的替换</p>
+<ul>
+<li>字符串.replace(字符串1, 字符串2) - 将字符串中的字符串1替换为字符换2</li>
+</ul>
+</li>
+<li><p>6)字符串切割</p>
+<ul>
+<li>字符串.split(字符串1) - 将字符串按照字符串1进行切割</li>
+<li>结果是一个序列，列表中元素是多个小字符串</li>
+</ul>
+</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day6-字符串/">http://yoursite.com/2019/07/19/day6-字符串/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day6-作业/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day5-作业/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

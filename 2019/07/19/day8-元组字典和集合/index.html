@@ -1,0 +1,160 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day8-元组字典和集合"><span class="toc-number">1.</span> <span class="toc-text">day8-元组字典和集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、元组"><span class="toc-number">1.1.</span> <span class="toc-text">一、元组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是元组-tuple"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 什么是元组(tuple)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-查询-和列表一样"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 查询 - 和列表一样</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-相关运算-和列表一样"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 相关运算 - 和列表一样</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-元组的特殊操作"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 元组的特殊操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、字典"><span class="toc-number">1.2.</span> <span class="toc-text">二、字典</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是字典-dict"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 什么是字典(dict)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-字典中的元素"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 字典中的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-查询-获取字典键值对中value的值"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 查询 - 获取字典键值对中value的值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-字典相关操作：增-改-删"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. 字典相关操作：增/改, 删</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-字典相关运算"><span class="toc-number">1.2.5.</span> <span class="toc-text">5. 字典相关运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-字典相关函数"><span class="toc-number">1.2.6.</span> <span class="toc-text">6. 字典相关函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、集合"><span class="toc-number">1.3.</span> <span class="toc-text">三、集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是集合-set"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 什么是集合(set)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-集合中的元素"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 集合中的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-集合的增删改查"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 集合的增删改查</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-数学集合运算"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 数学集合运算</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day8-元组字典和集合"><a href="#day8-元组字典和集合" class="headerlink" title="day8-元组字典和集合"></a>day8-元组字典和集合</h2><hr>
+<h3 id="一、元组"><a href="#一、元组" class="headerlink" title="一、元组"></a>一、元组</h3><hr>
+<h4 id="1-什么是元组-tuple"><a href="#1-什么是元组-tuple" class="headerlink" title="1. 什么是元组(tuple)"></a>1. 什么是元组(tuple)</h4><ul>
+<li>容器型数据类型</li>
+<li>特点：不可变(不支持增删改)、有序(支持下标操作)</li>
+<li>将()作为容器标志，多个元素用,隔开。元素的要求和列表一样</li>
+</ul>
+<hr>
+<h4 id="2-查询-和列表一样"><a href="#2-查询-和列表一样" class="headerlink" title="2. 查询 - 和列表一样"></a>2. 查询 - 和列表一样</h4><ul>
+<li>注意：元组切片的结果还是元组</li>
+</ul>
+<hr>
+<h4 id="3-相关运算-和列表一样"><a href="#3-相关运算-和列表一样" class="headerlink" title="3. 相关运算 - 和列表一样"></a>3. 相关运算 - 和列表一样</h4><ul>
+<li>+, *, ==, !=, in/not in, len(), max(), min(), sum()</li>
+<li>tuple(序列) - 将数据转换成元组，所有的序列都可以转换成元组</li>
+</ul>
+<hr>
+<h4 id="4-元组的特殊操作"><a href="#4-元组的特殊操作" class="headerlink" title="4. 元组的特殊操作"></a>4. 元组的特殊操作</h4><ul>
+<li><p>单个元素的元组：在只有一个元素的元组中必须加逗号</p>
+<ul>
+<li><code>tuple1 = (10,)</code></li>
+</ul>
+</li>
+<li><p>如果一个元组有多个元素，元组的括号可以省略</p>
+</li>
+<li><p>获取元素，通过让变量的个数和元组中的元素的个数保持一致来分别获取元组中的元素的值</p>
+<ul>
+<li><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; tuple1 = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">&gt; x, y, z = tuple</span><br><span class="line">&gt; print(x, y, z)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>可以通过在某一个变量前加<em>来获取不带</em>的变量取完后剩下的所有元素</p>
+<ul>
+<li><p>注意：带*的变量只能有一个，而且这个变量的结果是一个列表</p>
+</li>
+<li><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; tuple2 = (<span class="string">'小明'</span>, <span class="number">20</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>)</span><br><span class="line">&gt; name, age, *num = tuple2</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="二、字典"><a href="#二、字典" class="headerlink" title="二、字典"></a>二、字典</h3><hr>
+<h4 id="1-什么是字典-dict"><a href="#1-什么是字典-dict" class="headerlink" title="1. 什么是字典(dict)"></a>1. 什么是字典(dict)</h4><ul>
+<li>字典是容器型数据类型</li>
+<li>特点：可变(支持增删改)、无序(不支持下标操作)</li>
+<li>字典容器标志是{}；多个元素用,隔开</li>
+</ul>
+<hr>
+<h4 id="2-字典中的元素"><a href="#2-字典中的元素" class="headerlink" title="2. 字典中的元素"></a>2. 字典中的元素</h4><ul>
+<li>字典中的元素是键值对，以’key:value’的形式存在，而且key和value必须成对出现</li>
+<li>键(key) - 不可变的数据，并且是唯一的(一般使用字符串作为键)</li>
+<li>值(value) - 没有要求(和列表元素要求一样)</li>
+<li>注意：字典保存数据，真正要存储的是值，键只是为了对不同的值进行区分而存在的</li>
+</ul>
+<hr>
+<h4 id="3-查询-获取字典键值对中value的值"><a href="#3-查询-获取字典键值对中value的值" class="headerlink" title="3. 查询 - 获取字典键值对中value的值"></a>3. 查询 - 获取字典键值对中value的值</h4><ul>
+<li><p>获取单个值</p>
+<ul>
+<li>字典[key]：获取字典中指定key对应的值(key不存在会报错)</li>
+<li>字典.get(key)：获取字典中key对应的值(key不存在不会报错而是返回None)</li>
+<li>字典.get(key, 默认值)：获取字典中key对应的值(key不存在不会报错而是返回默认值)</li>
+</ul>
+</li>
+<li><p>遍历获取值</p>
+<ul>
+<li><blockquote>
+<p>for 变量 in 字典:</p>
+<p>​    循环体</p>
+<p>变量取到的是字典中所有的key</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="4-字典相关操作：增-改-删"><a href="#4-字典相关操作：增-改-删" class="headerlink" title="4. 字典相关操作：增/改, 删"></a>4. 字典相关操作：增/改, 删</h4><ul>
+<li>增 - 添加键值对；改 - 修改某个key对应的值<ul>
+<li>字典[key] = 值 - 当key不存在就是增加，当key存在就是修改</li>
+</ul>
+</li>
+<li>删除 - 删除键值对<ul>
+<li>del 字典[key] - 删除字典中指定key对应的键值对</li>
+<li>字典.pop(key) - 取出字典中指定key对应的值，返回取出的值</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="5-字典相关运算"><a href="#5-字典相关运算" class="headerlink" title="5. 字典相关运算"></a>5. 字典相关运算</h4><ul>
+<li>比较相等：==, !=</li>
+<li>in/not in：key in 字典 - 判断key值是否存在字典中</li>
+<li><code>len()</code>：获取字典的长度</li>
+<li><code>dict()</code>：转换成字典类型<ul>
+<li>能转换成字典的数据：本身必须是一个序列，序列中元素还是一个小序列，而且小序列中必须只有两个元素</li>
+<li>注意：将字典转换成列表、元组、集合时将字典的key作为元素</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="6-字典相关函数"><a href="#6-字典相关函数" class="headerlink" title="6. 字典相关函数"></a>6. 字典相关函数</h4><ul>
+<li><code>字典.clear()</code> - 清空字典</li>
+<li><code>字典.copy()</code> - 复制字典中所有的键值对，产生一个新的字典</li>
+<li><code>dict.fromkeys(序列, 值)</code> - 创建一个字典，将序列中元素作为value，返回一个字典<ul>
+<li>如果没有值，则返回None</li>
+</ul>
+</li>
+<li><code>items()</code> - 同时获取字典中所有的key和value，以序列的形式返回，序列中的元素是(key, value)元组</li>
+<li><code>keys()</code> - 获取字典中所有的key，以序列的形式返回</li>
+<li><code>values</code> - 获取字典中所有的value，以序列的形式返回</li>
+<li><code>字典.setdefault(key, value)</code> - 添加键值对，key不存在时添加，key存在时不修改</li>
+<li><code>字典.update(序列)</code> - 用序列去更新字典，这个序列必须是字典或可以转换成字典的序列</li>
+</ul>
+<hr>
+<h3 id="三、集合"><a href="#三、集合" class="headerlink" title="三、集合"></a>三、集合</h3><hr>
+<h4 id="1-什么是集合-set"><a href="#1-什么是集合-set" class="headerlink" title="1. 什么是集合(set)"></a>1. 什么是集合(set)</h4><ul>
+<li>容器型数据类型</li>
+<li>特点：可变(支持增删改)、无序(不支持下标操作)</li>
+<li>将{}作为容器的标志；里面的元素用,隔开</li>
+<li>空集合：set()</li>
+</ul>
+<hr>
+<h4 id="2-集合中的元素"><a href="#2-集合中的元素" class="headerlink" title="2. 集合中的元素"></a>2. 集合中的元素</h4><ul>
+<li>元素不可变：列表、字典、集合不能作为集合的元素</li>
+<li>元素唯一：(自带去重功能)利用元素的唯一性去重</li>
+</ul>
+<hr>
+<h4 id="3-集合的增删改查"><a href="#3-集合的增删改查" class="headerlink" title="3. 集合的增删改查"></a>3. 集合的增删改查</h4><ul>
+<li>查询 - 集合不能单独取出一个元素，只能通过遍历一个一个的取出所有的元素</li>
+<li>增加<ul>
+<li><code>集合.add()</code> - 在集合中添加一个元素</li>
+<li><code>集合.update(序列)</code> - 将序列中的元素添加到集合中(序列中的元素必须不可变)</li>
+</ul>
+</li>
+<li><code>删除 - 集合.remove(元素)</code>：删除集合中指定的元素</li>
+<li>改 - 集合不支持改操作</li>
+</ul>
+<hr>
+<h4 id="4-数学集合运算"><a href="#4-数学集合运算" class="headerlink" title="4. 数学集合运算"></a>4. 数学集合运算</h4><ul>
+<li>并集(|)：将两个集合中的元素合并并产生一个新的集合</li>
+<li>交集(&amp;)：将两个集合公共的元素取出来产生一个新的集合</li>
+<li>对称差集(^)：获取两个集合除了公共部分剩下的部分</li>
+<li>差集(-)：(集合1-集合2)集合1除了和集合2公共的部分剩下的元素</li>
+<li>集合1 &gt; 集合2：判断集合1中是否包含集合2</li>
+<li>集合1 &lt; 集合2：判断集合2中是否包含集合1</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day8-元组字典和集合/">http://yoursite.com/2019/07/19/day8-元组字典和集合/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day8-作业/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day7-作业/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

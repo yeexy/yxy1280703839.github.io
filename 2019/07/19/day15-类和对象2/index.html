@@ -1,0 +1,119 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day15-类和对象2"><span class="toc-number">1.</span> <span class="toc-text">day15-类和对象2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、类方法和静态方法"><span class="toc-number">1.1.</span> <span class="toc-text">一、类方法和静态方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-类中的方法"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 类中的方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、私有化属性"><span class="toc-number">1.2.</span> <span class="toc-text">二、私有化属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-访问权限-其他语言中"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 访问权限(其他语言中)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-私有化"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 私有化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、getter和setter"><span class="toc-number">1.3.</span> <span class="toc-text">三、getter和setter</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么时候使用getter和setter"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 什么时候使用getter和setter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-怎么给属性添加getter和setter"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 怎么给属性添加getter和setter</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、继承"><span class="toc-number">1.4.</span> <span class="toc-text">四、继承</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是继承"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 什么是继承</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-怎么继承"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 怎么继承</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-子类添加内容"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. 子类添加内容</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day15-类和对象2"><a href="#day15-类和对象2" class="headerlink" title="day15-类和对象2"></a>day15-类和对象2</h2><hr>
+<h3 id="一、类方法和静态方法"><a href="#一、类方法和静态方法" class="headerlink" title="一、类方法和静态方法"></a>一、类方法和静态方法</h3><hr>
+<h4 id="1-类中的方法"><a href="#1-类中的方法" class="headerlink" title="1. 类中的方法"></a>1. 类中的方法</h4><ul>
+<li>1)对象方法<ul>
+<li>a.怎么声明：直接声明在类中的函数</li>
+<li>b.怎么调用：通过对象来调用，以’对象.方法名()’方式调用</li>
+<li>c.特点：有一个指向当前对象的默认参数self；调用的时候不需要传参</li>
+<li>d.什么时候用：实现函数的功能需要用到对象属性，就只能用对象方法</li>
+</ul>
+</li>
+<li>2)类方法<ul>
+<li>a.怎么声明：声明函数前加‘@classmethod’</li>
+<li>b.怎么调用：通过类来调用，以’类.方法名()’方式调用</li>
+<li>c.特点：有一个默认参数cls，在通过类调用的时候不需要传参；指向当前类，类能做的事情，cls都能做</li>
+<li>d.什么时候用：实现函数的功能不需要对象属性的前提下，需要类的字段(需要类)，就用类方法</li>
+</ul>
+</li>
+<li>3)静态方法<ul>
+<li>a.怎么声明：声明函数前加‘@staticmethod’</li>
+<li>b.怎么调用：通过类来调用，以’类.方法名()’方式来调用</li>
+<li>c.特点：没有特点，没有默认参数</li>
+<li>d.什么时候用：实现函数的功能既不需要对象属性，也不需要类的字段，就用静态方法</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="二、私有化属性"><a href="#二、私有化属性" class="headerlink" title="二、私有化属性"></a>二、私有化属性</h3><hr>
+<h4 id="1-访问权限-其他语言中"><a href="#1-访问权限-其他语言中" class="headerlink" title="1. 访问权限(其他语言中)"></a>1. 访问权限(其他语言中)</h4><ul>
+<li>公开(public)：属性和方法在类的内部可以使用、可以被继承；也可以在类的外部使用</li>
+<li>保护(protect)：属性和方法在类的内部可以使用、可以被继承；但不能在类的外部使用</li>
+<li>私有(private)：属性和方法在类的内部可以使用；但不能被继承。也不能在类的外部使用</li>
+<li>python中本质上所有的属性和方法都是公开的，私有化是假的私有化</li>
+</ul>
+<hr>
+<h4 id="2-私有化"><a href="#2-私有化" class="headerlink" title="2. 私有化"></a>2. 私有化</h4><ul>
+<li>语法：在声明属性或方法的时候，在属性名前或方法名前加<code>&#39;__&#39;</code>;</li>
+<li>注意：只能以<code>&#39;__&#39;</code>开头，不能以<code>&#39;__&#39;</code>结尾</li>
+<li>私有化原理：只是单纯的在私有属性或方法名前加’_类名’，导致直接使用原名就使用不了属性和方法</li>
+</ul>
+<hr>
+<h3 id="三、getter和setter"><a href="#三、getter和setter" class="headerlink" title="三、getter和setter"></a>三、getter和setter</h3><hr>
+<h4 id="1-什么时候使用getter和setter"><a href="#1-什么时候使用getter和setter" class="headerlink" title="1. 什么时候使用getter和setter"></a>1. 什么时候使用getter和setter</h4><ul>
+<li>1)getter：希望获取一个属性值之前做点别的事情，就给这个属性添加getter</li>
+<li>2)setter：希望给属性赋值之前做点别的事情，就给这个属性添加setter</li>
+</ul>
+<hr>
+<h4 id="2-怎么给属性添加getter和setter"><a href="#2-怎么给属性添加getter和setter" class="headerlink" title="2. 怎么给属性添加getter和setter"></a>2. 怎么给属性添加getter和setter</h4><ul>
+<li>1)怎么添加getter<ul>
+<li>a.在需要添加getter的属性前加一个下划线</li>
+<li>b.在@property后面声明一个函数，函数名和去掉下划线的属性名一致，并且函数需要一个返回值表示获取属性的值</li>
+<li>c.在外面通过不带下划线的属性名去获取对应的属性值</li>
+</ul>
+</li>
+<li>2)怎么添加setter<ul>
+<li>a.如果想要给属性添加setter，必须先给他添加getter</li>
+<li>b.@getter名.setter后面声明函数；函数名和去掉下划线的属性名一致，这个函数不需要返回值，但是需要一个参数</li>
+<li>c.在外面通过不带下划线的属性名去给属性赋值</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="四、继承"><a href="#四、继承" class="headerlink" title="四、继承"></a>四、继承</h3><hr>
+<h4 id="1-什么是继承"><a href="#1-什么是继承" class="headerlink" title="1. 什么是继承"></a>1. 什么是继承</h4><ul>
+<li>让子类直接拥有父类的属性和方法，这个过程就是继承</li>
+</ul>
+<hr>
+<h4 id="2-怎么继承"><a href="#2-怎么继承" class="headerlink" title="2. 怎么继承"></a>2. 怎么继承</h4><ul>
+<li><p>python中所有的类，默认都是继承自object(object是基类)</p>
+</li>
+<li><p>1)语法：</p>
+<ul>
+<li><blockquote>
+<p>class 类名(父类1，父类2，…)：</p>
+<p>​    类的内容</p>
+<p>继承发生后子类直接拥有父类的所有的属性和方法(除了<code>__slots__</code>魔法)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-子类添加内容"><a href="#3-子类添加内容" class="headerlink" title="3. 子类添加内容"></a>3. 子类添加内容</h4><ul>
+<li><p>1)添加字段和方法</p>
+<ul>
+<li>直接在子类中声明新的字段或方法</li>
+</ul>
+</li>
+<li><p>2)添加对象属性</p>
+<ul>
+<li>需要继承父类的<code>__init__</code>方法</li>
+</ul>
+</li>
+<li><p>补充：1)类中的函数的调用：</p>
+<ul>
+<li><blockquote>
+<p>先看当前类中有没有这个方法，如果有直接调用，如果没有就看父类有没有这个方法；有的话就调用，如果没有就看父类的父类有没有这个方法…以此类推，如果找到基类都没有，程序才会报错</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>补充：2)super()的使用：</p>
+<ul>
+<li>在子类的对象方法和类方法中都可以通过super()去调用父类的对象方法和类方法；</li>
+<li>在子类中的静态方法中不能使用super()</li>
+</ul>
+</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day15-类和对象2/">http://yoursite.com/2019/07/19/day15-类和对象2/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day15-作业/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day14-作业/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

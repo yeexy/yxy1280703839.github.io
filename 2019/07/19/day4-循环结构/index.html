@@ -1,0 +1,91 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day4-循环结构"><span class="toc-number">1.</span> <span class="toc-text">day4-循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、for循环"><span class="toc-number">1.1.</span> <span class="toc-text">一、for循环</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么时候使用循环"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 什么时候使用循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-for循环语法"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. for循环语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-range-函数-专门产生一定范围的数字序列"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. range()函数   -   专门产生一定范围的数字序列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、while循环"><span class="toc-number">1.2.</span> <span class="toc-text">二、while循环</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-while循环的语法"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. while循环的语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-for循环和while循环的使用"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. for循环和while循环的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-随机数"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 随机数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、循环相关的关键字"><span class="toc-number">1.3.</span> <span class="toc-text">三、循环相关的关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-continue关键字"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. continue关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-break关键字"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. break关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-else关键字"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. else关键字</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day4-循环结构"><a href="#day4-循环结构" class="headerlink" title="day4-循环结构"></a>day4-循环结构</h2><hr>
+<h3 id="一、for循环"><a href="#一、for循环" class="headerlink" title="一、for循环"></a>一、for循环</h3><hr>
+<h4 id="1-什么时候使用循环"><a href="#1-什么时候使用循环" class="headerlink" title="1. 什么时候使用循环"></a>1. 什么时候使用循环</h4><ul>
+<li>代码中需要重复执行某个操作的时候，就可以使用循环</li>
+<li>python中有for循环和while循环</li>
+</ul>
+<hr>
+<h4 id="2-for循环语法"><a href="#2-for循环语法" class="headerlink" title="2. for循环语法"></a>2. for循环语法</h4><ul>
+<li><blockquote>
+<p>for 变量名 in 序列:</p>
+<p>​    循环体</p>
+<p>a.说明</p>
+<p>for，in   -   关键字，固定写法</p>
+<p>:    -    固定写法</p>
+<p>变量名    -    和声明变量时的变量名要求一样</p>
+<p>序列    -    容器型数据，python常见序列有：range、字符串、列表、字典、集合、元组、迭代器、生成器</p>
+<p>循环体    -    和for保持一个缩进的一条或多条语句，会被重读执行的代码</p>
+<p>b.执行过程</p>
+<p>让变量去序列中取值，一个一个的取，取完为止，每取一个值执行一次循环体</p>
+<p>for循环的循环次数由序列中元素的个数来控制</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="3-range-函数-专门产生一定范围的数字序列"><a href="#3-range-函数-专门产生一定范围的数字序列" class="headerlink" title="3. range()函数   -   专门产生一定范围的数字序列"></a>3. <code>range()</code>函数   -   专门产生一定范围的数字序列</h4><ul>
+<li>1) <code>range(n)</code>-产生一个0~n-1的数字序列（整数），n必须是大于0的整数</li>
+<li>2) <code>range(m,n)</code>-产生m~n-1的数字序列，m和n都必须是整数，n必须大于m</li>
+<li>3) <code>range(m,n,step)</code>-从m开始，每次加step，直到n-1</li>
+</ul>
+<hr>
+<h3 id="二、while循环"><a href="#二、while循环" class="headerlink" title="二、while循环"></a>二、while循环</h3><hr>
+<h4 id="1-while循环的语法"><a href="#1-while循环的语法" class="headerlink" title="1. while循环的语法"></a>1. while循环的语法</h4><ul>
+<li><blockquote>
+<p>while 条件语句:</p>
+<p>​    循环体</p>
+<p>a.说明</p>
+<p>while   -   关键字</p>
+<p>条件语句   -   和if后面的条件语句要求一样，任何有结果的表达式，除了赋值语句都可以</p>
+<p>循环体   -   和while保持一个缩进的一条或多条语句</p>
+<p>b.执行过程</p>
+<p>先判断条件语句是否为True，如果是True就执行循环体；执行完循环体，再判断条件是否为True，如果为True又执行循环体；以此类推，直到条件语句结果是False，整个循环结束</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="2-for循环和while循环的使用"><a href="#2-for循环和while循环的使用" class="headerlink" title="2. for循环和while循环的使用"></a>2. for循环和while循环的使用</h4><ul>
+<li>for：当循环次数确定的时候都选择for循环</li>
+<li>while：死循环，循环次数不确定</li>
+</ul>
+<hr>
+<h4 id="3-随机数"><a href="#3-随机数" class="headerlink" title="3. 随机数"></a>3. 随机数</h4><ul>
+<li><code>randint(m,n)</code>-产生一个m~n的随机整数</li>
+</ul>
+<hr>
+<h3 id="三、循环相关的关键字"><a href="#三、循环相关的关键字" class="headerlink" title="三、循环相关的关键字"></a>三、循环相关的关键字</h3><hr>
+<h4 id="1-continue关键字"><a href="#1-continue关键字" class="headerlink" title="1. continue关键字"></a>1. continue关键字</h4><ul>
+<li>continue只能出现在循环体中；当执行循环体遇到continue时，结束当次循环，进入下次循环的判断</li>
+</ul>
+<hr>
+<h4 id="2-break关键字"><a href="#2-break关键字" class="headerlink" title="2. break关键字"></a>2. break关键字</h4><ul>
+<li>break只能出现在循环体中；当执行循环体遇到break，整个循环直接结束</li>
+</ul>
+<hr>
+<h4 id="3-else关键字"><a href="#3-else关键字" class="headerlink" title="3. else关键字"></a>3. else关键字</h4><ul>
+<li><blockquote>
+<p>1) 完整的for循环</p>
+<p>for 变量 in 序列:</p>
+<p>​    循环体</p>
+<p>else:</p>
+<p>​    代码块</p>
+<p>2) 完整的while循环</p>
+<p>while 条件语句:</p>
+<p>​    循环体</p>
+<p>else:</p>
+<p>​    代码块</p>
+<p>当程序自然死亡，会执行和循环相关的else中的代码块；如果循环是因为遇到break结束，就不会执行else中的代码块</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day4-循环结构/">http://yoursite.com/2019/07/19/day4-循环结构/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day4-作业1/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day3-作业/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

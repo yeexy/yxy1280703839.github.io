@@ -1,0 +1,150 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day11-高阶函数"><span class="toc-number">1.</span> <span class="toc-text">day11-高阶函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、函数作为变量"><span class="toc-number">1.1.</span> <span class="toc-text">一、函数作为变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-函数调用表达式"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 函数调用表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-函数作为变量"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 函数作为变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、迭代器"><span class="toc-number">1.2.</span> <span class="toc-text">二、迭代器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是迭代器-iter"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 什么是迭代器(iter)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-获取迭代器中的元素"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 获取迭代器中的元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、生成器"><span class="toc-number">1.3.</span> <span class="toc-text">三、生成器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是生成器"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 什么是生成器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-yield"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. yield</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-生成器怎么产生数据"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 生成器怎么产生数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-生成器生成数据的原理"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 生成器生成数据的原理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、生成式"><span class="toc-number">1.4.</span> <span class="toc-text">四、生成式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是生成式"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 什么是生成式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、模块的使用"><span class="toc-number">1.5.</span> <span class="toc-text">五、模块的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是模块"><span class="toc-number">1.5.1.</span> <span class="toc-text">1. 什么是模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-多个模块怎么协作：导入模块"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. 多个模块怎么协作：导入模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-导入模块的原理"><span class="toc-number">1.5.3.</span> <span class="toc-text">3. 导入模块的原理</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day11-高阶函数"><a href="#day11-高阶函数" class="headerlink" title="day11-高阶函数"></a>day11-高阶函数</h2><hr>
+<h3 id="一、函数作为变量"><a href="#一、函数作为变量" class="headerlink" title="一、函数作为变量"></a>一、函数作为变量</h3><hr>
+<h4 id="1-函数调用表达式"><a href="#1-函数调用表达式" class="headerlink" title="1. 函数调用表达式"></a>1. 函数调用表达式</h4><ul>
+<li>就是调用函数的语句</li>
+<li>普通值能做的事情函数调用表达式都可以做</li>
+</ul>
+<hr>
+<h4 id="2-函数作为变量"><a href="#2-函数作为变量" class="headerlink" title="2. 函数作为变量"></a>2. 函数作为变量</h4><ul>
+<li><p>!!python中声明函数本质就是声明一个类型是function的变量，函数名就是变量名</p>
+</li>
+<li><p>变量能做的事情函数都可以做</p>
+</li>
+<li><p>1)一个变量可以给另外一个变量赋值</p>
+</li>
+<li><p>2)给变量重新赋值</p>
+</li>
+<li><p>3)变量作为容器的元素</p>
+</li>
+<li><p>4)变量可以作为函数的参数</p>
+<ul>
+<li><p>一个函数可以作为另外一个函数的参数</p>
+</li>
+<li><p>如果一个函数的参数也是函数，这种函数叫做实参高阶函数</p>
+</li>
+<li><blockquote>
+<p>sort和sorted</p>
+<p>这两个函数是实参高阶函数，里面有个参数key要求传一个函数</p>
+<p>key参数对应的函数是用来决定排序规则：</p>
+<p>—函数需要一个参数和一个返回值</p>
+<p>—它的参数代表排序的序列的元素，返回值是比较对象</p>
+<p>实参高阶函数：列表.sort()、sorted()、max()、min()</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>5)变量可以作为函数的返回值</p>
+<ul>
+<li>一个函数的返回值如果也是一个函数，这个函数就是返回值高阶函数</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="二、迭代器"><a href="#二、迭代器" class="headerlink" title="二、迭代器"></a>二、迭代器</h3><hr>
+<h4 id="1-什么是迭代器-iter"><a href="#1-什么是迭代器-iter" class="headerlink" title="1. 什么是迭代器(iter)"></a>1. 什么是迭代器(iter)</h4><ul>
+<li>迭代器是容器型数据类型(序列)，可变(但不支持增删改)、有序(但不支持下标操作)</li>
+<li>保存在迭代器中的元素，只能取，且取出来后迭代器中就不再保存，也不能再往迭代器中添加元素</li>
+<li>迭代器没有对应格式的数据，迭代器的产生只能通过：将其他序列转换成迭代器，或生成器</li>
+</ul>
+<hr>
+<h4 id="2-获取迭代器中的元素"><a href="#2-获取迭代器中的元素" class="headerlink" title="2. 获取迭代器中的元素"></a>2. 获取迭代器中的元素</h4><ul>
+<li>不管什么样的方式去获取迭代器中的元素，都是获取一个就会少一个</li>
+<li>1)获取单个元素：next(迭代器)<ul>
+<li>获取迭代器中最顶部(第一个)的元素</li>
+</ul>
+</li>
+<li>2)遍历：一个一个取，获取迭代器中所有的元素</li>
+</ul>
+<hr>
+<h3 id="三、生成器"><a href="#三、生成器" class="headerlink" title="三、生成器"></a>三、生成器</h3><hr>
+<h4 id="1-什么是生成器"><a href="#1-什么是生成器" class="headerlink" title="1. 什么是生成器"></a>1. 什么是生成器</h4><ul>
+<li>生成器本质就是迭代器：获取元素和迭代器一样</li>
+<li>调用函数体中有yield关键字的函数，就可以得到一个生成器</li>
+</ul>
+<hr>
+<h4 id="2-yield"><a href="#2-yield" class="headerlink" title="2. yield"></a>2. yield</h4><ul>
+<li>yield只能出现在函数体中</li>
+<li>调用有yield关键字的函数，不会再执行函数体，也不会获取返回值，而是得到一个生成器</li>
+</ul>
+<hr>
+<h4 id="3-生成器怎么产生数据"><a href="#3-生成器怎么产生数据" class="headerlink" title="3. 生成器怎么产生数据"></a>3. 生成器怎么产生数据</h4><ul>
+<li>看一个生成器能够产生几个数据，就看执行完生成器对应的函数会遇到几次yield，yield后面的值就是生成器能产生的数据</li>
+</ul>
+<hr>
+<h4 id="4-生成器生成数据的原理"><a href="#4-生成器生成数据的原理" class="headerlink" title="4. 生成器生成数据的原理"></a>4. 生成器生成数据的原理</h4><ul>
+<li>生成器不会同时将所有的元素保存起来，而是需要数据的时候临时产生数据</li>
+<li>获取生成器元素的时候，就去执行生成器对应的函数的函数体，从前往后执行，直到遇到yield为止，并且将yield后面的值作为结果，同时保存结束位置，下次获取下一个元素的时候，接着上次结束的位置往后执行，直到遇到下一个yield，以此类推…</li>
+<li>如果执行到函数结束都没有遇到yield，next函数会报StopIteration错误</li>
+</ul>
+<hr>
+<h3 id="四、生成式"><a href="#四、生成式" class="headerlink" title="四、生成式"></a>四、生成式</h3><hr>
+<h4 id="1-什么是生成式"><a href="#1-什么是生成式" class="headerlink" title="1. 什么是生成式"></a>1. 什么是生成式</h4><ul>
+<li><p>生成式本质就是生成器</p>
+</li>
+<li><p>语法1：</p>
+<ul>
+<li><p>(表达式 for 变量 in 序列)：创建一个生成器</p>
+</li>
+<li><blockquote>
+<p>展开成生成器：</p>
+<p>def func():</p>
+<p>​       for 变量 in 序列:</p>
+<p>​              yield 表达式</p>
+</blockquote>
+</li>
+<li><p>[表达式 for 变量 in 序列] - 将生成式对应的生成器转换成列表</p>
+</li>
+</ul>
+</li>
+<li><p>语法2：</p>
+<ul>
+<li><p>(表达式 for 变量 in 序列 if 条件语句)：创建一个生成器</p>
+</li>
+<li><blockquote>
+<p>展开成生成器：</p>
+<p>def func():</p>
+<p>​       for 变量 in 序列:</p>
+<p>​              if 条件语句：</p>
+<p>​                    yield 表达式</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="五、模块的使用"><a href="#五、模块的使用" class="headerlink" title="五、模块的使用"></a>五、模块的使用</h3><hr>
+<h4 id="1-什么是模块"><a href="#1-什么是模块" class="headerlink" title="1. 什么是模块"></a>1. 什么是模块</h4><ul>
+<li>在实际开发中，一个项目会分为多个模块</li>
+<li>一个python文件就是一个模块</li>
+</ul>
+<hr>
+<h4 id="2-多个模块怎么协作：导入模块"><a href="#2-多个模块怎么协作：导入模块" class="headerlink" title="2. 多个模块怎么协作：导入模块"></a>2. 多个模块怎么协作：导入模块</h4><ul>
+<li>1)import 模块名：在当前模块中导入指定模块，导入后可以使用指定模块中所有的全局变量，必须以’模块名.变量’的方式去使用</li>
+<li>2)from 模块名 import 全局变量1，全局变量2…：导入指定模块中指定的全局变量，被导入的全局变量在当前模块中可以直接使用</li>
+<li>3)重命名：<ul>
+<li>import 模块名 as 新模块名：模块重命名，通过新模块名来使用模块</li>
+<li>from 模块名 import 全局变量1 as 新变量1，全局变量2 as 新变量2…：变量重命名</li>
+</ul>
+</li>
+<li>4)通配符：from 模块名 import *：导入模块中所有的全局变量，使用的时候直接用</li>
+</ul>
+<hr>
+<h4 id="3-导入模块的原理"><a href="#3-导入模块的原理" class="headerlink" title="3. 导入模块的原理"></a>3. 导入模块的原理</h4><ul>
+<li>当执行导入模块的代码时，实质会执行被导入的模块对应的py文件</li>
+<li>将不希望被别的模块执行的代码放到下面的if语句中<ul>
+<li><code>if __name__ == &#39;__main__&#39;</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day11-高阶函数/">http://yoursite.com/2019/07/19/day11-高阶函数/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day12-文件操作和json数据/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day10-作业/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day19-多线程基础"><span class="toc-number">1.</span> <span class="toc-text">day19-多线程基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、多线程理论"><span class="toc-number">1.1.</span> <span class="toc-text">一、多线程理论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是进程"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 什么是进程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-什么是线程"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 什么是线程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-进程和线程的比较"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 进程和线程的比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-什么是多线程"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 什么是多线程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、多线程技术"><span class="toc-number">1.2.</span> <span class="toc-text">二、多线程技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-主线程和子线程"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 主线程和子线程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-创建子线程"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 创建子线程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-通过创建Thread类的子类对象来创建子线程"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 通过创建Thread类的子类对象来创建子线程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-join-方法"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. join()方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-多线程数据安全问题"><span class="toc-number">1.2.5.</span> <span class="toc-text">5. 多线程数据安全问题</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day19-多线程基础"><a href="#day19-多线程基础" class="headerlink" title="day19-多线程基础"></a>day19-多线程基础</h2><hr>
+<h3 id="一、多线程理论"><a href="#一、多线程理论" class="headerlink" title="一、多线程理论"></a>一、多线程理论</h3><hr>
+<h4 id="1-什么是进程"><a href="#1-什么是进程" class="headerlink" title="1. 什么是进程"></a>1. 什么是进程</h4><ul>
+<li>指系统中正在运行的一个程序</li>
+<li>特点：每个进程是独立的，每个进程均运行在其专用且受保护的内存空间</li>
+</ul>
+<hr>
+<h4 id="2-什么是线程"><a href="#2-什么是线程" class="headerlink" title="2. 什么是线程"></a>2. 什么是线程</h4><ul>
+<li>一个进程要想执行任务，必须得有线程(每个进程至少要有一条线程)</li>
+<li>一个进程的所有任务都在线程中执行</li>
+<li>线程的串行：<ul>
+<li>一个线程中任务的执行是串行的</li>
+<li>同一时间一个线程只能执行一个任务</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-进程和线程的比较"><a href="#3-进程和线程的比较" class="headerlink" title="3. 进程和线程的比较"></a>3. 进程和线程的比较</h4><ul>
+<li>1)线程是cpu调用的最小单位</li>
+<li>2)进程是cpu分配资源和调度的单位</li>
+<li>3)一个程序可以对应多个进程，一个进程中可以有多个线程，但至少要有有一个线程</li>
+<li>4)同一进程内的线程共享进程的资源</li>
+</ul>
+<hr>
+<h4 id="4-什么是多线程"><a href="#4-什么是多线程" class="headerlink" title="4. 什么是多线程"></a>4. 什么是多线程</h4><ul>
+<li>定义：一个进程中可以开启多条线程，每条线程可以并行执行不同的任务</li>
+<li>作用：多线程技术可以提高程序的执行效率</li>
+<li>原理：<ul>
+<li>同一时间，cpu只能处理一条线程，只有一条线程在工作</li>
+<li>多线程并发执行，其实就是cpu快速的在多条线程之间的调度</li>
+<li>如果cpu调度线程时间足够快，就造成了多线程并发执行的假象</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="二、多线程技术"><a href="#二、多线程技术" class="headerlink" title="二、多线程技术"></a>二、多线程技术</h3><hr>
+<h4 id="1-主线程和子线程"><a href="#1-主线程和子线程" class="headerlink" title="1. 主线程和子线程"></a>1. 主线程和子线程</h4><ul>
+<li>默认情况下，进程有一个线程，这个线程叫主线程。(主线程是自动创建的)</li>
+<li>默认情况下所有的代码都是在主线程中执行的</li>
+<li>程序员通过代码创建的线程都叫子线程。</li>
+</ul>
+<hr>
+<h4 id="2-创建子线程"><a href="#2-创建子线程" class="headerlink" title="2. 创建子线程"></a>2. 创建子线程</h4><ul>
+<li>python内置的threading模块中提供了和线程操作相关的类和方法</li>
+<li>threading模块中有个Thread类，这个类或者这个的子类的对象就是线程对象</li>
+<li>需要子线程的时候就创建Thread类的对象</li>
+<li>1)创建线程对象<ul>
+<li>语法：<code>Thread(target=函数, args=实参列表) - 返回子线程对象</code></li>
+<li>说明：target-必须要赋一个函数，这个函数会在子线程中调用</li>
+<li>args-赋一个元组，元组中的元素就是调用target函数的时候需要传的参数</li>
+</ul>
+</li>
+<li>2)让子线程开始执行<ul>
+<li>线程对象.start()-在子线程中去调用target对应的download，并且将args中的值作为实参</li>
+</ul>
+</li>
+<li>3)程序的结束(进程的结束)<ul>
+<li>一个进程是否结束，看这个进程中是否每个线程都结束</li>
+<li>线程结束：任务执行完成自然死亡、遇到exit()函数、发生异常</li>
+<li>程序出现异常只会影响一个线程，线程中遇到exit()，线程直接结束</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-通过创建Thread类的子类对象来创建子线程"><a href="#3-通过创建Thread类的子类对象来创建子线程" class="headerlink" title="3. 通过创建Thread类的子类对象来创建子线程"></a>3. 通过创建Thread类的子类对象来创建子线程</h4><ul>
+<li>1)声明一个类继承Thread</li>
+<li>2)实现run方法，这个方法中的代码就是会在子线程中执行的代码</li>
+<li>3)创建子类的线程对象</li>
+<li>4)通过start去执行子线程中的任务</li>
+</ul>
+<hr>
+<h4 id="4-join-方法"><a href="#4-join-方法" class="headerlink" title="4. join()方法"></a>4. join()方法</h4><ul>
+<li><blockquote>
+<p>线程对象.join()</p>
+<p>其他对象</p>
+<p>说明：这儿的其他代码会等到线程对象结束后才会执行</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="5-多线程数据安全问题"><a href="#5-多线程数据安全问题" class="headerlink" title="5. 多线程数据安全问题"></a>5. 多线程数据安全问题</h4><ul>
+<li>通过加锁来解决数据安全问题</li>
+<li>1)保证一个数据对应一把锁：创建锁的对象</li>
+<li>2)在使用数据之前，加锁：锁对象.acquire()</li>
+<li>3)数据使用完后，释放锁：锁对象.release()</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day19-多线程基础/">http://yoursite.com/2019/07/19/day19-多线程基础/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day20-时间模块/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day18-网络编程/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

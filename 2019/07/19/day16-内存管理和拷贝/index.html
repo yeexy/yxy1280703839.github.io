@@ -1,0 +1,62 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day16-内存管理和拷贝"><span class="toc-number">1.</span> <span class="toc-text">day16-内存管理和拷贝</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、多继承"><span class="toc-number">1.1.</span> <span class="toc-text">一、多继承</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-多继承"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 多继承</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、运算符重载"><span class="toc-number">1.2.</span> <span class="toc-text">二、运算符重载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-运算符"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、内存管理"><span class="toc-number">1.3.</span> <span class="toc-text">三、内存管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#手动内存管理"><span class="toc-number">1.3.1.</span> <span class="toc-text">手动内存管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-内存的开辟"><span class="toc-number">1.3.2.</span> <span class="toc-text">1. 内存的开辟</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-内存的释放"><span class="toc-number">1.3.3.</span> <span class="toc-text">2. 内存的释放</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、浅拷贝和深拷贝"><span class="toc-number">1.4.</span> <span class="toc-text">四、浅拷贝和深拷贝</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-使用变量的3种情况"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 使用变量的3种情况</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day16-内存管理和拷贝"><a href="#day16-内存管理和拷贝" class="headerlink" title="day16-内存管理和拷贝"></a>day16-内存管理和拷贝</h2><hr>
+<h3 id="一、多继承"><a href="#一、多继承" class="headerlink" title="一、多继承"></a>一、多继承</h3><hr>
+<h4 id="1-多继承"><a href="#1-多继承" class="headerlink" title="1. 多继承"></a>1. 多继承</h4><ul>
+<li>python中的类支持多继承</li>
+<li>class 子类(父类1,父类2,…)</li>
+<li>多继承只能继承第一个父类的对象属性</li>
+</ul>
+<hr>
+<h3 id="二、运算符重载"><a href="#二、运算符重载" class="headerlink" title="二、运算符重载"></a>二、运算符重载</h3><hr>
+<h4 id="1-运算符"><a href="#1-运算符" class="headerlink" title="1. 运算符"></a>1. 运算符</h4><ul>
+<li>python中所有的数据类型本质都是类，所有的数据本质都是对象</li>
+<li>在使用运算符对数据进行操作的时候，实质是在调用运算符对应的魔法方法，运算符前面的数据类型，决定了函数调用哪个类中对应的魔法方法</li>
+<li>每个运算符都有自己固定的魔法方法，看某种类型的数据是否支持某种运算符就看这个类型中有没有实现对应的魔法方法</li>
+<li>注意：&gt;和&lt;符号只需要重载一个，另外一个自动支持</li>
+</ul>
+<hr>
+<h3 id="三、内存管理"><a href="#三、内存管理" class="headerlink" title="三、内存管理"></a>三、内存管理</h3><hr>
+<h4 id="手动内存管理"><a href="#手动内存管理" class="headerlink" title="手动内存管理"></a>手动内存管理</h4><ul>
+<li>内存分为栈区间和堆区间，栈区间中的内存是自动开辟自动释放的；堆里的内存需要程序员写代码申请和释放</li>
+</ul>
+<h4 id="1-内存的开辟"><a href="#1-内存的开辟" class="headerlink" title="1. 内存的开辟"></a>1. 内存的开辟</h4><ul>
+<li>python中所有的类型都是类，所以所有的数据都是对象。对象都是保存在堆区间；变量是保存在栈区间，变量中实际保存的堆中存储的数据的地址。(变量的本质就是指针)</li>
+<li>注意：除了数字和字符串对象，其他数据都是每次需要的时候直接在堆中开辟区间。数字和字符串会先检查这个数据之前是否保存过，如果保存过就直接用之前的数据，否则才开辟新的空间。</li>
+</ul>
+<hr>
+<h4 id="2-内存的释放"><a href="#2-内存的释放" class="headerlink" title="2. 内存的释放"></a>2. 内存的释放</h4><ul>
+<li>python中内存的释放采用的是’垃圾回收机制’自动释放</li>
+<li>垃圾回收机制原理：<ul>
+<li>1)看一个数据是否需要销毁(回收)，就看这个对象的引用计数是否为0(引用：保存对象地址的数据)</li>
+<li>2)如果这个对象引用计数不为0就假设当前对象消失，然后看会不会有其他对象因为它的消失引用计数变为0，如果有，就将另外一个对象也回收(循环引用释放)</li>
+</ul>
+</li>
+<li>注意：用一个变量给另外一个变量赋值实质上赋的是地址</li>
+<li>==和is的区别：==(判断的是值是否相等)；is(判读的是地址是否相等)</li>
+</ul>
+<hr>
+<h3 id="四、浅拷贝和深拷贝"><a href="#四、浅拷贝和深拷贝" class="headerlink" title="四、浅拷贝和深拷贝"></a>四、浅拷贝和深拷贝</h3><hr>
+<h4 id="1-使用变量的3种情况"><a href="#1-使用变量的3种情况" class="headerlink" title="1. 使用变量的3种情况"></a>1. 使用变量的3种情况</h4><ul>
+<li>1)直接赋值：赋的是地址，赋完值后两个变量一模一样</li>
+<li>2)浅拷贝：列表[:]、列表.copy()、copy.copy()<ul>
+<li>直接复制被拷贝的数据，产生一个新的地址，将新的地址赋值给变量；</li>
+<li>如果被拷贝的对象有子对象，子对象不会被赋值</li>
+</ul>
+</li>
+<li>3)深拷贝：<code>copy.deepcopy()</code><ul>
+<li>直接复制被拷贝的数据，产生一个新的地址，将新的地址赋值给变量；</li>
+<li>如果被拷贝的对象有子对象，子对象也会被赋值</li>
+</ul>
+</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day16-内存管理和拷贝/">http://yoursite.com/2019/07/19/day16-内存管理和拷贝/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day17-正则表达式/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day15-作业/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

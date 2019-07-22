@@ -1,0 +1,201 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day3-运算符、数据类型和if语句"><span class="toc-number">1.</span> <span class="toc-text">day3-运算符、数据类型和if语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、运算符"><span class="toc-number">1.1.</span> <span class="toc-text">一、运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-数学运算符"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 数学运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-比较运算符"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 比较运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-逻辑运算符"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 逻辑运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-赋值运算符"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 赋值运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-运算顺序"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 运算顺序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、数字类型"><span class="toc-number">1.2.</span> <span class="toc-text">二、数字类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-数字类型：整型-int-、浮点型-float-、布尔-bool-、复数-complex"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 数字类型：整型(int)、浮点型(float)、布尔(bool)、复数(complex)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-type-函数"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. type()函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-类型转换：类型名-数据"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 类型转换：类型名(数据)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、if分支结构"><span class="toc-number">1.3.</span> <span class="toc-text">三、if分支结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-if使用的条件"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. if使用的条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-怎么使用if"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 怎么使用if</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-if嵌套"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. if嵌套</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day3-运算符、数据类型和if语句"><a href="#day3-运算符、数据类型和if语句" class="headerlink" title="day3-运算符、数据类型和if语句"></a>day3-运算符、数据类型和if语句</h2><hr>
+<h3 id="一、运算符"><a href="#一、运算符" class="headerlink" title="一、运算符"></a>一、运算符</h3><hr>
+<h4 id="1-数学运算符"><a href="#1-数学运算符" class="headerlink" title="1. 数学运算符"></a>1. 数学运算符</h4><ul>
+<li>+，-，*，/    —    和数学中的加、减、乘、除一样</li>
+<li>%    —    取余，求余数<ul>
+<li>应用1：通过对2取余来判断一个数是偶数还是奇数</li>
+<li>应用2：通过对10取余来获取一个数的个位数</li>
+</ul>
+</li>
+<li>//    —    取整，求商取商的整数部分<ul>
+<li><code>print(5 // 2)    #结果为2</code>    </li>
+</ul>
+</li>
+<li>**    —    求幂运算<ul>
+<li><code>print(9 ** 0.5)    #幂运算可以用来开方</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="2-比较运算符"><a href="#2-比较运算符" class="headerlink" title="2. 比较运算符"></a>2. 比较运算符</h4><ul>
+<li>python中有&gt;(大于), &lt;(小于), &gt;=(大于等于), &lt;=(小于等于), ==(等于), !=(不等于)几种比较运算符</li>
+<li>所有比较运算符的的运算结果都是布尔值(True/False)</li>
+<li>python中还可以使用多个比较运算符来表示一个范围</li>
+</ul>
+<hr>
+<h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3. 逻辑运算符"></a>3. 逻辑运算符</h4><ul>
+<li>逻辑运算符有：and，or，not</li>
+<li>and(逻辑与运算)：真真为真，其他为假<ul>
+<li>应用：如果需要多个条件同时满足，这个时候条件才用and连接</li>
+</ul>
+</li>
+<li>or(逻辑或运算)：假假为假，其他为真<ul>
+<li>应用：如果多个条件只要有一个条件满足就可以用or将多个条件连接起来</li>
+</ul>
+</li>
+<li>not(逻辑非运算)：结果取反<ul>
+<li>应用：对一个条件进行否定</li>
+</ul>
+</li>
+<li>短路操作：<ul>
+<li>and短路操作：如果and前的结果是False，不会执行and后面的语句，结果直接为False</li>
+<li>or短路操作：如果or前的结果是True，不会执行or后面的语句，结果直接为True</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="4-赋值运算符"><a href="#4-赋值运算符" class="headerlink" title="4. 赋值运算符"></a>4. 赋值运算符</h4><ul>
+<li>python中有=，+=，-=，/=，<em>=，%=，//=，*</em>=</li>
+<li>赋值符号的左边必须是变量；复合的赋值运算符的左边必须是已经赋值过的变量</li>
+</ul>
+<hr>
+<h4 id="5-运算顺序"><a href="#5-运算顺序" class="headerlink" title="5. 运算顺序"></a>5. 运算顺序</h4><ul>
+<li>数学运算符 &gt; 比较运算符 &gt; 逻辑运算符 &gt; 赋值运算符</li>
+<li>数学运算符中：** &gt; *, /, //, % &gt; +, -</li>
+<li>加()可以改变运算顺序，有()先算口号里的</li>
+</ul>
+<hr>
+<h3 id="二、数字类型"><a href="#二、数字类型" class="headerlink" title="二、数字类型"></a>二、数字类型</h3><hr>
+<h4 id="1-数字类型：整型-int-、浮点型-float-、布尔-bool-、复数-complex"><a href="#1-数字类型：整型-int-、浮点型-float-、布尔-bool-、复数-complex" class="headerlink" title="1. 数字类型：整型(int)、浮点型(float)、布尔(bool)、复数(complex)"></a>1. 数字类型：整型(int)、浮点型(float)、布尔(bool)、复数(complex)</h4><ul>
+<li><p>整型(int)：包含所有的整数</p>
+</li>
+<li><p>python中整数支持二进制、八进制、十进制、十六进制</p>
+<ul>
+<li><blockquote>
+<p>十进制：</p>
+<p>a.基数：0，1，2，3，4，5，6，7，8，9</p>
+<p>b.进位：逢10进1</p>
+<p>c.位权：10的n次方</p>
+<p>d.表示方式：直接写的所有的数字都是10进制</p>
+<p>e.转换方式：直接print打印</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>二进制：</p>
+<p>a.基数：0，1</p>
+<p>b.进位：逢2进1</p>
+<p>c.位权：2的n次方</p>
+<p>d.表示方式：在二进制数的前面加前缀0b/0B，例如0b110</p>
+<p>e.转换方式：<code>bin()</code>-把其他进制的数转换为二进制</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>八进制：</p>
+<p>a.基数：0，1，2，3，4，5，6，7</p>
+<p>b.进位：逢8进1</p>
+<p>c.位权：8的n次方</p>
+<p>d.表示方式：在八进制数的前面加前缀0o/0O，例如0o110</p>
+<p>e.转换方式：<code>oct()</code>-把其他进制的数转换为八进制</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>十六进制：</p>
+<p>a.基数：0，1，2，3，4，5，6，7，8，9，a/A，b/B，c/C，d/D，e/E，f/F</p>
+<p>b.进位：逢16进1</p>
+<p>c.位权：16的n次方</p>
+<p>d.表示方式：在十六进制数前加前缀0x/0X，例如0x110</p>
+<p>e.转换方式：<code>hex()</code>-把其他进制的数转换为十六进制</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>浮点型(float)：所有的小数对应的类型</p>
+<ul>
+<li>支持科学计数法：3e4，3e-4</li>
+</ul>
+</li>
+<li><p>布尔值(bool)：只有True和False两个值，True实质是1，False实质是0</p>
+</li>
+<li><p>复数(complex)：包括所有由实数和虚数组成的数字，python中用j表示虚部</p>
+<ul>
+<li>python中直接支持复数运算</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="2-type-函数"><a href="#2-type-函数" class="headerlink" title="2. type()函数"></a>2. type()函数</h4><ul>
+<li><code>type(数据)</code>-返回指定数据对应的类型</li>
+</ul>
+<hr>
+<h4 id="3-类型转换：类型名-数据"><a href="#3-类型转换：类型名-数据" class="headerlink" title="3. 类型转换：类型名(数据)"></a>3. 类型转换：类型名(数据)</h4><ul>
+<li>将指定的数据转换为指定类型，返回新的数据</li>
+<li><code>int()</code>-转换成整型，数字转换成整型只保留整数部分；不是所有的字符串都能转换成整型，只有去掉引号后本身就是一个整数的字符串才可以</li>
+<li><code>float()</code>-转换成浮点型，数字后面加.0；只有去掉引号后本身就是一个数字的才能转换成浮点型</li>
+<li><code>bool()</code>-所有的数据都可以转换成布尔值；所有为0、为空的值会转换成False，其他都是True</li>
+</ul>
+<hr>
+<h3 id="三、if分支结构"><a href="#三、if分支结构" class="headerlink" title="三、if分支结构"></a>三、if分支结构</h3><hr>
+<h4 id="1-if使用的条件"><a href="#1-if使用的条件" class="headerlink" title="1. if使用的条件"></a>1. if使用的条件</h4><ul>
+<li>当某段代码是需要在满足某个条件的时候才会执行，这个时候就会使用if分支结构</li>
+</ul>
+<hr>
+<h4 id="2-怎么使用if"><a href="#2-怎么使用if" class="headerlink" title="2. 怎么使用if"></a>2. 怎么使用if</h4><ul>
+<li><p>语法1</p>
+<ul>
+<li><blockquote>
+<p>if 条件语句:</p>
+<p>​    代码块</p>
+<p>a.说明</p>
+<p>if    -    关键字，固定写法</p>
+<p>条件语句        -    除了赋值语句以外的所有由结果的表达式</p>
+<p>:    -    固定写法</p>
+<p>代码块    -    和if保持一个缩进的一条或多条语句</p>
+<p>b.执行过程</p>
+<p>先判断条件语句是否为True(如果结果不是布尔就先转换成布尔再判断)，如果是True就执行代码块，否则不执行，继续执行后面的代码</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>语法2</p>
+<ul>
+<li><blockquote>
+<p>if 条件语句:</p>
+<p>​    代码块1</p>
+<p>else:</p>
+<p>​    代码块2</p>
+<p>a.说明</p>
+<p>if    -    和上面的一样</p>
+<p>代码块1   -   和if保持一个缩进的一条或多条语句</p>
+<p>else        -    关键字，固定写法</p>
+<p>代码块2   -   和else保持一个缩进的一条或多条语句</p>
+<p>b.执行过程</p>
+<p>先判断条件语句是否为True(如果不是也要布尔先转换成布尔)，如果是True就执行带买块1，否则就执行代码块2</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>语法3</p>
+<ul>
+<li><blockquote>
+<p>if 条件语句1:</p>
+<p>​    代码块1</p>
+<p>elif 条件语句2:</p>
+<p>​    代码块2</p>
+<p>…</p>
+<p>else:</p>
+<p>​    代码块3</p>
+<p>a.说明</p>
+<p>elif   -   关键字，固定写法</p>
+<p>b.执行过程</p>
+<p>先判断条件语句1是否为True，如果是True就执行代码块1，然后整个if结束，直接执行其他语句；如果是False，就判断条件语句2是否为True，如果为True就执行代码块2，然后整个if结束；以此类推，如果前面所有条件语句都是False，就只想else中的代码块</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-if嵌套"><a href="#3-if嵌套" class="headerlink" title="3. if嵌套"></a>3. if嵌套</h4><ul>
+<li>可以在if结构中再嵌套其他的if语句</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day3-运算符和数据类型/">http://yoursite.com/2019/07/19/day3-运算符和数据类型/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day3-作业/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day2-作业/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

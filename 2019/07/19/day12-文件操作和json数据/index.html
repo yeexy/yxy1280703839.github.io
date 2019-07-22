@@ -1,0 +1,228 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day12-文件操作和json数据"><span class="toc-number">1.</span> <span class="toc-text">day12-文件操作和json数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、文件操作"><span class="toc-number">1.1.</span> <span class="toc-text">一、文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-数据持久化"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 数据持久化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-文件操作-对文件内容的操作"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 文件操作 - 对文件内容的操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、二进制文件的操作"><span class="toc-number">1.2.</span> <span class="toc-text">二、二进制文件的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-二进制文件有哪些"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 二进制文件有哪些</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-文件不存在"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 文件不存在</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-打开文件的简写"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 打开文件的简写</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、json数据"><span class="toc-number">1.3.</span> <span class="toc-text">三、json数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是json数据：满足json格式的数据"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 什么是json数据：满足json格式的数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-json转python"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. json转python</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-python转json"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. python转json</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day12-文件操作和json数据"><a href="#day12-文件操作和json数据" class="headerlink" title="day12-文件操作和json数据"></a>day12-文件操作和json数据</h2><hr>
+<h3 id="一、文件操作"><a href="#一、文件操作" class="headerlink" title="一、文件操作"></a>一、文件操作</h3><hr>
+<h4 id="1-数据持久化"><a href="#1-数据持久化" class="headerlink" title="1. 数据持久化"></a>1. 数据持久化</h4><ul>
+<li><p>计算机内存分为硬盘和运行内存</p>
+</li>
+<li><p>存储到本地文件中的数据，就是存储在硬盘中的数据，就能持久化</p>
+</li>
+<li><p>编程中常用的数据持久化文件：</p>
+<ul>
+<li><p>txt文件</p>
+</li>
+<li><p>二进制文件(图片、音频、视频、压缩文件)</p>
+</li>
+<li><p>json文件</p>
+</li>
+<li><p>数据库文件(.db、.sql)</p>
+</li>
+<li><p>plist文件</p>
+</li>
+</ul>
+</li>
+<li><p>数据持久化三步走：</p>
+<ul>
+<li>a.需要持久化的数据保存在本地文件中</li>
+<li>b.需要数据的时候去文件中读数据</li>
+<li>c.数据发生改变后将最新的数据写入文件中</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="2-文件操作-对文件内容的操作"><a href="#2-文件操作-对文件内容的操作" class="headerlink" title="2. 文件操作 - 对文件内容的操作"></a>2. 文件操作 - 对文件内容的操作</h4><ul>
+<li><p>基本步骤：打开文件；读/写操作；关闭文件</p>
+</li>
+<li><p>1)打开文件：</p>
+<ul>
+<li><p><code>open(file, mode=&#39;r&#39;, encoding=None)</code>：打开指定文件，返回文件对象</p>
+</li>
+<li><p>file：字符串，需要打开的文件的路径，可以是绝对路径，也可以是相对路径</p>
+<ul>
+<li><p>绝对路径：文件在电脑上的完整路径</p>
+</li>
+<li><blockquote>
+<p>相对路径：./(当前目录，当前py文件所在的目录)，可以省略</p>
+<p>​                   ../(当前目录的上层目录)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>mode：字符串，决定文件的打开方式；打开方式决定了打开文件后支持的操作</p>
+<ul>
+<li>‘r’：默认值，只读，读出来的数据就是字符串类型</li>
+<li>‘w’：只写；只能将字符串写入文件(先删除原文件内容，再写)</li>
+<li>‘rb/br’：二进制只读；以二进制的格式读</li>
+<li>‘wb/bw’：二进制只写；只能将二进制数据写入文件</li>
+<li>‘a’：只写；追加字符串内容(保留原文件内容)</li>
+<li>‘ab/ba’：二进制只写；追加二进制内容(保留原文件内容)</li>
+</ul>
+</li>
+<li><p>encoding：设置文件的编码方式，固定写’utf-8’；只针对文本文件有效</p>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>只有文本操作才能设置编码方式(二进制不行)</li>
+<li>文本文件在读和写(或编码和解码)的方式必须一致</li>
+<li>windows默认的是’gbk’</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2)操作文件：</p>
+<ul>
+<li>a.读操作：获取文件中的内容<ul>
+<li>文件对象.read()：获取文件中所有的内容，会返回文件中的内容</li>
+<li>文件对象.readline()：读一行内容(从读写位置到一行结尾)</li>
+</ul>
+</li>
+<li>b.写操作<ul>
+<li>文件对象.write(写的内容)：将指定的内容写入文件中</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3)关闭文件</p>
+<ul>
+<li>文件对象.close()</li>
+</ul>
+</li>
+<li><p>4)移动读写的位置(移动光标)</p>
+<ul>
+<li>文件对象.seek(0)：将读写位置移动到文件开头</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="二、二进制文件的操作"><a href="#二、二进制文件的操作" class="headerlink" title="二、二进制文件的操作"></a>二、二进制文件的操作</h3><hr>
+<h4 id="1-二进制文件有哪些"><a href="#1-二进制文件有哪些" class="headerlink" title="1. 二进制文件有哪些"></a>1. 二进制文件有哪些</h4><ul>
+<li>常见的二进制文件：图片文件、音频文件、视频文件、压缩文件等</li>
+<li>不是只有二进制文件才支持’b’操作(rb、wb、ab)，但是二进制文件只能采用’b’操作</li>
+<li>注意：所有带’b’的操作都不能设置encoding</li>
+</ul>
+<hr>
+<h4 id="2-文件不存在"><a href="#2-文件不存在" class="headerlink" title="2. 文件不存在"></a>2. 文件不存在</h4><ul>
+<li>如果以读的方式打开一个不存在的文件，程序会报错</li>
+<li>如果以写的方式打开一个不存在的文件，不会报错，而是自动创建这个文件</li>
+</ul>
+<hr>
+<h4 id="3-打开文件的简写"><a href="#3-打开文件的简写" class="headerlink" title="3. 打开文件的简写"></a>3. 打开文件的简写</h4><ul>
+<li>1)语法：<ul>
+<li>with open(‘文件路径’, ‘读写方式’, encoding=’编码方式’) as 文件对象：文件域(操作文件)</li>
+</ul>
+</li>
+<li>2)说明：以这种方式打开的文件，在文件域结束后，文件会自动关闭</li>
+</ul>
+<hr>
+<h3 id="三、json数据"><a href="#三、json数据" class="headerlink" title="三、json数据"></a>三、json数据</h3><hr>
+<h4 id="1-什么是json数据：满足json格式的数据"><a href="#1-什么是json数据：满足json格式的数据" class="headerlink" title="1. 什么是json数据：满足json格式的数据"></a>1. 什么是json数据：满足json格式的数据</h4><ul>
+<li>1)json格式：<ul>
+<li>a.一个json有且只有一个数据</li>
+<li>b.这个数据必须是json支持的数据类型对应的数据</li>
+</ul>
+</li>
+<li>2)json支持的数据类型<ul>
+<li>a.数据类型：包含所有的数字</li>
+<li>b.字符串：使用双引号引起来的字符集，支持转义字符和编码字符</li>
+<li>c.布尔：只有true和false两个值</li>
+<li>d.数组：相当于python中的列表</li>
+<li>e.字典：相当于python中的字典，但key只能是字符串</li>
+<li>f.null：相当于python中的None，表示空</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="2-json转python"><a href="#2-json转python" class="headerlink" title="2. json转python"></a>2. json转python</h4><ul>
+<li>1)转换关系</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>json</th>
+<th>python</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数字类型</td>
+<td>int或float</td>
+</tr>
+<tr>
+<td>字符串</td>
+<td>str，双引号可能会变成单引号</td>
+</tr>
+<tr>
+<td>布尔</td>
+<td>bool，true-&gt;True,false-&gt;False</td>
+</tr>
+<tr>
+<td>数组</td>
+<td>list，内容也会跟着变</td>
+</tr>
+<tr>
+<td>字典</td>
+<td>dict，内容也会跟着变</td>
+</tr>
+<tr>
+<td>null</td>
+<td>None</td>
+</tr>
+</tbody></table>
+<ul>
+<li>2)方法<ul>
+<li><code>json.loads(字符串)</code>：将json格式的字符串转换成对应的python的数据</li>
+<li>注意：字符串的内容必须是json格式的数据</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-python转json"><a href="#3-python转json" class="headerlink" title="3. python转json"></a>3. python转json</h4><ul>
+<li>1)转换关系</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>python</th>
+<th>json</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int/float</td>
+<td>数字</td>
+</tr>
+<tr>
+<td>str</td>
+<td>字符串，单引号变双引号</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>布尔，True-&gt;true,False-&gt;false</td>
+</tr>
+<tr>
+<td>list/tuple</td>
+<td>数组</td>
+</tr>
+<tr>
+<td>dict</td>
+<td>字典</td>
+</tr>
+<tr>
+<td>None</td>
+<td>null</td>
+</tr>
+</tbody></table>
+<ul>
+<li>2)方法<ul>
+<li><code>json.dumps(python数据)</code>：将数据转换成json格式的字符串</li>
+</ul>
+</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day12-文件操作和json数据/">http://yoursite.com/2019/07/19/day12-文件操作和json数据/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day13-异常/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day11-高阶函数/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

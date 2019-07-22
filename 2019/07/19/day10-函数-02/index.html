@@ -1,0 +1,127 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day10-函数-02"><span class="toc-number">1.</span> <span class="toc-text">day10-函数-02</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、函数的返回值"><span class="toc-number">1.1.</span> <span class="toc-text">一、函数的返回值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是返回值"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 什么是返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-return"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. return</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-函数调用过程-完整版-执行过程"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 函数调用过程(完整版) - 执行过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-函数调用过程中的内存变化"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 函数调用过程中的内存变化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、匿名函数"><span class="toc-number">1.2.</span> <span class="toc-text">二、匿名函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-匿名函数：本质还是函数"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 匿名函数：本质还是函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、变量的作用域"><span class="toc-number">1.3.</span> <span class="toc-text">三、变量的作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是作用域"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 什么是作用域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-全局变量和局部变量"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 全局变量和局部变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-global和nonlocal"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. global和nonlocal</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、递归函数"><span class="toc-number">1.4.</span> <span class="toc-text">四、递归函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day10-函数-02"><a href="#day10-函数-02" class="headerlink" title="day10-函数-02"></a>day10-函数-02</h2><hr>
+<h3 id="一、函数的返回值"><a href="#一、函数的返回值" class="headerlink" title="一、函数的返回值"></a>一、函数的返回值</h3><hr>
+<h4 id="1-什么是返回值"><a href="#1-什么是返回值" class="headerlink" title="1. 什么是返回值"></a>1. 什么是返回值</h4><ul>
+<li>概念：返回值就是函数返回给函数调用者的值</li>
+<li>语法：返回值就是return后面的值</li>
+<li>获取返回值：返回值就是函数调用表达式的值</li>
+</ul>
+<hr>
+<h4 id="2-return"><a href="#2-return" class="headerlink" title="2. return"></a>2. return</h4><ul>
+<li>1)什么是return<ul>
+<li>是一个关键字，只能出现在函数体中</li>
+</ul>
+</li>
+<li>2)return作用<ul>
+<li>a.结束函数：执行函数体时，一旦遇到return，函数直接结束</li>
+<li>b.将函数内部的数据传到外部：return 需要返回的数据</li>
+</ul>
+</li>
+<li>说明<ul>
+<li>看一个函数的返回值是什么，就看执行函数体过程中有没有遇到return，如果遇到return，return后面的值就是函数的返回值</li>
+</ul>
+</li>
+<li>3)什么样的数据应该作为函数的返回值<ul>
+<li>初学者：如果执行完函数会产生新的数据，那么产生的新数据就可以返回；产生几个返回几个；return 返回值1, 返回值2</li>
+</ul>
+</li>
+<li>4)怎么获取函数的返回值<ul>
+<li>获取函数调用表达式的值就是获取函数的返回值</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-函数调用过程-完整版-执行过程"><a href="#3-函数调用过程-完整版-执行过程" class="headerlink" title="3. 函数调用过程(完整版) - 执行过程"></a>3. 函数调用过程(完整版) - 执行过程</h4><ul>
+<li><blockquote>
+<p>1)回到函数调用的位置</p>
+<p>2)传参，用实参给形参赋值</p>
+<p>3)执行函数体</p>
+<p>4)执行完函数体，先确定函数返回值(函数结束：a.执行完函数体的最后一条语句 b.执行过程中遇到return)</p>
+<p>5)回到函数调用的位置(这时函数调用表达式的值才是函数的返回值)，接着往后执行</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="4-函数调用过程中的内存变化"><a href="#4-函数调用过程中的内存变化" class="headerlink" title="4. 函数调用过程中的内存变化"></a>4. 函数调用过程中的内存变化</h4><ul>
+<li>函数调用过程其实是一个压栈的过程<ul>
+<li>每次调用函数，系统都会自动在内存中专门为这个函数开辟一个内存空间，用来保存在函数中声明的变量(形参也是声明在函数中的变量)。当函数调用结束，这个内存区域会自动释放。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="二、匿名函数"><a href="#二、匿名函数" class="headerlink" title="二、匿名函数"></a>二、匿名函数</h3><hr>
+<h4 id="1-匿名函数：本质还是函数"><a href="#1-匿名函数：本质还是函数" class="headerlink" title="1. 匿名函数：本质还是函数"></a>1. 匿名函数：本质还是函数</h4><ul>
+<li><blockquote>
+<p>1)语法</p>
+<p>函数名 = lambda 参数列表:返回值</p>
+<p>2)lambda：关键字，固定写法</p>
+<p>参数列表：形参列表，以’参数名1,参数名2,…,’形式</p>
+<p>返回值：写任何有结果的表达式</p>
+<p>3)什么时候使用匿名函数</p>
+<p>a.函数的功能一行代码就可以实现</p>
+<p>b.函数的功能不会重复使用</p>
+</blockquote>
+</li>
+<li><p>注意：匿名函数的函数体只有一条语句，且这条语句的结果就是返回值</p>
+</li>
+<li><p>python中三目运算符</p>
+<ul>
+<li>值1 if 条件语句 else 值2：如果条件语句是True，整个表达式结果是值1，否则就是值2</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="三、变量的作用域"><a href="#三、变量的作用域" class="headerlink" title="三、变量的作用域"></a>三、变量的作用域</h3><hr>
+<h4 id="1-什么是作用域"><a href="#1-什么是作用域" class="headerlink" title="1. 什么是作用域"></a>1. 什么是作用域</h4><ul>
+<li>声明完变量后，这个变量能够作用的范围就是变量的作用域</li>
+</ul>
+<hr>
+<h4 id="2-全局变量和局部变量"><a href="#2-全局变量和局部变量" class="headerlink" title="2. 全局变量和局部变量"></a>2. 全局变量和局部变量</h4><ul>
+<li>1)全局变量：声明在函数或者类外面的变量都是局部变量<ul>
+<li>全局变量的作用域：从声明开始到整个文件结束</li>
+<li>循环和循环体中声明的变量也是全局变量</li>
+</ul>
+</li>
+<li>2)局部变量：声明在函数中的变量就是局部变量<ul>
+<li>局部变量的作用域：从声明开始到整个函数结束</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-global和nonlocal"><a href="#3-global和nonlocal" class="headerlink" title="3. global和nonlocal"></a>3. global和nonlocal</h4><ul>
+<li>这两个关键字只能在函数体中使用</li>
+<li>1)global：在函数中声明一个全局变量(或去修改一个全局变量的值)<ul>
+<li>global 变量名</li>
+<li>变量名 = 值</li>
+</ul>
+</li>
+<li>nonlocal：在局部的局部中去修改局部变量的值<ul>
+<li>nonlocal 变量名</li>
+<li>变量名 = 值</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="四、递归函数"><a href="#四、递归函数" class="headerlink" title="四、递归函数"></a>四、递归函数</h3><hr>
+<h4 id="1-什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数"><a href="#1-什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数" class="headerlink" title="1. 什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数"></a>1. 什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数</h4><ul>
+<li>循环能做的事情递归都能做</li>
+<li>1)怎么写递归函数<ul>
+<li>第一步：声明函数(和普通函数一样)</li>
+<li>第二步：找临界值(函数结束的条件)</li>
+<li>第三步：找关系(假设函数的功能已经实现了，找f(n)和f(n-1)的关系)</li>
+<li>第四步：使用f(n-1)去实现f(n)的功能</li>
+</ul>
+</li>
+<li>2)总结：通过for或while循环能做的事情就不要用递归函数</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day10-函数-02/">http://yoursite.com/2019/07/19/day10-函数-02/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day10-作业/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day9-作业/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day13-异常"><span class="toc-number">1.</span> <span class="toc-text">day13-异常</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、异常捕获"><span class="toc-number">1.1.</span> <span class="toc-text">一、异常捕获</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-捕获异常"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 捕获异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-捕获异常的语法"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 捕获异常的语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-finally"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. finally</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-抛出异常"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 抛出异常</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day13-异常"><a href="#day13-异常" class="headerlink" title="day13-异常"></a>day13-异常</h2><hr>
+<h3 id="一、异常捕获"><a href="#一、异常捕获" class="headerlink" title="一、异常捕获"></a>一、异常捕获</h3><hr>
+<h4 id="1-捕获异常"><a href="#1-捕获异常" class="headerlink" title="1. 捕获异常"></a>1. 捕获异常</h4><ul>
+<li>当程序发生异常时，默认情况下程序会崩溃，不能接着往后执行，捕获异常就是让程序发生异常时不会崩溃，能够接着执行，一般在明明知道代码可能会出现异常，但是又不能通过修改代码去避免，这个时候就可以通过异常捕获去处理异常</li>
+</ul>
+<hr>
+<h4 id="2-捕获异常的语法"><a href="#2-捕获异常的语法" class="headerlink" title="2. 捕获异常的语法"></a>2. 捕获异常的语法</h4><ul>
+<li><p>1)语法1：捕获所有的异常</p>
+<ul>
+<li><blockquote>
+<p>try:</p>
+<p>​    代码段1</p>
+<p>except:</p>
+<p>​    代码段2</p>
+<p>try,except：关键字，固定写法</p>
+<p>代码段1：需要捕获异常的一条或多条语句</p>
+<p>代码段2：出现异常后需要去执行的一条或多条语句</p>
+<p>执行过程：先执行代码段1，如果执行代码段1的时候出现异常，程序不会崩溃，而是直接执行代码段2；如果代码段1没有出现异常，不会执行代码段2</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>2)语法2：</p>
+<ul>
+<li><blockquote>
+<p>try:</p>
+<p>​    代码段1</p>
+<p>except 异常类型:</p>
+<p>​    代码段2</p>
+<p>执行过程：先执行代码段1，如果执行的时候出现异常，判断异常类型和except后面的类型是否一致，如果一致，则程序不崩溃，直接执行代码段2，如果不一致，程序直接崩溃</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>3)语法3：</p>
+<ul>
+<li><blockquote>
+<p>try:</p>
+<p>​    代码段1</p>
+<p>except (异常类型1, 异常类型2,…):</p>
+<p>​    代码段2</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>4)语法4：</p>
+<ul>
+<li><blockquote>
+<p>try:</p>
+<p>​    代码段1</p>
+<p>except 异常类型1:</p>
+<p>​    代码段11</p>
+<p>except 异常类型2:</p>
+<p>​    代码段22</p>
+<p>…</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-finally"><a href="#3-finally" class="headerlink" title="3. finally"></a>3. finally</h4><ul>
+<li>捕获异常的最后可以添加一个finally，finally后面的代码段在任何时候都会执行</li>
+<li>1)try后面的代码段没有出现异常，finally会执行</li>
+<li>2)try后面的代码段出现异常，被捕获到，finally会执行</li>
+<li>3)try后面的代码段出现异常，没有被捕获到，finally会执行</li>
+</ul>
+<hr>
+<h4 id="4-抛出异常"><a href="#4-抛出异常" class="headerlink" title="4. 抛出异常"></a>4. 抛出异常</h4><ul>
+<li>让代码在某种情况下主动崩溃</li>
+<li>raise 异常类型</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day13-异常/">http://yoursite.com/2019/07/19/day13-异常/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day13-作业/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day12-文件操作和json数据/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

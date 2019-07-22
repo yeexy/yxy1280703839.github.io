@@ -1,0 +1,114 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day7-列表"><span class="toc-number">1.</span> <span class="toc-text">day7-列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、认识列表"><span class="toc-number">1.1.</span> <span class="toc-text">一、认识列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是列表-list"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 什么是列表(list)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-列表中的元素"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 列表中的元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、增删改查"><span class="toc-number">1.2.</span> <span class="toc-text">二、增删改查</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-查-获取列表中的元素"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 查 - 获取列表中的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-增-在列表中添加元素"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 增 - 在列表中添加元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-删除-删除列表中的元素"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 删除 - 删除列表中的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-改-修改列表中某个元素的值"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. 改 - 修改列表中某个元素的值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、列表的运算"><span class="toc-number">1.3.</span> <span class="toc-text">三、列表的运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-数学运算："><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 数学运算：+, *</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-比较运算："><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 比较运算：==, !=</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-in-not-in"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. in / not in</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-len-序列"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. len(序列)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-list-数据-：将数据转换成列表"><span class="toc-number">1.3.5.</span> <span class="toc-text">5. list(数据)：将数据转换成列表</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、列表函数"><span class="toc-number">1.4.</span> <span class="toc-text">四、列表函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-内置函数"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 内置函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-列表相关函数"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 列表相关函数</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day7-列表"><a href="#day7-列表" class="headerlink" title="day7-列表"></a>day7-列表</h2><hr>
+<h3 id="一、认识列表"><a href="#一、认识列表" class="headerlink" title="一、认识列表"></a>一、认识列表</h3><hr>
+<h4 id="1-什么是列表-list"><a href="#1-什么是列表-list" class="headerlink" title="1. 什么是列表(list)"></a>1. 什么是列表(list)</h4><ul>
+<li>列表是容器型数据类型(序列)</li>
+<li>特点：可变(支持元素的增删改)、有序(支持下标操作)</li>
+<li>说明：将[]作为容器，里面的元素用,隔开</li>
+</ul>
+<hr>
+<h4 id="2-列表中的元素"><a href="#2-列表中的元素" class="headerlink" title="2. 列表中的元素"></a>2. 列表中的元素</h4><ul>
+<li>任何类型的数据都可以作为列表的元素，如：数字、字符串、列表、字典、元组、函数等</li>
+<li>同一个列表中的不同元素的类型可以不一样</li>
+</ul>
+<hr>
+<h3 id="二、增删改查"><a href="#二、增删改查" class="headerlink" title="二、增删改查"></a>二、增删改查</h3><hr>
+<h4 id="1-查-获取列表中的元素"><a href="#1-查-获取列表中的元素" class="headerlink" title="1. 查 - 获取列表中的元素"></a>1. 查 - 获取列表中的元素</h4><ul>
+<li>获取单个元素：列表[下标]<ul>
+<li>语法和字符串一样</li>
+</ul>
+</li>
+<li>获取部分元素(列表切片)：列表[开始下标:结束下标:步长]<ul>
+<li>列表切片和字符串切片语法一样，但是列表切片结果是一个列表</li>
+<li>空列表：[]</li>
+</ul>
+</li>
+<li>遍历<ul>
+<li>直接遍历：通过for循环取出每一个元素</li>
+<li>通过遍历下标去遍历列表</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="2-增-在列表中添加元素"><a href="#2-增-在列表中添加元素" class="headerlink" title="2. 增 - 在列表中添加元素"></a>2. 增 - 在列表中添加元素</h4><ul>
+<li>列表.append(元素)：在列表的最后面追加一个元素</li>
+<li>列表.insert(下标,元素)：在列表指定的下标前面插入指定元素</li>
+</ul>
+<hr>
+<h4 id="3-删除-删除列表中的元素"><a href="#3-删除-删除列表中的元素" class="headerlink" title="3. 删除 - 删除列表中的元素"></a>3. 删除 - 删除列表中的元素</h4><ul>
+<li>del 列表[下标]：删除列表中指定下标对应的元素；没有下标则删除整个列表</li>
+<li>列表.remove(元素)：删除列表中第一个指定的元素<ul>
+<li>元素必须在列表中，否则会报错</li>
+</ul>
+</li>
+<li>列表.pop()：取出列表中最后一个元素，返回被取出的数据<ul>
+<li>列表.pop(下标)：取出列表中指定下标的元素，返回被取出的数据</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="4-改-修改列表中某个元素的值"><a href="#4-改-修改列表中某个元素的值" class="headerlink" title="4. 改 - 修改列表中某个元素的值"></a>4. 改 - 修改列表中某个元素的值</h4><ul>
+<li>列表[下标] = 新值：将列表中指定下标对应的元素设置为新值</li>
+</ul>
+<hr>
+<h3 id="三、列表的运算"><a href="#三、列表的运算" class="headerlink" title="三、列表的运算"></a>三、列表的运算</h3><hr>
+<h4 id="1-数学运算："><a href="#1-数学运算：" class="headerlink" title="1. 数学运算：+, *"></a>1. 数学运算：+, *</h4><ul>
+<li>列表1 + 列表2：将两个列表中的元素合并产生一个新的列表</li>
+<li>列表 * N：将列表中的元素重复N次产生一个新的列表</li>
+</ul>
+<hr>
+<h4 id="2-比较运算："><a href="#2-比较运算：" class="headerlink" title="2. 比较运算：==, !="></a>2. 比较运算：==, !=</h4><ul>
+<li>列表大小没有实际的意义，所以只关心相等和不相等</li>
+</ul>
+<hr>
+<h4 id="3-in-not-in"><a href="#3-in-not-in" class="headerlink" title="3. in / not in"></a>3. in / not in</h4><ul>
+<li>元素 in 列表：判断列表中是否存在指定的元素</li>
+<li>元素 not in 列表：判断列表中是否不存在指定的元素</li>
+</ul>
+<hr>
+<h4 id="4-len-序列"><a href="#4-len-序列" class="headerlink" title="4. len(序列)"></a>4. len(序列)</h4><ul>
+<li>len()：获取指定列表中的个数</li>
+</ul>
+<hr>
+<h4 id="5-list-数据-：将数据转换成列表"><a href="#5-list-数据-：将数据转换成列表" class="headerlink" title="5. list(数据)：将数据转换成列表"></a>5. list(数据)：将数据转换成列表</h4><ul>
+<li>所有的序列都可以转换成列表</li>
+<li>将序列中的元素转换成列表元素</li>
+</ul>
+<hr>
+<h3 id="四、列表函数"><a href="#四、列表函数" class="headerlink" title="四、列表函数"></a>四、列表函数</h3><hr>
+<h4 id="1-内置函数"><a href="#1-内置函数" class="headerlink" title="1. 内置函数"></a>1. 内置函数</h4><ul>
+<li><code>max(序列)、min(序列)、sum(序列)</code></li>
+<li>max、min：序列中元素类型必须一样；序列中元素必须支持比较运算符</li>
+<li>sum：只支持数字序列的求和</li>
+</ul>
+<hr>
+<h4 id="2-列表相关函数"><a href="#2-列表相关函数" class="headerlink" title="2. 列表相关函数"></a>2. 列表相关函数</h4><ul>
+<li>列表.count(元素)：统计列表中指定元素的个数</li>
+<li>列表.extend(序列)：将序列中的元素依次添加到列表的最后</li>
+<li>列表.index(元素)：获取列表中指定元素对应的下标(只获取第一个)<ul>
+<li>注意：元素不存在会报错</li>
+</ul>
+</li>
+<li>列表.reverse()：对原列表倒序，不会产生新列表</li>
+<li>列表.sort()：将列表中元素从小到大排序<ul>
+<li>列表.sort(reverse=True)：将列表中元素从大到小排序</li>
+<li>要求：列表的元素类型必须一样；元素支持比较运算符</li>
+</ul>
+</li>
+<li>列表.clear()：清空列表</li>
+<li>列表.copy()：复制列表中的元素产生一个新的列表，跟列表[:]功能一样<ul>
+<li>注意：这是一个浅拷贝</li>
+</ul>
+</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day7-列表/">http://yoursite.com/2019/07/19/day7-列表/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day7-作业/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day6-作业/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
+  root: '/',
+  back2top_animation: true,
+  sidebar_offsetTop: '20px',
+  algolia: undefined,
+};
+
+window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day18-网络编程"><span class="toc-number">1.</span> <span class="toc-text">day18-网络编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、socket服务器"><span class="toc-number">1.1.</span> <span class="toc-text">一、socket服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是socket"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 什么是socket</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-服务器套接字"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 服务器套接字</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、socket客户端"><span class="toc-number">1.2.</span> <span class="toc-text">二、socket客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-客户端套接字"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.客户端套接字</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、requests的使用"><span class="toc-number">1.3.</span> <span class="toc-text">三、requests的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-requests"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.requests</span></a></li></ol></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day18-网络编程"><a href="#day18-网络编程" class="headerlink" title="day18-网络编程"></a>day18-网络编程</h2><hr>
+<h3 id="一、socket服务器"><a href="#一、socket服务器" class="headerlink" title="一、socket服务器"></a>一、socket服务器</h3><hr>
+<h4 id="1-什么是socket"><a href="#1-什么是socket" class="headerlink" title="1. 什么是socket"></a>1. 什么是socket</h4><ul>
+<li>socket又叫套接字，指的是实现网络通信的两端</li>
+</ul>
+<hr>
+<h4 id="2-服务器套接字"><a href="#2-服务器套接字" class="headerlink" title="2. 服务器套接字"></a>2. 服务器套接字</h4><ul>
+<li><p>1)创建套接字对象</p>
+<ul>
+<li><p><code>server = socket.socket()</code></p>
+</li>
+<li><blockquote>
+<p>socket(family=AF_INET, type=SOCK_STREAM)</p>
+<p>family：设置ip类型；AF_INET：ipv4；AF_INET6：ipv6</p>
+<p>type：设置传输协议类型；SOCK_STREAM：TCP传输协议；SOCK_DGRAM：UDP传输协议</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>2)绑定IP和端口</p>
+<ul>
+<li><p><code>server.bind((&#39;10.7.160.57&#39;, 1234))</code></p>
+</li>
+<li><blockquote>
+<p>bind(address)：绑定地址</p>
+<p>address：元组(IP地址，端口)</p>
+<p>ip地址：通过ip地址可以确定互联网中唯一的一台计算机(字符串)，运行服务器程序的计算机的ip地址</p>
+<p>端口：端口是用来区分同一台计算机中的不同服务，范围是0-65535，其中0-1024是著名端口，不能随便使用</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>3)开始监听，同时设置最大在线客户端个数(设置同时在线人数)</p>
+<ul>
+<li>server.listen(200)</li>
+</ul>
+</li>
+<li><p>4)让服务器一直处于启动状态(通过死循环方式)</p>
+</li>
+<li><p>5)接收请求，返回建立的连接和客户端的地址</p>
+<ul>
+<li><code>connection, addr = server.accept()</code></li>
+<li>注意：当代码执行到这里的时候，会阻塞线程</li>
+</ul>
+</li>
+<li><p>6)接收客户端发送的消息</p>
+<ul>
+<li><p><code>re_data = connection.recv(1024)</code></p>
+</li>
+<li><p>recv(一次性能够接收的最大值)：返回值是接收到的数据，类型是二进制</p>
+</li>
+<li><p><code>re_message = re_data.decode(encoding=&#39;utf-8&#39;)</code></p>
+</li>
+<li><blockquote>
+<p>二进制数据和字符串的转换</p>
+<p>a.二进制转字符串：</p>
+<p>-str(二进制数据, encoding=’utf-8’)</p>
+<p>-二进制.decode(encoding=’utf-8’)</p>
+<p>b.字符串转二进制：</p>
+<p>-bytes(字符串, 编码方式)</p>
+<p>-字符串.encode()</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>7)发送消息</p>
+<ul>
+<li><code>connection.send(&#39;hello&#39;.encode())</code></li>
+</ul>
+</li>
+<li><p>8)关闭连接</p>
+<ul>
+<li><code>connection.close()</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="二、socket客户端"><a href="#二、socket客户端" class="headerlink" title="二、socket客户端"></a>二、socket客户端</h3><hr>
+<h4 id="1-客户端套接字"><a href="#1-客户端套接字" class="headerlink" title="1.客户端套接字"></a>1.客户端套接字</h4><ul>
+<li>1)创建套接字对象<ul>
+<li><code>client = socket.socket()</code></li>
+</ul>
+</li>
+<li>2)直接连接服务器<ul>
+<li><code>client.connect((&#39;10.7.160.57&#39;, 8000))</code></li>
+<li>connect((服务器地址, 服务器端口))</li>
+</ul>
+</li>
+<li>3)发送消息<ul>
+<li><code>client.send(&#39;hello&#39;.encode())</code></li>
+</ul>
+</li>
+<li>4)接收消息<ul>
+<li><code>re_data = client.recv(1024)</code></li>
+<li><code>re_message = re_data.decode(encoding=&#39;utf-8&#39;)</code></li>
+</ul>
+</li>
+<li>5)关闭连接<ul>
+<li><code>client.close()</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="三、requests的使用"><a href="#三、requests的使用" class="headerlink" title="三、requests的使用"></a>三、requests的使用</h3><hr>
+<h4 id="1-requests"><a href="#1-requests" class="headerlink" title="1.requests"></a>1.requests</h4><ul>
+<li>requests是一个专门用来支持HTTP请求的一个第三方库</li>
+<li>1)获取指定url对应的资源，返回时响应<ul>
+<li><code>response = requests.get(url)</code></li>
+<li><code>response = requests.post(url)</code></li>
+</ul>
+</li>
+<li>2)获取响应头<ul>
+<li><code>response.headers</code></li>
+</ul>
+</li>
+<li>3)获取内容<ul>
+<li>a.字符串格式的内容<ul>
+<li><code>response.text</code></li>
+</ul>
+</li>
+<li>b.获取json内容<ul>
+<li><code>response.json()</code></li>
+</ul>
+</li>
+<li>c.获取二进制内容<ul>
+<li><code>data = response.content</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day18-网络编程/">http://yoursite.com/2019/07/19/day18-网络编程/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day19-多线程基础/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day17-作业/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+  window.Promise = null;
+}
+</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>
