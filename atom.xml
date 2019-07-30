@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-19T09:35:46.292Z</updated>
+  <updated>2019-07-30T12:55:19.260Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,18 +18,14 @@
   
   <entry>
     <title></title>
-    <link href="http://yoursite.com/2019/07/19/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/"/>
-    <id>http://yoursite.com/2019/07/19/day20-时间模块/</id>
-    <published>2019-07-19T09:35:46.292Z</published>
-    <updated>2019-07-19T09:35:46.292Z</updated>
+    <link href="http://yoursite.com/2019/07/30/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/"/>
+    <id>http://yoursite.com/2019/07/30/day20-时间模块/</id>
+    <published>2019-07-30T12:55:19.262Z</published>
+    <updated>2019-07-30T12:55:19.260Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;day20-时间模块&quot;&gt;&lt;a href=&quot;#day20-时间模块&quot; class=&quot;headerlink&quot; title=&quot;day20-时间模块&quot;&gt;&lt;/a&gt;day20-时间模块&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、time模块&quot;&gt;&lt;a href=&quot;#一、time模块
-      
+      &lt;p&gt;这一部分主要讲了Python中有关时间的模块。&lt;/p&gt;
     
     </summary>
     
