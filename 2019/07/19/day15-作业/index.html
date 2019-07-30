@@ -1,32 +1,413 @@
-<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
-  root: '/',
-  back2top_animation: true,
-  sidebar_offsetTop: '20px',
-  algolia: undefined,
-};
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    
+    <meta name="keywords" content="Python, HTML5, CSS, JavaScript, jQuery, Vue.js, Linux, MySQL, Redis, Django">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="叶小永的技术专栏" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
 
-window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day15-作业"><span class="toc-number">1.</span> <span class="toc-text">day15-作业</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-建立一个汽车类Auto，包括轮胎个数，汽车颜色，车身重量，速度等属性，并通过不同的构造方法创建实例。至少要求-汽车能够加速-减速-停车。-再定义一个小汽车类CarAuto-继承Auto-并添加空调、CD属性，并且重新实现方法覆盖加速、减速的方法"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 建立一个汽车类Auto，包括轮胎个数，汽车颜色，车身重量，速度等属性，并通过不同的构造方法创建实例。至少要求 汽车能够加速 减速 停车。 再定义一个小汽车类CarAuto 继承Auto 并添加空调、CD属性，并且重新实现方法覆盖加速、减速的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-创建一个Person类，添加一个类字段用来统计Perosn类的对象的个数"><span class="toc-number">1.0.2.</span> <span class="toc-text">2.创建一个Person类，添加一个类字段用来统计Perosn类的对象的个数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-创建一个动物类，拥有属性：性别、年龄、颜色、类型-要求打印这个类的对象的时候以’-XXX的对象-性别-年龄-颜色-类型-‘-的形式来打印"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 创建一个动物类，拥有属性：性别、年龄、颜色、类型;要求打印这个类的对象的时候以’/XXX的对象: 性别-? 年龄-? 颜色-? 类型-?/‘ 的形式来打印</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-写一个圆类，-拥有属性半径、面积和周长；要求获取面积和周长的时候的时候可以根据半径的值把对应的值取到。但是给面积和周长赋值的时候，程序直接崩溃，并且提示改属性不能赋值"><span class="toc-number">1.0.4.</span> <span class="toc-text">4.写一个圆类， 拥有属性半径、面积和周长；要求获取面积和周长的时候的时候可以根据半径的值把对应的值取到。但是给面积和周长赋值的时候，程序直接崩溃，并且提示改属性不能赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-尝试-写一个类，其功能是：1-解析指定的歌词文件的内容-2-按时间显示歌词-提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. (尝试)写一个类，其功能是：1.解析指定的歌词文件的内容 2.按时间显示歌词 提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词</span></a></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day15-作业"><a href="#day15-作业" class="headerlink" title="day15-作业"></a>day15-作业</h2><hr>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title> | 叶小永的技术专栏</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">叶小永的技术专栏</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/logo.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="Toggle Navbar"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">Archives</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">Categories</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">Tags</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">About</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/19/day15-作业/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="叶小永">
+       <meta itemprop="description" content="技术宅，python新手">
+       <meta itemprop="image" content="/images/FutureGazerSmall.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="叶小永的技术专栏">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline"></h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-19T17:35:38+08:00">2019-07-19 17:35:38</time></span>
+        </span>
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h2 id="day15-作业"><a href="#day15-作业" class="headerlink" title="day15-作业"></a>day15-作业</h2><hr>
 <h4 id="1-建立一个汽车类Auto，包括轮胎个数，汽车颜色，车身重量，速度等属性，并通过不同的构造方法创建实例。至少要求-汽车能够加速-减速-停车。-再定义一个小汽车类CarAuto-继承Auto-并添加空调、CD属性，并且重新实现方法覆盖加速、减速的方法"><a href="#1-建立一个汽车类Auto，包括轮胎个数，汽车颜色，车身重量，速度等属性，并通过不同的构造方法创建实例。至少要求-汽车能够加速-减速-停车。-再定义一个小汽车类CarAuto-继承Auto-并添加空调、CD属性，并且重新实现方法覆盖加速、减速的方法" class="headerlink" title="1. 建立一个汽车类Auto，包括轮胎个数，汽车颜色，车身重量，速度等属性，并通过不同的构造方法创建实例。至少要求 汽车能够加速 减速 停车。 再定义一个小汽车类CarAuto 继承Auto 并添加空调、CD属性，并且重新实现方法覆盖加速、减速的方法"></a>1. 建立一个汽车类Auto，包括轮胎个数，汽车颜色，车身重量，速度等属性，并通过不同的构造方法创建实例。至少要求 汽车能够加速 减速 停车。 再定义一个小汽车类CarAuto 继承Auto 并添加空调、CD属性，并且重新实现方法覆盖加速、减速的方法</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="class"><span class="keyword">class</span> <span class="title">Auto</span>:</span></span><br><span class="line">&gt;     <span class="string">"""汽车类"""</span></span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, color, weight, speed=<span class="number">0</span>, tyre=<span class="number">4</span>)</span>:</span></span><br><span class="line">&gt;         self.color = color</span><br><span class="line">&gt;         self.weight = weight</span><br><span class="line">&gt;         self.speed = speed</span><br><span class="line">&gt;         self.tyre = tyre</span><br><span class="line">&gt;         self.max_speed = <span class="number">300</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">speed_up</span><span class="params">(self, value)</span>:</span></span><br><span class="line">&gt;         <span class="string">"""加速"""</span></span><br><span class="line">&gt;         current_speed = self.speed + value</span><br><span class="line">&gt;         <span class="keyword">if</span> current_speed &gt;= self.max_speed:</span><br><span class="line">&gt;             <span class="keyword">return</span> self.max_speed</span><br><span class="line">&gt;         <span class="keyword">else</span>:</span><br><span class="line">&gt;             <span class="keyword">return</span> current_speed</span><br><span class="line">&gt;</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">reduce_speed</span><span class="params">(self, value)</span>:</span></span><br><span class="line">&gt;         <span class="string">"""减速"""</span></span><br><span class="line">&gt;         <span class="keyword">if</span> self.speed &gt; value:</span><br><span class="line">&gt;             <span class="keyword">return</span> self.speed - value</span><br><span class="line">&gt;         <span class="keyword">else</span>:</span><br><span class="line">&gt;             <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">stop</span><span class="params">(self)</span>:</span></span><br><span class="line">&gt;         <span class="string">"""停车"""</span></span><br><span class="line">&gt;         self.speed = <span class="number">0</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;</span><br><span class="line">&gt; <span class="class"><span class="keyword">class</span> <span class="title">CarAuto</span><span class="params">(Auto)</span>:</span></span><br><span class="line">&gt;     <span class="string">"""小汽车类"""</span></span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, air_con, cd, color, weight)</span>:</span></span><br><span class="line">&gt;         super().__init__(color, weight)</span><br><span class="line">&gt;         self.air_con = air_con</span><br><span class="line">&gt;         self.cd = cd</span><br><span class="line">&gt;</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">speed_up</span><span class="params">(self, value)</span>:</span></span><br><span class="line">&gt;         super(CarAuto, self).speed_up(value)</span><br><span class="line">&gt;         print(<span class="string">'加速:%d'</span> % (self.speed + value))</span><br><span class="line">&gt;</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">reduce_speed</span><span class="params">(self, value)</span>:</span></span><br><span class="line">&gt;         super(CarAuto, self).reduce_speed(value)</span><br><span class="line">&gt;         print(<span class="string">'减速：%d'</span> % (self.speed - value))</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Auto</span>:</span><br>&gt;     <span class="hljs-string">"""汽车类"""</span><br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, color, weight, speed=<span class="hljs-number">0</span>, tyre=<span class="hljs-number">4</span>)</span>:</span><br>&gt;         self.color = color<br>&gt;         self.weight = weight<br>&gt;         self.speed = speed<br>&gt;         self.tyre = tyre<br>&gt;         self.max_speed = <span class="hljs-number">300</span><br>&gt;<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">speed_up</span><span class="hljs-params">(self, value)</span>:</span><br>&gt;         <span class="hljs-string">"""加速"""</span><br>&gt;         current_speed = self.speed + value<br>&gt;         <span class="hljs-keyword">if</span> current_speed &gt;= self.max_speed:<br>&gt;             <span class="hljs-keyword">return</span> self.max_speed<br>&gt;         <span class="hljs-keyword">else</span>:<br>&gt;             <span class="hljs-keyword">return</span> current_speed<br>&gt;<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">reduce_speed</span><span class="hljs-params">(self, value)</span>:</span><br>&gt;         <span class="hljs-string">"""减速"""</span><br>&gt;         <span class="hljs-keyword">if</span> self.speed &gt; value:<br>&gt;             <span class="hljs-keyword">return</span> self.speed - value<br>&gt;         <span class="hljs-keyword">else</span>:<br>&gt;             <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>&gt;<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stop</span><span class="hljs-params">(self)</span>:</span><br>&gt;         <span class="hljs-string">"""停车"""</span><br>&gt;         self.speed = <span class="hljs-number">0</span><br>&gt;<br>&gt;<br>&gt; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CarAuto</span><span class="hljs-params">(Auto)</span>:</span><br>&gt;     <span class="hljs-string">"""小汽车类"""</span><br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, air_con, cd, color, weight)</span>:</span><br>&gt;         super().__init__(color, weight)<br>&gt;         self.air_con = air_con<br>&gt;         self.cd = cd<br>&gt;<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">speed_up</span><span class="hljs-params">(self, value)</span>:</span><br>&gt;         super(CarAuto, self).speed_up(value)<br>&gt;         print(<span class="hljs-string">'加速:%d'</span> % (self.speed + value))<br>&gt;<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">reduce_speed</span><span class="hljs-params">(self, value)</span>:</span><br>&gt;         super(CarAuto, self).reduce_speed(value)<br>&gt;         print(<span class="hljs-string">'减速：%d'</span> % (self.speed - value))<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="2-创建一个Person类，添加一个类字段用来统计Perosn类的对象的个数"><a href="#2-创建一个Person类，添加一个类字段用来统计Perosn类的对象的个数" class="headerlink" title="2.创建一个Person类，添加一个类字段用来统计Perosn类的对象的个数"></a>2.创建一个Person类，添加一个类字段用来统计Perosn类的对象的个数</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="class"><span class="keyword">class</span> <span class="title">Person</span>:</span></span><br><span class="line">&gt;     <span class="string">"""人类"""</span></span><br><span class="line">&gt;     count = <span class="number">0</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, age)</span>:</span></span><br><span class="line">&gt;         self.name = name</span><br><span class="line">&gt;         self.age = age</span><br><span class="line">&gt;         Person.count += <span class="number">1</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;</span><br><span class="line">&gt; p1 = Person(<span class="string">'11'</span>, <span class="number">12</span>)</span><br><span class="line">&gt; p2 = Person(<span class="string">'22'</span>, <span class="number">16</span>)</span><br><span class="line">&gt; p3 = Person(<span class="string">'33'</span>, <span class="number">19</span>)</span><br><span class="line">&gt; print(Person.count)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span><br>&gt;     <span class="hljs-string">"""人类"""</span><br>&gt;     count = <span class="hljs-number">0</span><br>&gt;<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, age)</span>:</span><br>&gt;         self.name = name<br>&gt;         self.age = age<br>&gt;         Person.count += <span class="hljs-number">1</span><br>&gt;<br>&gt;<br>&gt; p1 = Person(<span class="hljs-string">'11'</span>, <span class="hljs-number">12</span>)<br>&gt; p2 = Person(<span class="hljs-string">'22'</span>, <span class="hljs-number">16</span>)<br>&gt; p3 = Person(<span class="hljs-string">'33'</span>, <span class="hljs-number">19</span>)<br>&gt; print(Person.count)<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="3-创建一个动物类，拥有属性：性别、年龄、颜色、类型-要求打印这个类的对象的时候以’-XXX的对象-性别-年龄-颜色-类型-‘-的形式来打印"><a href="#3-创建一个动物类，拥有属性：性别、年龄、颜色、类型-要求打印这个类的对象的时候以’-XXX的对象-性别-年龄-颜色-类型-‘-的形式来打印" class="headerlink" title="3. 创建一个动物类，拥有属性：性别、年龄、颜色、类型;要求打印这个类的对象的时候以’/XXX的对象: 性别-? 年龄-? 颜色-? 类型-?/‘ 的形式来打印"></a>3. 创建一个动物类，拥有属性：性别、年龄、颜色、类型;要求打印这个类的对象的时候以’/XXX的对象: 性别-? 年龄-? 颜色-? 类型-?/‘ 的形式来打印</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="class"><span class="keyword">class</span> <span class="title">Animal</span>:</span></span><br><span class="line">&gt;     <span class="string">"""动物类"""</span></span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, gender, color, genre, age=<span class="number">0</span>)</span>:</span></span><br><span class="line">&gt;         self.age = age</span><br><span class="line">&gt;         self.gender = gender</span><br><span class="line">&gt;         self.color = color</span><br><span class="line">&gt;         self.genre = genre</span><br><span class="line">&gt;</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line">&gt;         <span class="keyword">return</span> <span class="string">'/%s的对象：性别-%s 年龄-%d 颜色-%s 类型-%s/'</span> % \</span><br><span class="line">&gt;                (self.__class__.__name__, self.gender, self.age, self.color, self.genre)</span><br><span class="line">&gt;</span><br><span class="line">&gt;</span><br><span class="line">&gt; a1 = Animal(<span class="string">'母'</span>, <span class="string">'白色'</span>, <span class="string">'加菲猫'</span>, <span class="number">12</span>)</span><br><span class="line">&gt; print(a1)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span>:</span><br>&gt;     <span class="hljs-string">"""动物类"""</span><br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, gender, color, genre, age=<span class="hljs-number">0</span>)</span>:</span><br>&gt;         self.age = age<br>&gt;         self.gender = gender<br>&gt;         self.color = color<br>&gt;         self.genre = genre<br>&gt;<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__repr__</span><span class="hljs-params">(self)</span>:</span><br>&gt;         <span class="hljs-keyword">return</span> <span class="hljs-string">'/%s的对象：性别-%s 年龄-%d 颜色-%s 类型-%s/'</span> % \<br>&gt;                (self.__class__.__name__, self.gender, self.age, self.color, self.genre)<br>&gt;<br>&gt;<br>&gt; a1 = Animal(<span class="hljs-string">'母'</span>, <span class="hljs-string">'白色'</span>, <span class="hljs-string">'加菲猫'</span>, <span class="hljs-number">12</span>)<br>&gt; print(a1)<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="4-写一个圆类，-拥有属性半径、面积和周长；要求获取面积和周长的时候的时候可以根据半径的值把对应的值取到。但是给面积和周长赋值的时候，程序直接崩溃，并且提示改属性不能赋值"><a href="#4-写一个圆类，-拥有属性半径、面积和周长；要求获取面积和周长的时候的时候可以根据半径的值把对应的值取到。但是给面积和周长赋值的时候，程序直接崩溃，并且提示改属性不能赋值" class="headerlink" title="4.写一个圆类， 拥有属性半径、面积和周长；要求获取面积和周长的时候的时候可以根据半径的值把对应的值取到。但是给面积和周长赋值的时候，程序直接崩溃，并且提示改属性不能赋值"></a>4.写一个圆类， 拥有属性半径、面积和周长；要求获取面积和周长的时候的时候可以根据半径的值把对应的值取到。但是给面积和周长赋值的时候，程序直接崩溃，并且提示改属性不能赋值</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="class"><span class="keyword">class</span> <span class="title">ReadError</span><span class="params">(Exception)</span>:</span></span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">&gt;         <span class="keyword">return</span> <span class="string">'该属性不能赋值'</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;</span><br><span class="line">&gt; <span class="class"><span class="keyword">class</span> <span class="title">Circle</span>:</span></span><br><span class="line">&gt;     <span class="string">"""圆类"""</span></span><br><span class="line">&gt;     pai = <span class="number">3.14</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, radius)</span>:</span></span><br><span class="line">&gt;         self.radius = radius</span><br><span class="line">&gt;         self._area = <span class="number">0</span></span><br><span class="line">&gt;         self._girth = <span class="number">0</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;     @property</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">area</span><span class="params">(self)</span>:</span></span><br><span class="line">&gt;         <span class="keyword">return</span> Circle.pai * self.radius ** <span class="number">2</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;     @area.setter</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">area</span><span class="params">(self, value)</span>:</span></span><br><span class="line">&gt;         <span class="keyword">raise</span> ReadError</span><br><span class="line">&gt;</span><br><span class="line">&gt;     @property</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">girth</span><span class="params">(self)</span>:</span></span><br><span class="line">&gt;         <span class="keyword">return</span> Circle.pai * self.radius * <span class="number">2</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;     @girth.setter</span><br><span class="line">&gt;     <span class="function"><span class="keyword">def</span> <span class="title">girth</span><span class="params">(self, value)</span>:</span></span><br><span class="line">&gt;         <span class="keyword">raise</span> ReadError</span><br><span class="line">&gt;</span><br><span class="line">&gt;</span><br><span class="line">&gt; c1 = Circle(<span class="number">10</span>)</span><br><span class="line">&gt; print(c1.area)</span><br><span class="line">&gt; print(c1.girth)</span><br><span class="line">&gt; <span class="comment"># c1.area = 100</span></span><br><span class="line">&gt; <span class="comment"># c1.girth = 200</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReadError</span><span class="hljs-params">(Exception)</span>:</span><br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span><span class="hljs-params">(self)</span>:</span><br>&gt;         <span class="hljs-keyword">return</span> <span class="hljs-string">'该属性不能赋值'</span><br>&gt;<br>&gt;<br>&gt; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span>:</span><br>&gt;     <span class="hljs-string">"""圆类"""</span><br>&gt;     pai = <span class="hljs-number">3.14</span><br>&gt;<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, radius)</span>:</span><br>&gt;         self.radius = radius<br>&gt;         self._area = <span class="hljs-number">0</span><br>&gt;         self._girth = <span class="hljs-number">0</span><br>&gt;<br>&gt;     @property<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span><span class="hljs-params">(self)</span>:</span><br>&gt;         <span class="hljs-keyword">return</span> Circle.pai * self.radius ** <span class="hljs-number">2</span><br>&gt;<br>&gt;     @area.setter<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span><span class="hljs-params">(self, value)</span>:</span><br>&gt;         <span class="hljs-keyword">raise</span> ReadError<br>&gt;<br>&gt;     @property<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">girth</span><span class="hljs-params">(self)</span>:</span><br>&gt;         <span class="hljs-keyword">return</span> Circle.pai * self.radius * <span class="hljs-number">2</span><br>&gt;<br>&gt;     @girth.setter<br>&gt;     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">girth</span><span class="hljs-params">(self, value)</span>:</span><br>&gt;         <span class="hljs-keyword">raise</span> ReadError<br>&gt;<br>&gt;<br>&gt; c1 = Circle(<span class="hljs-number">10</span>)<br>&gt; print(c1.area)<br>&gt; print(c1.girth)<br>&gt; <span class="hljs-comment"># c1.area = 100</span><br>&gt; <span class="hljs-comment"># c1.girth = 200</span><br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
-<h4 id="5-尝试-写一个类，其功能是：1-解析指定的歌词文件的内容-2-按时间显示歌词-提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词"><a href="#5-尝试-写一个类，其功能是：1-解析指定的歌词文件的内容-2-按时间显示歌词-提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词" class="headerlink" title="5. (尝试)写一个类，其功能是：1.解析指定的歌词文件的内容 2.按时间显示歌词 提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词"></a>5. (尝试)写一个类，其功能是：1.解析指定的歌词文件的内容 2.按时间显示歌词 提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">00</span>:<span class="number">00.20</span>]蓝莲花   </span><br><span class="line">[<span class="number">00</span>:<span class="number">00.80</span>]没有什么能够阻挡   </span><br><span class="line">[<span class="number">00</span>:<span class="number">06.53</span>]你对自由地向往   </span><br><span class="line">[<span class="number">00</span>:<span class="number">11.59</span>]天马行空的生涯  </span><br><span class="line">[<span class="number">00</span>:<span class="number">16.53</span>]你的心了无牵挂   </span><br><span class="line">[<span class="number">02</span>:<span class="number">11.27</span>][<span class="number">01</span>:<span class="number">50.22</span>][<span class="number">00</span>:<span class="number">21.95</span>]穿过幽暗地岁月   </span><br><span class="line">[<span class="number">02</span>:<span class="number">16.51</span>][<span class="number">01</span>:<span class="number">55.46</span>][<span class="number">00</span>:<span class="number">26.83</span>]也曾感到彷徨   </span><br><span class="line">[<span class="number">02</span>:<span class="number">21.81</span>][<span class="number">02</span>:<span class="number">00.60</span>][<span class="number">00</span>:<span class="number">32.30</span>]当你低头地瞬间  </span><br><span class="line">[<span class="number">02</span>:<span class="number">26.79</span>][<span class="number">02</span>:<span class="number">05.72</span>][<span class="number">00</span>:<span class="number">37.16</span>]才发觉脚下的路   </span><br><span class="line">[<span class="number">02</span>:<span class="number">32.17</span>][<span class="number">00</span>:<span class="number">42.69</span>]心中那自由地世界  </span><br><span class="line">[<span class="number">02</span>:<span class="number">37.20</span>][<span class="number">00</span>:<span class="number">47.58</span>]如此的清澈高远   </span><br><span class="line">[<span class="number">02</span>:<span class="number">42.32</span>][<span class="number">00</span>:<span class="number">52.72</span>]盛开着永不凋零   </span><br><span class="line">[<span class="number">02</span>:<span class="number">47.83</span>][<span class="number">00</span>:<span class="number">57.47</span>]蓝莲花</span><br></pre></td></tr></table></figure>
+<h4 id="5-尝试-写一个类，其功能是：1-解析指定的歌词文件的内容-2-按时间显示歌词-提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词"><a href="#5-尝试-写一个类，其功能是：1-解析指定的歌词文件的内容-2-按时间显示歌词-提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词" class="headerlink" title="5. (尝试)写一个类，其功能是：1.解析指定的歌词文件的内容 2.按时间显示歌词 提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词"></a>5. (尝试)写一个类，其功能是：1.解析指定的歌词文件的内容 2.按时间显示歌词 提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词</h4><figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python">[<span class="hljs-number">00</span>:<span class="hljs-number">00.20</span>]蓝莲花   <br>[<span class="hljs-number">00</span>:<span class="hljs-number">00.80</span>]没有什么能够阻挡   <br>[<span class="hljs-number">00</span>:<span class="hljs-number">06.53</span>]你对自由地向往   <br>[<span class="hljs-number">00</span>:<span class="hljs-number">11.59</span>]天马行空的生涯  <br>[<span class="hljs-number">00</span>:<span class="hljs-number">16.53</span>]你的心了无牵挂   <br>[<span class="hljs-number">02</span>:<span class="hljs-number">11.27</span>][<span class="hljs-number">01</span>:<span class="hljs-number">50.22</span>][<span class="hljs-number">00</span>:<span class="hljs-number">21.95</span>]穿过幽暗地岁月   <br>[<span class="hljs-number">02</span>:<span class="hljs-number">16.51</span>][<span class="hljs-number">01</span>:<span class="hljs-number">55.46</span>][<span class="hljs-number">00</span>:<span class="hljs-number">26.83</span>]也曾感到彷徨   <br>[<span class="hljs-number">02</span>:<span class="hljs-number">21.81</span>][<span class="hljs-number">02</span>:<span class="hljs-number">00.60</span>][<span class="hljs-number">00</span>:<span class="hljs-number">32.30</span>]当你低头地瞬间  <br>[<span class="hljs-number">02</span>:<span class="hljs-number">26.79</span>][<span class="hljs-number">02</span>:<span class="hljs-number">05.72</span>][<span class="hljs-number">00</span>:<span class="hljs-number">37.16</span>]才发觉脚下的路   <br>[<span class="hljs-number">02</span>:<span class="hljs-number">32.17</span>][<span class="hljs-number">00</span>:<span class="hljs-number">42.69</span>]心中那自由地世界  <br>[<span class="hljs-number">02</span>:<span class="hljs-number">37.20</span>][<span class="hljs-number">00</span>:<span class="hljs-number">47.58</span>]如此的清澈高远   <br>[<span class="hljs-number">02</span>:<span class="hljs-number">42.32</span>][<span class="hljs-number">00</span>:<span class="hljs-number">52.72</span>]盛开着永不凋零   <br>[<span class="hljs-number">02</span>:<span class="hljs-number">47.83</span>][<span class="hljs-number">00</span>:<span class="hljs-number">57.47</span>]蓝莲花<br></code></pre></td></tr></table></figure>
 
 <blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></blockquote>
-</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day15-作业/">http://yoursite.com/2019/07/19/day15-作业/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day16-内存管理和拷贝/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day15-类和对象2/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-  window.Promise = null;
-}
-</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt;<br>&gt;<br></code></pre></td></tr></table></figure></blockquote>
+
+    </main>
+    <footer class="post-footer">
+      
+    </footer>
+  </article>
+  
+  
+<div class="reward" id="reward">
+  <p>坚持原创技术分享，您的支持是我前进的动力！</p>
+  <button id="reward-button" class="button" disable="enable">Reward</button>
+  <div id="qr" class="qr" style="display: none;" aria-hidden="true">
+    
+    <div id="wechat">
+      <img id="wechat_qr" src="/images/WeChatPay.jpg" alt="WechatPay">
+      <span>WechatPay</span>
+    </div>
+    
+    
+    <div id="alipay">
+      <img id="alipay_qr" src="/images/AliPay.jpg" alt="AliPay">
+      <span>AliPay</span>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/07/19/day15-类和对象2/" rel="next" title><i class="fas fa-angle-left"></i><span class="nav-title"></span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2019/07/19/day16-内存管理和拷贝/" rel="prev" title><span class="nav-title"></span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/FutureGazerSmall.png" alt="叶小永">
+  
+  <h1 class="author-name">叶小永</h1>
+  <h2 class="author-description">技术宅，python新手</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">Archives</div>
+      <div><a href="/archives/">33</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">Categories</div>
+      <div><a href="/categories/">0</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">Tags</div>
+      <div><a href="/tags/">0</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>Table of Contents</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day15-作业"><span class="toc-text">day15-作业</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-建立一个汽车类Auto，包括轮胎个数，汽车颜色，车身重量，速度等属性，并通过不同的构造方法创建实例。至少要求-汽车能够加速-减速-停车。-再定义一个小汽车类CarAuto-继承Auto-并添加空调、CD属性，并且重新实现方法覆盖加速、减速的方法"><span class="toc-text">1. 建立一个汽车类Auto，包括轮胎个数，汽车颜色，车身重量，速度等属性，并通过不同的构造方法创建实例。至少要求 汽车能够加速 减速 停车。 再定义一个小汽车类CarAuto 继承Auto 并添加空调、CD属性，并且重新实现方法覆盖加速、减速的方法</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-创建一个Person类，添加一个类字段用来统计Perosn类的对象的个数"><span class="toc-text">2.创建一个Person类，添加一个类字段用来统计Perosn类的对象的个数</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-创建一个动物类，拥有属性：性别、年龄、颜色、类型-要求打印这个类的对象的时候以’-XXX的对象-性别-年龄-颜色-类型-‘-的形式来打印"><span class="toc-text">3. 创建一个动物类，拥有属性：性别、年龄、颜色、类型;要求打印这个类的对象的时候以’/XXX的对象: 性别-? 年龄-? 颜色-? 类型-?/‘ 的形式来打印</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#4-写一个圆类，-拥有属性半径、面积和周长；要求获取面积和周长的时候的时候可以根据半径的值把对应的值取到。但是给面积和周长赋值的时候，程序直接崩溃，并且提示改属性不能赋值"><span class="toc-text">4.写一个圆类， 拥有属性半径、面积和周长；要求获取面积和周长的时候的时候可以根据半径的值把对应的值取到。但是给面积和周长赋值的时候，程序直接崩溃，并且提示改属性不能赋值</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#5-尝试-写一个类，其功能是：1-解析指定的歌词文件的内容-2-按时间显示歌词-提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词"><span class="toc-text">5. (尝试)写一个类，其功能是：1.解析指定的歌词文件的内容 2.按时间显示歌词 提示：歌词文件的内容一般是按下面的格式进行存储的。歌词前面对应的是时间，在对应的时间点可以显示对应的歌词</span></a></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>Social Links<p></p></div>
+      <ul>
+        
+        <li><i class="fab fa-qq"></i><a href="787271413" target="_blank">QQ</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/yxy1280703839/yxy1280703839.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weixin"></i><a href="18382255437" target="_blank">Wechat</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>Blogroll</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="Back to Top"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">叶小永</span><span class="year"><i class="far fa-copyright"></i>2019 - 2019</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">BY-SA 4.0</a></span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="Site Visit Count" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="Site User Count" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="Page Click Count" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

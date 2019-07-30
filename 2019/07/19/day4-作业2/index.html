@@ -1,62 +1,443 @@
-<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="叶小永, 叶小永的技术专栏"><meta name="author" content="叶小永"><meta name="description" content="技术宅，python新手"><meta name="copyright" content="叶小永"><title>叶小永的技术专栏</title><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-stun.png?v=1.1.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-stun.png?v=1.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css?v=1.1.1"><script>let CONFIG = {
-  root: '/',
-  back2top_animation: true,
-  sidebar_offsetTop: '20px',
-  algolia: undefined,
-};
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    
+    <meta name="keywords" content="Python, HTML5, CSS, JavaScript, jQuery, Vue.js, Linux, MySQL, Redis, Django">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="叶小永的技术专栏" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
 
-window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url( )"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="site-info-title">叶小永的技术专栏</div><div class="site-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-overview">Overview</span></div><section class="sidebar-toc"><div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day4-作业2"><span class="toc-number">1.</span> <span class="toc-text">day4-作业2</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-控制台输入年龄，根据年龄输出不同的提示-例如-老年人，青壮年，成年人，未成年，儿童"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 控制台输入年龄，根据年龄输出不同的提示(例如:老年人，青壮年，成年人，未成年，儿童)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-计算5的阶乘-5-的结果"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 计算5的阶乘 5!的结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-求1-2-3-…-20-的和-1-程序分析：此程序只是把累加变成了累乘"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 求1+2!+3!+…+20!的和 1.程序分析：此程序只是把累加变成了累乘</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-计算-1-1-2-1-3-1-4-…1-20"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. 计算 1+1/2!+1/3!+1/4!+…1/20!=?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-循环输入大于0的数字进行累加，直到输入的数字为0，就结束循环，并最后输出累加的结果"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. 循环输入大于0的数字进行累加，直到输入的数字为0，就结束循环，并最后输出累加的结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-求s-a-aa-aaa-aaaa-aa…a的值，其中a是一个数字。例如2-22-222-2222-22222-此时共有5个数相加-，几个数相加有键盘控制。-1-程序分析：关键是计算出每一项的值"><span class="toc-number">1.0.6.</span> <span class="toc-text">6. 求s=a+aa+aaa+aaaa+aa…a的值，其中a是一个数字。例如2+22+222+2222+22222(此时共有5个数相加)，几个数相加有键盘控制。 1.程序分析：关键是计算出每一项的值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-输入三个整数x-y-z，请把这三个数由小到大输出"><span class="toc-number">1.0.7.</span> <span class="toc-text">7. 输入三个整数x,y,z，请把这三个数由小到大输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-控制台输出三角形"><span class="toc-number">1.0.8.</span> <span class="toc-text">8. 控制台输出三角形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-输出9-9口诀。1-程序分析：分行与列考虑，共9行9列，i控制行，j控制列。"><span class="toc-number">1.0.9.</span> <span class="toc-text">9. 输出9*9口诀。1.程序分析：分行与列考虑，共9行9列，i控制行，j控制列。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-这是经典的”百马百担”问题，有一百匹马，驮一百担货，大马驮3担，中马驮2担，两只小马驮1担，问有大，中，小马各几匹？"><span class="toc-number">1.0.10.</span> <span class="toc-text">10. 这是经典的”百马百担”问题，有一百匹马，驮一百担货，大马驮3担，中马驮2担，两只小马驮1担，问有大，中，小马各几匹？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-我国古代数学家张邱建在《算经》中出了一道“百钱买百鸡”的问题，题意是这样的：-5文钱可以买一只公鸡，3文钱可以买一只母鸡，1文钱可以买3只雏鸡。现在用100文钱买100只鸡，那么各有公鸡、母鸡、雏鸡多少只？请编写程序实现。"><span class="toc-number">1.0.11.</span> <span class="toc-text">11. 我国古代数学家张邱建在《算经》中出了一道“百钱买百鸡”的问题，题意是这样的： 5文钱可以买一只公鸡，3文钱可以买一只母鸡，1文钱可以买3只雏鸡。现在用100文钱买100只鸡，那么各有公鸡、母鸡、雏鸡多少只？请编写程序实现。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-小明单位发了100元的购物卡，小明到超市买三类洗化用品，洗发水（15元），香皂（2元），牙刷（5元）。要把100元整好花掉，可如有哪些购买结合？"><span class="toc-number">1.0.12.</span> <span class="toc-text">12. 小明单位发了100元的购物卡，小明到超市买三类洗化用品，洗发水（15元），香皂（2元），牙刷（5元）。要把100元整好花掉，可如有哪些购买结合？</span></a></li></ol></li></ol></div></section><section class="hide sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">hello world</p></div><div class="sidebar-state"><div class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">33</div><div class="sidebar-state-item-name">Articles</div></a></div><div class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></div><div class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Tags</div></a></div></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section><div class="sidebar-progress"><div class="sidebar-progress-read"><span>You have read</span><span class="sidebar-progress-number"></span></div><div class="sidebar-progress-line"></div></div></div></aside><div class="main-content code-highlight"><div class="post-header"><h1 class="post-title">Untitled</h1><div class="post-meta"><span class="post-meta-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-07-19</span></span><span class="post-meta-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-07-19</span></span></div></div><div class="post-body"><h2 id="day4-作业2"><a href="#day4-作业2" class="headerlink" title="day4-作业2"></a>day4-作业2</h2><hr>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title> | 叶小永的技术专栏</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">叶小永的技术专栏</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/logo.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="Toggle Navbar"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">Archives</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">Categories</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">Tags</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">About</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/19/day4-作业2/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="叶小永">
+       <meta itemprop="description" content="技术宅，python新手">
+       <meta itemprop="image" content="/images/FutureGazerSmall.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="叶小永的技术专栏">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline"></h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-19T17:31:47+08:00">2019-07-19 17:31:47</time></span>
+        </span>
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h2 id="day4-作业2"><a href="#day4-作业2" class="headerlink" title="day4-作业2"></a>day4-作业2</h2><hr>
 <h4 id="1-控制台输入年龄，根据年龄输出不同的提示-例如-老年人，青壮年，成年人，未成年，儿童"><a href="#1-控制台输入年龄，根据年龄输出不同的提示-例如-老年人，青壮年，成年人，未成年，儿童" class="headerlink" title="1. 控制台输入年龄，根据年龄输出不同的提示(例如:老年人，青壮年，成年人，未成年，儿童)"></a>1. 控制台输入年龄，根据年龄输出不同的提示(例如:老年人，青壮年，成年人，未成年，儿童)</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; age = int(input(<span class="string">'请输入年龄(0-120):'</span>))</span><br><span class="line">&gt; <span class="keyword">if</span> age &lt;= <span class="number">15</span>:</span><br><span class="line">&gt;     print(<span class="string">'儿童'</span>)</span><br><span class="line">&gt; <span class="keyword">elif</span> age &lt;= <span class="number">17</span>:</span><br><span class="line">&gt;     print(<span class="string">'未成年'</span>)</span><br><span class="line">&gt; <span class="keyword">elif</span> age &lt;= <span class="number">29</span>:</span><br><span class="line">&gt;     print(<span class="string">'成年人'</span>)</span><br><span class="line">&gt; <span class="keyword">elif</span> age &lt;= <span class="number">60</span>:</span><br><span class="line">&gt;     print(<span class="string">'青壮年'</span>)</span><br><span class="line">&gt; <span class="keyword">else</span>:</span><br><span class="line">&gt;     print(<span class="string">'老年人'</span>)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; age = int(input(<span class="hljs-string">'请输入年龄(0-120):'</span>))<br>&gt; <span class="hljs-keyword">if</span> age &lt;= <span class="hljs-number">15</span>:<br>&gt;     print(<span class="hljs-string">'儿童'</span>)<br>&gt; <span class="hljs-keyword">elif</span> age &lt;= <span class="hljs-number">17</span>:<br>&gt;     print(<span class="hljs-string">'未成年'</span>)<br>&gt; <span class="hljs-keyword">elif</span> age &lt;= <span class="hljs-number">29</span>:<br>&gt;     print(<span class="hljs-string">'成年人'</span>)<br>&gt; <span class="hljs-keyword">elif</span> age &lt;= <span class="hljs-number">60</span>:<br>&gt;     print(<span class="hljs-string">'青壮年'</span>)<br>&gt; <span class="hljs-keyword">else</span>:<br>&gt;     print(<span class="hljs-string">'老年人'</span>)<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="2-计算5的阶乘-5-的结果"><a href="#2-计算5的阶乘-5-的结果" class="headerlink" title="2. 计算5的阶乘 5!的结果"></a>2. 计算5的阶乘 5!的结果</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; pro = <span class="number">1</span></span><br><span class="line">&gt; <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">6</span>):</span><br><span class="line">&gt;     pro *= x</span><br><span class="line">&gt; print(<span class="string">'5！=%d'</span> % pro)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; pro = <span class="hljs-number">1</span><br>&gt; <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):<br>&gt;     pro *= x<br>&gt; print(<span class="hljs-string">'5！=%d'</span> % pro)<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="3-求1-2-3-…-20-的和-1-程序分析：此程序只是把累加变成了累乘"><a href="#3-求1-2-3-…-20-的和-1-程序分析：此程序只是把累加变成了累乘" class="headerlink" title="3. 求1+2!+3!+…+20!的和 1.程序分析：此程序只是把累加变成了累乘"></a>3. 求1+2!+3!+…+20!的和 1.程序分析：此程序只是把累加变成了累乘</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; sum1 = <span class="number">0</span></span><br><span class="line">&gt; <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>):</span><br><span class="line">&gt;     factorial = <span class="number">1</span></span><br><span class="line">&gt;     <span class="keyword">for</span> m <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>):</span><br><span class="line">&gt;         factorial *= m</span><br><span class="line">&gt;     sum1 += factorial</span><br><span class="line">&gt; print(<span class="string">'1+2！+3！+...+20！=%d'</span> % sum1)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; sum1 = <span class="hljs-number">0</span><br>&gt; <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">21</span>):<br>&gt;     factorial = <span class="hljs-number">1</span><br>&gt;     <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):<br>&gt;         factorial *= m<br>&gt;     sum1 += factorial<br>&gt; print(<span class="hljs-string">'1+2！+3！+...+20！=%d'</span> % sum1)<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="4-计算-1-1-2-1-3-1-4-…1-20"><a href="#4-计算-1-1-2-1-3-1-4-…1-20" class="headerlink" title="4. 计算 1+1/2!+1/3!+1/4!+…1/20!=?"></a>4. 计算 1+1/2!+1/3!+1/4!+…1/20!=?</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; sum1 = <span class="number">0</span></span><br><span class="line">&gt; <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>):</span><br><span class="line">&gt;     factorial = <span class="number">1</span></span><br><span class="line">&gt;     <span class="keyword">for</span> m <span class="keyword">in</span> range(<span class="number">1</span>, n):</span><br><span class="line">&gt;         factorial *= m</span><br><span class="line">&gt;     sum1 += (<span class="number">1</span>/factorial)</span><br><span class="line">&gt; print(<span class="string">'1+1/2！+1/3！+...+1/20！=%f'</span> % sum1)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; sum1 = <span class="hljs-number">0</span><br>&gt; <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">21</span>):<br>&gt;     factorial = <span class="hljs-number">1</span><br>&gt;     <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, n):<br>&gt;         factorial *= m<br>&gt;     sum1 += (<span class="hljs-number">1</span>/factorial)<br>&gt; print(<span class="hljs-string">'1+1/2！+1/3！+...+1/20！=%f'</span> % sum1)<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="5-循环输入大于0的数字进行累加，直到输入的数字为0，就结束循环，并最后输出累加的结果"><a href="#5-循环输入大于0的数字进行累加，直到输入的数字为0，就结束循环，并最后输出累加的结果" class="headerlink" title="5. 循环输入大于0的数字进行累加，直到输入的数字为0，就结束循环，并最后输出累加的结果"></a>5. 循环输入大于0的数字进行累加，直到输入的数字为0，就结束循环，并最后输出累加的结果</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; sum1 = <span class="number">0</span></span><br><span class="line">&gt; <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">&gt;     num = int(input(<span class="string">'请输入一个大于0的数(输入0结束):'</span>))</span><br><span class="line">&gt;     <span class="keyword">if</span> num == <span class="number">0</span>:</span><br><span class="line">&gt;         <span class="keyword">break</span></span><br><span class="line">&gt;     sum1 += num</span><br><span class="line">&gt; print(<span class="string">'你输入的所有数字和为：%d'</span> % sum1)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; sum1 = <span class="hljs-number">0</span><br>&gt; <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>&gt;     num = int(input(<span class="hljs-string">'请输入一个大于0的数(输入0结束):'</span>))<br>&gt;     <span class="hljs-keyword">if</span> num == <span class="hljs-number">0</span>:<br>&gt;         <span class="hljs-keyword">break</span><br>&gt;     sum1 += num<br>&gt; print(<span class="hljs-string">'你输入的所有数字和为：%d'</span> % sum1)<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="6-求s-a-aa-aaa-aaaa-aa…a的值，其中a是一个数字。例如2-22-222-2222-22222-此时共有5个数相加-，几个数相加有键盘控制。-1-程序分析：关键是计算出每一项的值"><a href="#6-求s-a-aa-aaa-aaaa-aa…a的值，其中a是一个数字。例如2-22-222-2222-22222-此时共有5个数相加-，几个数相加有键盘控制。-1-程序分析：关键是计算出每一项的值" class="headerlink" title="6. 求s=a+aa+aaa+aaaa+aa…a的值，其中a是一个数字。例如2+22+222+2222+22222(此时共有5个数相加)，几个数相加有键盘控制。 1.程序分析：关键是计算出每一项的值"></a>6. 求s=a+aa+aaa+aaaa+aa…a的值，其中a是一个数字。例如2+22+222+2222+22222(此时共有5个数相加)，几个数相加有键盘控制。 1.程序分析：关键是计算出每一项的值</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; n = int(input(<span class="string">'请输入一个大于0的整数:'</span>))</span><br><span class="line">&gt; sum1 = s = <span class="number">0</span></span><br><span class="line">&gt; a, b = <span class="number">2</span>, <span class="number">0</span></span><br><span class="line">&gt; <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">&gt;     <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>):</span><br><span class="line">&gt;         <span class="keyword">for</span> m <span class="keyword">in</span> range(j+<span class="number">1</span>):</span><br><span class="line">&gt;             b = a * <span class="number">10</span> ** j</span><br><span class="line">&gt;         sum1 += b</span><br><span class="line">&gt; s += sum1</span><br><span class="line">&gt; print(<span class="string">'和为%s'</span> % s)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; n = int(input(<span class="hljs-string">'请输入一个大于0的整数:'</span>))<br>&gt; sum1 = s = <span class="hljs-number">0</span><br>&gt; a, b = <span class="hljs-number">2</span>, <span class="hljs-number">0</span><br>&gt; <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n):<br>&gt;     <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(i+<span class="hljs-number">1</span>):<br>&gt;         <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> range(j+<span class="hljs-number">1</span>):<br>&gt;             b = a * <span class="hljs-number">10</span> ** j<br>&gt;         sum1 += b<br>&gt; s += sum1<br>&gt; print(<span class="hljs-string">'和为%s'</span> % s)<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="7-输入三个整数x-y-z，请把这三个数由小到大输出"><a href="#7-输入三个整数x-y-z，请把这三个数由小到大输出" class="headerlink" title="7. 输入三个整数x,y,z，请把这三个数由小到大输出"></a>7. 输入三个整数x,y,z，请把这三个数由小到大输出</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; x = int(input(<span class="string">'请输入第一个数:'</span>))</span><br><span class="line">&gt; y = int(input(<span class="string">'请输入第二个数:'</span>))</span><br><span class="line">&gt; z = int(input(<span class="string">'请输入第三个数:'</span>))</span><br><span class="line">&gt; max1 = x</span><br><span class="line">&gt; <span class="keyword">if</span> y &gt; max1:</span><br><span class="line">&gt;     max1 = y</span><br><span class="line">&gt; <span class="keyword">if</span> z &gt; max1:</span><br><span class="line">&gt;     max1 = z</span><br><span class="line">&gt; min1 = x</span><br><span class="line">&gt; <span class="keyword">if</span> y &lt; min1:</span><br><span class="line">&gt;     min1 = y</span><br><span class="line">&gt; <span class="keyword">if</span> z &lt; min1:</span><br><span class="line">&gt;     min1 = z</span><br><span class="line">&gt; mid = x + y + z - min1 - max1</span><br><span class="line">&gt; print(min1, mid, max1)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; x = int(input(<span class="hljs-string">'请输入第一个数:'</span>))<br>&gt; y = int(input(<span class="hljs-string">'请输入第二个数:'</span>))<br>&gt; z = int(input(<span class="hljs-string">'请输入第三个数:'</span>))<br>&gt; max1 = x<br>&gt; <span class="hljs-keyword">if</span> y &gt; max1:<br>&gt;     max1 = y<br>&gt; <span class="hljs-keyword">if</span> z &gt; max1:<br>&gt;     max1 = z<br>&gt; min1 = x<br>&gt; <span class="hljs-keyword">if</span> y &lt; min1:<br>&gt;     min1 = y<br>&gt; <span class="hljs-keyword">if</span> z &lt; min1:<br>&gt;     min1 = z<br>&gt; mid = x + y + z - min1 - max1<br>&gt; print(min1, mid, max1)<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
-<h4 id="8-控制台输出三角形"><a href="#8-控制台输出三角形" class="headerlink" title="8. 控制台输出三角形"></a>8. 控制台输出三角形</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">a.根据n的值的不同，输出相应的形状</span><br><span class="line">n = <span class="number">5</span>时             n = <span class="number">4</span></span><br><span class="line">*****               ****</span><br><span class="line">****                ***</span><br><span class="line">***                 **</span><br><span class="line">**                  *</span><br><span class="line">*</span><br><span class="line"></span><br><span class="line">b.根据n的值的不同，输出相应的形状(n为奇数)</span><br><span class="line">n = <span class="number">5</span>               n = <span class="number">7</span></span><br><span class="line">  *                    *</span><br><span class="line"> ***                  ***</span><br><span class="line">*****                *****</span><br><span class="line">                    *******</span><br></pre></td></tr></table></figure>
+<h4 id="8-控制台输出三角形"><a href="#8-控制台输出三角形" class="headerlink" title="8. 控制台输出三角形"></a>8. 控制台输出三角形</h4><figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python">a.根据n的值的不同，输出相应的形状<br>n = <span class="hljs-number">5</span>时             n = <span class="hljs-number">4</span><br>*****               ****<br>****                ***<br>***                 **<br>**                  *<br>*<br><br>b.根据n的值的不同，输出相应的形状(n为奇数)<br>n = <span class="hljs-number">5</span>               n = <span class="hljs-number">7</span><br>  *                    *<br> ***                  ***<br>*****                *****<br>                    *******<br></code></pre></td></tr></table></figure>
 
 <blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment"># 8.a</span></span><br><span class="line">&gt; n = int(input(<span class="string">'请输入n的值:'</span>))</span><br><span class="line">&gt; <span class="keyword">for</span> i <span class="keyword">in</span> range(n, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">&gt;     <span class="keyword">for</span> j <span class="keyword">in</span> range(i, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">&gt;         print(<span class="string">'*'</span>, end=<span class="string">''</span>)</span><br><span class="line">&gt;     print(<span class="string">''</span>)</span><br><span class="line">&gt; <span class="comment"># 8.b</span></span><br><span class="line">&gt; n = int(input(<span class="string">'请输入n的值(n为奇数):'</span>))</span><br><span class="line">&gt; <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">&gt;     <span class="keyword">if</span> (i + <span class="number">1</span>) % <span class="number">2</span>:</span><br><span class="line">&gt;         <span class="keyword">for</span> k <span class="keyword">in</span> range((n-i<span class="number">-1</span>)//<span class="number">2</span>):</span><br><span class="line">&gt;             print(end=<span class="string">' '</span>)</span><br><span class="line">&gt;         <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>):</span><br><span class="line">&gt;             print(<span class="string">'*'</span>, end=<span class="string">''</span>)</span><br><span class="line">&gt;         print(<span class="string">''</span>)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; <span class="hljs-comment"># 8.a</span><br>&gt; n = int(input(<span class="hljs-string">'请输入n的值:'</span>))<br>&gt; <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n, <span class="hljs-number">0</span>, <span class="hljs-number">-1</span>):<br>&gt;     <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(i, <span class="hljs-number">0</span>, <span class="hljs-number">-1</span>):<br>&gt;         print(<span class="hljs-string">'*'</span>, end=<span class="hljs-string">''</span>)<br>&gt;     print(<span class="hljs-string">''</span>)<br>&gt; <span class="hljs-comment"># 8.b</span><br>&gt; n = int(input(<span class="hljs-string">'请输入n的值(n为奇数):'</span>))<br>&gt; <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n):<br>&gt;     <span class="hljs-keyword">if</span> (i + <span class="hljs-number">1</span>) % <span class="hljs-number">2</span>:<br>&gt;         <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range((n-i<span class="hljs-number">-1</span>)//<span class="hljs-number">2</span>):<br>&gt;             print(end=<span class="hljs-string">' '</span>)<br>&gt;         <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(i+<span class="hljs-number">1</span>):<br>&gt;             print(<span class="hljs-string">'*'</span>, end=<span class="hljs-string">''</span>)<br>&gt;         print(<span class="hljs-string">''</span>)<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="9-输出9-9口诀。1-程序分析：分行与列考虑，共9行9列，i控制行，j控制列。"><a href="#9-输出9-9口诀。1-程序分析：分行与列考虑，共9行9列，i控制行，j控制列。" class="headerlink" title="9. 输出9*9口诀。1.程序分析：分行与列考虑，共9行9列，i控制行，j控制列。"></a>9. 输出9*9口诀。1.程序分析：分行与列考虑，共9行9列，i控制行，j控制列。</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">&gt;     <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, i+<span class="number">1</span>):</span><br><span class="line">&gt;         print(<span class="string">'%d×%d=%d'</span> % (j, i, i*j), end=<span class="string">' '</span>)</span><br><span class="line">&gt;     print(<span class="string">''</span>)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>):<br>&gt;     <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, i+<span class="hljs-number">1</span>):<br>&gt;         print(<span class="hljs-string">'%d×%d=%d'</span> % (j, i, i*j), end=<span class="hljs-string">' '</span>)<br>&gt;     print(<span class="hljs-string">''</span>)<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="10-这是经典的”百马百担”问题，有一百匹马，驮一百担货，大马驮3担，中马驮2担，两只小马驮1担，问有大，中，小马各几匹？"><a href="#10-这是经典的”百马百担”问题，有一百匹马，驮一百担货，大马驮3担，中马驮2担，两只小马驮1担，问有大，中，小马各几匹？" class="headerlink" title="10. 这是经典的”百马百担”问题，有一百匹马，驮一百担货，大马驮3担，中马驮2担，两只小马驮1担，问有大，中，小马各几匹？"></a>10. 这是经典的”百马百担”问题，有一百匹马，驮一百担货，大马驮3担，中马驮2担，两只小马驮1担，问有大，中，小马各几匹？</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">101</span>):</span><br><span class="line">&gt;     <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">101</span>):</span><br><span class="line">&gt;         <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">101</span>):</span><br><span class="line">&gt;             <span class="keyword">if</span> i * <span class="number">3</span> + j * <span class="number">2</span> + k * <span class="number">0.5</span> == <span class="number">100</span> <span class="keyword">and</span> i + j + k == <span class="number">100</span>:</span><br><span class="line">&gt;                 print(<span class="string">'大马:%d匹，中马:%d匹，小马:%d匹'</span> % (i, j, k))</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">101</span>):<br>&gt;     <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">101</span>):<br>&gt;         <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(<span class="hljs-number">101</span>):<br>&gt;             <span class="hljs-keyword">if</span> i * <span class="hljs-number">3</span> + j * <span class="hljs-number">2</span> + k * <span class="hljs-number">0.5</span> == <span class="hljs-number">100</span> <span class="hljs-keyword">and</span> i + j + k == <span class="hljs-number">100</span>:<br>&gt;                 print(<span class="hljs-string">'大马:%d匹，中马:%d匹，小马:%d匹'</span> % (i, j, k))<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="11-我国古代数学家张邱建在《算经》中出了一道“百钱买百鸡”的问题，题意是这样的：-5文钱可以买一只公鸡，3文钱可以买一只母鸡，1文钱可以买3只雏鸡。现在用100文钱买100只鸡，那么各有公鸡、母鸡、雏鸡多少只？请编写程序实现。"><a href="#11-我国古代数学家张邱建在《算经》中出了一道“百钱买百鸡”的问题，题意是这样的：-5文钱可以买一只公鸡，3文钱可以买一只母鸡，1文钱可以买3只雏鸡。现在用100文钱买100只鸡，那么各有公鸡、母鸡、雏鸡多少只？请编写程序实现。" class="headerlink" title="11. 我国古代数学家张邱建在《算经》中出了一道“百钱买百鸡”的问题，题意是这样的： 5文钱可以买一只公鸡，3文钱可以买一只母鸡，1文钱可以买3只雏鸡。现在用100文钱买100只鸡，那么各有公鸡、母鸡、雏鸡多少只？请编写程序实现。"></a>11. 我国古代数学家张邱建在《算经》中出了一道“百钱买百鸡”的问题，题意是这样的： 5文钱可以买一只公鸡，3文钱可以买一只母鸡，1文钱可以买3只雏鸡。现在用100文钱买100只鸡，那么各有公鸡、母鸡、雏鸡多少只？请编写程序实现。</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">101</span>):</span><br><span class="line">&gt;     <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">101</span>):</span><br><span class="line">&gt;         <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">101</span>):</span><br><span class="line">&gt;             <span class="keyword">if</span> i * <span class="number">5</span> + j * <span class="number">3</span> + k * <span class="number">1</span>/<span class="number">3</span> == <span class="number">100</span> <span class="keyword">and</span> i + j + k == <span class="number">100</span>:</span><br><span class="line">&gt;                 print(<span class="string">'公鸡:%d，母鸡:%d，雏鸡:%d'</span> % (i, j, k))</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">101</span>):<br>&gt;     <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">101</span>):<br>&gt;         <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(<span class="hljs-number">101</span>):<br>&gt;             <span class="hljs-keyword">if</span> i * <span class="hljs-number">5</span> + j * <span class="hljs-number">3</span> + k * <span class="hljs-number">1</span>/<span class="hljs-number">3</span> == <span class="hljs-number">100</span> <span class="hljs-keyword">and</span> i + j + k == <span class="hljs-number">100</span>:<br>&gt;                 print(<span class="hljs-string">'公鸡:%d，母鸡:%d，雏鸡:%d'</span> % (i, j, k))<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
 <h4 id="12-小明单位发了100元的购物卡，小明到超市买三类洗化用品，洗发水（15元），香皂（2元），牙刷（5元）。要把100元整好花掉，可如有哪些购买结合？"><a href="#12-小明单位发了100元的购物卡，小明到超市买三类洗化用品，洗发水（15元），香皂（2元），牙刷（5元）。要把100元整好花掉，可如有哪些购买结合？" class="headerlink" title="12. 小明单位发了100元的购物卡，小明到超市买三类洗化用品，洗发水（15元），香皂（2元），牙刷（5元）。要把100元整好花掉，可如有哪些购买结合？"></a>12. 小明单位发了100元的购物卡，小明到超市买三类洗化用品，洗发水（15元），香皂（2元），牙刷（5元）。要把100元整好花掉，可如有哪些购买结合？</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">51</span>):</span><br><span class="line">&gt;     <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">51</span>):</span><br><span class="line">&gt;         <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">51</span>):</span><br><span class="line">&gt;             <span class="keyword">if</span> i * <span class="number">15</span> + j * <span class="number">2</span> + k * <span class="number">5</span> == <span class="number">100</span>:</span><br><span class="line">&gt;                 print(<span class="string">'洗发水:%d，香皂:%d，牙刷:%d'</span> % (i, j, k))</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">51</span>):<br>&gt;     <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">51</span>):<br>&gt;         <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">51</span>):<br>&gt;             <span class="hljs-keyword">if</span> i * <span class="hljs-number">15</span> + j * <span class="hljs-number">2</span> + k * <span class="hljs-number">5</span> == <span class="hljs-number">100</span>:<br>&gt;                 print(<span class="hljs-string">'洗发水:%d，香皂:%d，牙刷:%d'</span> % (i, j, k))<br>&gt;<br></code></pre></td></tr></table></figure>
 </blockquote>
 <hr>
-</div><footer class="post-footer"><div class="post-footer-end"><span>------</span><span>End of text, thank you for reading</span><span>------</span></div><div class="post-footer-copyright"><div class="copyright-author"><span class="copyright-name">Author:</span><span class="copyright-value"><a href="http://yoursite.com">叶小永</a></span></div><div class="copyright-link"><span class="copyright-name">Link:</span><span class="copyright-value"><a href="http://yoursite.com/2019/07/19/day4-作业2/">http://yoursite.com/2019/07/19/day4-作业2/</a></span></div><div class="copyright-notice"><span class="copyright-name">Copyright:</span><span class="copyright-value">All articles in this blog are licensed under  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav id="paginator"><div class="post-paginator"><div class="article-prev pull-left"><a href="/2019/07/19/day5-作业/"><i class="fa fa-chevron-left"></i><span class="title">Untitled</span></a></div><div class="article-next pull-right"><a href="/2019/07/19/day4-作业1/"><span class="title">Untitled</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>叶小永.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.1.1.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-  window.Promise = null;
-}
-</script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@1.2.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=1.1.1"></script><script src="/js/copy.js?v=1.1.1"></script><script src="/js/scroll.js?v=1.1.1"></script><script src="/js/header.js?v=1.1.1"></script><script src="/js/sidebar.js?v=1.1.1"></script><script src="/js/post.js?v=1.1.1"></script></body></html>
+
+    </main>
+    <footer class="post-footer">
+      
+    </footer>
+  </article>
+  
+  
+<div class="reward" id="reward">
+  <p>坚持原创技术分享，您的支持是我前进的动力！</p>
+  <button id="reward-button" class="button" disable="enable">Reward</button>
+  <div id="qr" class="qr" style="display: none;" aria-hidden="true">
+    
+    <div id="wechat">
+      <img id="wechat_qr" src="/images/WeChatPay.jpg" alt="WechatPay">
+      <span>WechatPay</span>
+    </div>
+    
+    
+    <div id="alipay">
+      <img id="alipay_qr" src="/images/AliPay.jpg" alt="AliPay">
+      <span>AliPay</span>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/07/19/day4-作业1/" rel="next" title><i class="fas fa-angle-left"></i><span class="nav-title"></span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2019/07/19/day5-作业/" rel="prev" title><span class="nav-title"></span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/FutureGazerSmall.png" alt="叶小永">
+  
+  <h1 class="author-name">叶小永</h1>
+  <h2 class="author-description">技术宅，python新手</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">Archives</div>
+      <div><a href="/archives/">33</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">Categories</div>
+      <div><a href="/categories/">0</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">Tags</div>
+      <div><a href="/tags/">0</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>Table of Contents</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day4-作业2"><span class="toc-text">day4-作业2</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-控制台输入年龄，根据年龄输出不同的提示-例如-老年人，青壮年，成年人，未成年，儿童"><span class="toc-text">1. 控制台输入年龄，根据年龄输出不同的提示(例如:老年人，青壮年，成年人，未成年，儿童)</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-计算5的阶乘-5-的结果"><span class="toc-text">2. 计算5的阶乘 5!的结果</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-求1-2-3-…-20-的和-1-程序分析：此程序只是把累加变成了累乘"><span class="toc-text">3. 求1+2!+3!+…+20!的和 1.程序分析：此程序只是把累加变成了累乘</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#4-计算-1-1-2-1-3-1-4-…1-20"><span class="toc-text">4. 计算 1+1/2!+1/3!+1/4!+…1/20!=?</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#5-循环输入大于0的数字进行累加，直到输入的数字为0，就结束循环，并最后输出累加的结果"><span class="toc-text">5. 循环输入大于0的数字进行累加，直到输入的数字为0，就结束循环，并最后输出累加的结果</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#6-求s-a-aa-aaa-aaaa-aa…a的值，其中a是一个数字。例如2-22-222-2222-22222-此时共有5个数相加-，几个数相加有键盘控制。-1-程序分析：关键是计算出每一项的值"><span class="toc-text">6. 求s=a+aa+aaa+aaaa+aa…a的值，其中a是一个数字。例如2+22+222+2222+22222(此时共有5个数相加)，几个数相加有键盘控制。 1.程序分析：关键是计算出每一项的值</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#7-输入三个整数x-y-z，请把这三个数由小到大输出"><span class="toc-text">7. 输入三个整数x,y,z，请把这三个数由小到大输出</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#8-控制台输出三角形"><span class="toc-text">8. 控制台输出三角形</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#9-输出9-9口诀。1-程序分析：分行与列考虑，共9行9列，i控制行，j控制列。"><span class="toc-text">9. 输出9*9口诀。1.程序分析：分行与列考虑，共9行9列，i控制行，j控制列。</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#10-这是经典的”百马百担”问题，有一百匹马，驮一百担货，大马驮3担，中马驮2担，两只小马驮1担，问有大，中，小马各几匹？"><span class="toc-text">10. 这是经典的”百马百担”问题，有一百匹马，驮一百担货，大马驮3担，中马驮2担，两只小马驮1担，问有大，中，小马各几匹？</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#11-我国古代数学家张邱建在《算经》中出了一道“百钱买百鸡”的问题，题意是这样的：-5文钱可以买一只公鸡，3文钱可以买一只母鸡，1文钱可以买3只雏鸡。现在用100文钱买100只鸡，那么各有公鸡、母鸡、雏鸡多少只？请编写程序实现。"><span class="toc-text">11. 我国古代数学家张邱建在《算经》中出了一道“百钱买百鸡”的问题，题意是这样的： 5文钱可以买一只公鸡，3文钱可以买一只母鸡，1文钱可以买3只雏鸡。现在用100文钱买100只鸡，那么各有公鸡、母鸡、雏鸡多少只？请编写程序实现。</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#12-小明单位发了100元的购物卡，小明到超市买三类洗化用品，洗发水（15元），香皂（2元），牙刷（5元）。要把100元整好花掉，可如有哪些购买结合？"><span class="toc-text">12. 小明单位发了100元的购物卡，小明到超市买三类洗化用品，洗发水（15元），香皂（2元），牙刷（5元）。要把100元整好花掉，可如有哪些购买结合？</span></a></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>Social Links<p></p></div>
+      <ul>
+        
+        <li><i class="fab fa-qq"></i><a href="787271413" target="_blank">QQ</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/yxy1280703839/yxy1280703839.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weixin"></i><a href="18382255437" target="_blank">Wechat</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>Blogroll</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="Back to Top"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">叶小永</span><span class="year"><i class="far fa-copyright"></i>2019 - 2019</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">BY-SA 4.0</a></span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="Site Visit Count" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="Site User Count" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="Page Click Count" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
