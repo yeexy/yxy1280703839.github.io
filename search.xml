@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2019/07/30/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/"/>
-      <url>/2019/07/30/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/</url>
+      <title>时间模块</title>
+      <link href="/2019/07/29/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/"/>
+      <url>/2019/07/29/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/</url>
       
         <content type="html"><![CDATA[<p>这一部分主要讲了Python中有关时间的模块。</p><a id="more"></a><h2 id="day20-时间模块"><a href="#day20-时间模块" class="headerlink" title="day20-时间模块"></a>day20-时间模块</h2><hr><h3 id="一、time模块"><a href="#一、time模块" class="headerlink" title="一、time模块"></a>一、time模块</h3><hr><h4 id="1-包的使用"><a href="#1-包的使用" class="headerlink" title="1.包的使用"></a>1.包的使用</h4><ul><li>1)导入包中的模块<ul><li>from 包名 import 模块名</li><li>from 包名.模块名 import *(或内容)</li></ul></li><li>2)普通文件和包的区别<ul><li>包有一个默认的py文件，文件名是<code>&#39;__init__&#39;</code>，不管用什么方式去导入包中的内容，这个默认文件都会被导入</li></ul></li></ul><hr><h4 id="2-time模块-提供和时间操作相关的函数"><a href="#2-time模块-提供和时间操作相关的函数" class="headerlink" title="2.time模块 - 提供和时间操作相关的函数"></a>2.time模块 - 提供和时间操作相关的函数</h4><ul><li>1)<code>asctime()</code>：获取当前时间，并且以’星期 月份 日期 时:分:秒 年份’的格式返回</li><li>2)<code>localtime()</code>：获取当地的当前时间，返回结构体时间对象</li><li>3)<code>time()</code>：获取当前时间，返回时间戳<ul><li>时间戳：当前时间到格林威治时间的1970年1月1日00时00分00秒的时间差(单位是秒)</li><li>特点：a.方便对时间加密；b.可以节约存储空间</li><li><code>%H：24小时制的时；%I：12小时制的时；%w：星期几</code></li></ul></li><li>4)<code>strftime(时间格式,结构体时间对象)</code>：将时间对象以指定的格式转换成字符串时间</li><li>5)<code>strptime(时间字符串,时间格式)</code>：将字符串时间转换成结构体时间对象</li></ul><hr><h4 id="二、datetime模块"><a href="#二、datetime模块" class="headerlink" title="二、datetime模块"></a>二、datetime模块</h4><hr><h4 id="1-各种时间类"><a href="#1-各种时间类" class="headerlink" title="1.各种时间类"></a>1.各种时间类</h4><ul><li>time类：和时、分、秒、毫秒相关的时间</li><li>date类：和年、月、日相关的时间</li><li>datetime类：和time类、date类都相关的时间</li><li>timedelta：用来时间的加减操作类</li></ul><hr>]]></content>
       
       
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> time </tag>
+            
+            <tag> Datetime </tag>
+            
+        </tags>
       
     </entry>
     

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-30T12:55:19.260Z</updated>
+  <updated>2019-07-31T11:56:33.377Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/30/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/"/>
-    <id>http://yoursite.com/2019/07/30/day20-时间模块/</id>
-    <published>2019-07-30T12:55:19.262Z</published>
-    <updated>2019-07-30T12:55:19.260Z</updated>
+    <title>时间模块</title>
+    <link href="http://yoursite.com/2019/07/29/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/"/>
+    <id>http://yoursite.com/2019/07/29/day20-时间模块/</id>
+    <published>2019-07-29T06:45:20.000Z</published>
+    <updated>2019-07-31T11:56:33.377Z</updated>
     
     <summary type="html">
     
@@ -29,6 +29,12 @@
     
     </summary>
     
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="time" scheme="http://yoursite.com/tags/time/"/>
+    
+      <category term="Datetime" scheme="http://yoursite.com/tags/Datetime/"/>
     
   </entry>
   
