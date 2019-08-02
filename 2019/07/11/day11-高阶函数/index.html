@@ -133,7 +133,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title> | 叶小永的技术专栏</title>
+    <title>高阶函数 | 叶小永的技术专栏</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN" data-spy="scroll" data-target=".list-group">
     
@@ -179,7 +179,7 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/19/day12-文件操作和json数据/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/11/day11-高阶函数/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="叶小永">
        <meta itemprop="description" content="技术宅，python新手">
@@ -190,231 +190,164 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline"></h1>
+      <h1 class="post-title" itemprop="name headline">高阶函数</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-19T17:33:56+08:00">2019-07-19 17:33:56</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-11T14:45:20+08:00">2019-07-11 14:45:20</time></span>
         </span>
         
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+        </span>
         
         
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h2 id="day12-文件操作和json数据"><a href="#day12-文件操作和json数据" class="headerlink" title="day12-文件操作和json数据"></a>day12-文件操作和json数据</h2><hr>
-<h3 id="一、文件操作"><a href="#一、文件操作" class="headerlink" title="一、文件操作"></a>一、文件操作</h3><hr>
-<h4 id="1-数据持久化"><a href="#1-数据持久化" class="headerlink" title="1. 数据持久化"></a>1. 数据持久化</h4><ul>
-<li><p>计算机内存分为硬盘和运行内存</p>
-</li>
-<li><p>存储到本地文件中的数据，就是存储在硬盘中的数据，就能持久化</p>
-</li>
-<li><p>编程中常用的数据持久化文件：</p>
-<ul>
-<li><p>txt文件</p>
-</li>
-<li><p>二进制文件(图片、音频、视频、压缩文件)</p>
-</li>
-<li><p>json文件</p>
-</li>
-<li><p>数据库文件(.db、.sql)</p>
-</li>
-<li><p>plist文件</p>
-</li>
-</ul>
-</li>
-<li><p>数据持久化三步走：</p>
-<ul>
-<li>a.需要持久化的数据保存在本地文件中</li>
-<li>b.需要数据的时候去文件中读数据</li>
-<li>c.数据发生改变后将最新的数据写入文件中</li>
-</ul>
-</li>
+      <p>这一部分主要讲了Python中的高阶函数、迭代器和生成器、生产式以及模块的使用。</p>
+<a id="more"></a>
+
+<h2 id="day11-高阶函数"><a href="#day11-高阶函数" class="headerlink" title="day11-高阶函数"></a>day11-高阶函数</h2><hr>
+<h3 id="一、函数作为变量"><a href="#一、函数作为变量" class="headerlink" title="一、函数作为变量"></a>一、函数作为变量</h3><hr>
+<h4 id="1-函数调用表达式"><a href="#1-函数调用表达式" class="headerlink" title="1. 函数调用表达式"></a>1. 函数调用表达式</h4><ul>
+<li>就是调用函数的语句</li>
+<li>普通值能做的事情函数调用表达式都可以做</li>
 </ul>
 <hr>
-<h4 id="2-文件操作-对文件内容的操作"><a href="#2-文件操作-对文件内容的操作" class="headerlink" title="2. 文件操作 - 对文件内容的操作"></a>2. 文件操作 - 对文件内容的操作</h4><ul>
-<li><p>基本步骤：打开文件；读/写操作；关闭文件</p>
+<h4 id="2-函数作为变量"><a href="#2-函数作为变量" class="headerlink" title="2. 函数作为变量"></a>2. 函数作为变量</h4><ul>
+<li><p>!!python中声明函数本质就是声明一个类型是function的变量，函数名就是变量名</p>
 </li>
-<li><p>1)打开文件：</p>
-<ul>
-<li><p><code>open(file, mode=&#39;r&#39;, encoding=None)</code>：打开指定文件，返回文件对象</p>
+<li><p>变量能做的事情函数都可以做</p>
 </li>
-<li><p>file：字符串，需要打开的文件的路径，可以是绝对路径，也可以是相对路径</p>
+<li><p>1)一个变量可以给另外一个变量赋值</p>
+</li>
+<li><p>2)给变量重新赋值</p>
+</li>
+<li><p>3)变量作为容器的元素</p>
+</li>
+<li><p>4)变量可以作为函数的参数</p>
 <ul>
-<li><p>绝对路径：文件在电脑上的完整路径</p>
+<li><p>一个函数可以作为另外一个函数的参数</p>
+</li>
+<li><p>如果一个函数的参数也是函数，这种函数叫做实参高阶函数</p>
 </li>
 <li><blockquote>
-<p>相对路径：./(当前目录，当前py文件所在的目录)，可以省略</p>
-<p>​                   ../(当前目录的上层目录)</p>
+<p>sort和sorted</p>
+<p>这两个函数是实参高阶函数，里面有个参数key要求传一个函数</p>
+<p>key参数对应的函数是用来决定排序规则：</p>
+<p>—函数需要一个参数和一个返回值</p>
+<p>—它的参数代表排序的序列的元素，返回值是比较对象</p>
+<p>实参高阶函数：列表.sort()、sorted()、max()、min()</p>
 </blockquote>
 </li>
 </ul>
 </li>
-<li><p>mode：字符串，决定文件的打开方式；打开方式决定了打开文件后支持的操作</p>
+<li><p>5)变量可以作为函数的返回值</p>
 <ul>
-<li>‘r’：默认值，只读，读出来的数据就是字符串类型</li>
-<li>‘w’：只写；只能将字符串写入文件(先删除原文件内容，再写)</li>
-<li>‘rb/br’：二进制只读；以二进制的格式读</li>
-<li>‘wb/bw’：二进制只写；只能将二进制数据写入文件</li>
-<li>‘a’：只写；追加字符串内容(保留原文件内容)</li>
-<li>‘ab/ba’：二进制只写；追加二进制内容(保留原文件内容)</li>
-</ul>
-</li>
-<li><p>encoding：设置文件的编码方式，固定写’utf-8’；只针对文本文件有效</p>
-</li>
-<li><p>注意：</p>
-<ul>
-<li>只有文本操作才能设置编码方式(二进制不行)</li>
-<li>文本文件在读和写(或编码和解码)的方式必须一致</li>
-<li>windows默认的是’gbk’</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>2)操作文件：</p>
-<ul>
-<li>a.读操作：获取文件中的内容<ul>
-<li>文件对象.read()：获取文件中所有的内容，会返回文件中的内容</li>
-<li>文件对象.readline()：读一行内容(从读写位置到一行结尾)</li>
-</ul>
-</li>
-<li>b.写操作<ul>
-<li>文件对象.write(写的内容)：将指定的内容写入文件中</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>3)关闭文件</p>
-<ul>
-<li>文件对象.close()</li>
-</ul>
-</li>
-<li><p>4)移动读写的位置(移动光标)</p>
-<ul>
-<li>文件对象.seek(0)：将读写位置移动到文件开头</li>
+<li>一个函数的返回值如果也是一个函数，这个函数就是返回值高阶函数</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h3 id="二、二进制文件的操作"><a href="#二、二进制文件的操作" class="headerlink" title="二、二进制文件的操作"></a>二、二进制文件的操作</h3><hr>
-<h4 id="1-二进制文件有哪些"><a href="#1-二进制文件有哪些" class="headerlink" title="1. 二进制文件有哪些"></a>1. 二进制文件有哪些</h4><ul>
-<li>常见的二进制文件：图片文件、音频文件、视频文件、压缩文件等</li>
-<li>不是只有二进制文件才支持’b’操作(rb、wb、ab)，但是二进制文件只能采用’b’操作</li>
-<li>注意：所有带’b’的操作都不能设置encoding</li>
+<h3 id="二、迭代器"><a href="#二、迭代器" class="headerlink" title="二、迭代器"></a>二、迭代器</h3><hr>
+<h4 id="1-什么是迭代器-iter"><a href="#1-什么是迭代器-iter" class="headerlink" title="1. 什么是迭代器(iter)"></a>1. 什么是迭代器(iter)</h4><ul>
+<li>迭代器是容器型数据类型(序列)，可变(但不支持增删改)、有序(但不支持下标操作)</li>
+<li>保存在迭代器中的元素，只能取，且取出来后迭代器中就不再保存，也不能再往迭代器中添加元素</li>
+<li>迭代器没有对应格式的数据，迭代器的产生只能通过：将其他序列转换成迭代器，或生成器</li>
 </ul>
 <hr>
-<h4 id="2-文件不存在"><a href="#2-文件不存在" class="headerlink" title="2. 文件不存在"></a>2. 文件不存在</h4><ul>
-<li>如果以读的方式打开一个不存在的文件，程序会报错</li>
-<li>如果以写的方式打开一个不存在的文件，不会报错，而是自动创建这个文件</li>
-</ul>
-<hr>
-<h4 id="3-打开文件的简写"><a href="#3-打开文件的简写" class="headerlink" title="3. 打开文件的简写"></a>3. 打开文件的简写</h4><ul>
-<li>1)语法：<ul>
-<li>with open(‘文件路径’, ‘读写方式’, encoding=’编码方式’) as 文件对象：文件域(操作文件)</li>
+<h4 id="2-获取迭代器中的元素"><a href="#2-获取迭代器中的元素" class="headerlink" title="2. 获取迭代器中的元素"></a>2. 获取迭代器中的元素</h4><ul>
+<li>不管什么样的方式去获取迭代器中的元素，都是获取一个就会少一个</li>
+<li>1)获取单个元素：next(迭代器)<ul>
+<li>获取迭代器中最顶部(第一个)的元素</li>
 </ul>
 </li>
-<li>2)说明：以这种方式打开的文件，在文件域结束后，文件会自动关闭</li>
+<li>2)遍历：一个一个取，获取迭代器中所有的元素</li>
 </ul>
 <hr>
-<h3 id="三、json数据"><a href="#三、json数据" class="headerlink" title="三、json数据"></a>三、json数据</h3><hr>
-<h4 id="1-什么是json数据：满足json格式的数据"><a href="#1-什么是json数据：满足json格式的数据" class="headerlink" title="1. 什么是json数据：满足json格式的数据"></a>1. 什么是json数据：满足json格式的数据</h4><ul>
-<li>1)json格式：<ul>
-<li>a.一个json有且只有一个数据</li>
-<li>b.这个数据必须是json支持的数据类型对应的数据</li>
-</ul>
-</li>
-<li>2)json支持的数据类型<ul>
-<li>a.数据类型：包含所有的数字</li>
-<li>b.字符串：使用双引号引起来的字符集，支持转义字符和编码字符</li>
-<li>c.布尔：只有true和false两个值</li>
-<li>d.数组：相当于python中的列表</li>
-<li>e.字典：相当于python中的字典，但key只能是字符串</li>
-<li>f.null：相当于python中的None，表示空</li>
-</ul>
-</li>
+<h3 id="三、生成器"><a href="#三、生成器" class="headerlink" title="三、生成器"></a>三、生成器</h3><hr>
+<h4 id="1-什么是生成器"><a href="#1-什么是生成器" class="headerlink" title="1. 什么是生成器"></a>1. 什么是生成器</h4><ul>
+<li>生成器本质就是迭代器：获取元素和迭代器一样</li>
+<li>调用函数体中有yield关键字的函数，就可以得到一个生成器</li>
 </ul>
 <hr>
-<h4 id="2-json转python"><a href="#2-json转python" class="headerlink" title="2. json转python"></a>2. json转python</h4><ul>
-<li>1)转换关系</li>
+<h4 id="2-yield"><a href="#2-yield" class="headerlink" title="2. yield"></a>2. yield</h4><ul>
+<li>yield只能出现在函数体中</li>
+<li>调用有yield关键字的函数，不会再执行函数体，也不会获取返回值，而是得到一个生成器</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>json</th>
-<th>python</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>数字类型</td>
-<td>int或float</td>
-</tr>
-<tr>
-<td>字符串</td>
-<td>str，双引号可能会变成单引号</td>
-</tr>
-<tr>
-<td>布尔</td>
-<td>bool，true-&gt;True,false-&gt;False</td>
-</tr>
-<tr>
-<td>数组</td>
-<td>list，内容也会跟着变</td>
-</tr>
-<tr>
-<td>字典</td>
-<td>dict，内容也会跟着变</td>
-</tr>
-<tr>
-<td>null</td>
-<td>None</td>
-</tr>
-</tbody></table>
+<hr>
+<h4 id="3-生成器怎么产生数据"><a href="#3-生成器怎么产生数据" class="headerlink" title="3. 生成器怎么产生数据"></a>3. 生成器怎么产生数据</h4><ul>
+<li>看一个生成器能够产生几个数据，就看执行完生成器对应的函数会遇到几次yield，yield后面的值就是生成器能产生的数据</li>
+</ul>
+<hr>
+<h4 id="4-生成器生成数据的原理"><a href="#4-生成器生成数据的原理" class="headerlink" title="4. 生成器生成数据的原理"></a>4. 生成器生成数据的原理</h4><ul>
+<li>生成器不会同时将所有的元素保存起来，而是需要数据的时候临时产生数据</li>
+<li>获取生成器元素的时候，就去执行生成器对应的函数的函数体，从前往后执行，直到遇到yield为止，并且将yield后面的值作为结果，同时保存结束位置，下次获取下一个元素的时候，接着上次结束的位置往后执行，直到遇到下一个yield，以此类推…</li>
+<li>如果执行到函数结束都没有遇到yield，next函数会报StopIteration错误</li>
+</ul>
+<hr>
+<h3 id="四、生成式"><a href="#四、生成式" class="headerlink" title="四、生成式"></a>四、生成式</h3><hr>
+<h4 id="1-什么是生成式"><a href="#1-什么是生成式" class="headerlink" title="1. 什么是生成式"></a>1. 什么是生成式</h4><ul>
+<li><p>生成式本质就是生成器</p>
+</li>
+<li><p>语法1：</p>
 <ul>
-<li>2)方法<ul>
-<li><code>json.loads(字符串)</code>：将json格式的字符串转换成对应的python的数据</li>
-<li>注意：字符串的内容必须是json格式的数据</li>
+<li><p>(表达式 for 变量 in 序列)：创建一个生成器</p>
+</li>
+<li><blockquote>
+<p>展开成生成器：</p>
+<p>def func():</p>
+<p>​       for 变量 in 序列:</p>
+<p>​              yield 表达式</p>
+</blockquote>
+</li>
+<li><p>[表达式 for 变量 in 序列] - 将生成式对应的生成器转换成列表</p>
+</li>
+</ul>
+</li>
+<li><p>语法2：</p>
+<ul>
+<li><p>(表达式 for 变量 in 序列 if 条件语句)：创建一个生成器</p>
+</li>
+<li><blockquote>
+<p>展开成生成器：</p>
+<p>def func():</p>
+<p>​       for 变量 in 序列:</p>
+<p>​              if 条件语句：</p>
+<p>​                    yield 表达式</p>
+</blockquote>
+</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="3-python转json"><a href="#3-python转json" class="headerlink" title="3. python转json"></a>3. python转json</h4><ul>
-<li>1)转换关系</li>
+<h3 id="五、模块的使用"><a href="#五、模块的使用" class="headerlink" title="五、模块的使用"></a>五、模块的使用</h3><hr>
+<h4 id="1-什么是模块"><a href="#1-什么是模块" class="headerlink" title="1. 什么是模块"></a>1. 什么是模块</h4><ul>
+<li>在实际开发中，一个项目会分为多个模块</li>
+<li>一个python文件就是一个模块</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>python</th>
-<th>json</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>int/float</td>
-<td>数字</td>
-</tr>
-<tr>
-<td>str</td>
-<td>字符串，单引号变双引号</td>
-</tr>
-<tr>
-<td>bool</td>
-<td>布尔，True-&gt;true,False-&gt;false</td>
-</tr>
-<tr>
-<td>list/tuple</td>
-<td>数组</td>
-</tr>
-<tr>
-<td>dict</td>
-<td>字典</td>
-</tr>
-<tr>
-<td>None</td>
-<td>null</td>
-</tr>
-</tbody></table>
-<ul>
-<li>2)方法<ul>
-<li><code>json.dumps(python数据)</code>：将数据转换成json格式的字符串</li>
+<hr>
+<h4 id="2-多个模块怎么协作：导入模块"><a href="#2-多个模块怎么协作：导入模块" class="headerlink" title="2. 多个模块怎么协作：导入模块"></a>2. 多个模块怎么协作：导入模块</h4><ul>
+<li>1)import 模块名：在当前模块中导入指定模块，导入后可以使用指定模块中所有的全局变量，必须以’模块名.变量’的方式去使用</li>
+<li>2)from 模块名 import 全局变量1，全局变量2…：导入指定模块中指定的全局变量，被导入的全局变量在当前模块中可以直接使用</li>
+<li>3)重命名：<ul>
+<li>import 模块名 as 新模块名：模块重命名，通过新模块名来使用模块</li>
+<li>from 模块名 import 全局变量1 as 新变量1，全局变量2 as 新变量2…：变量重命名</li>
+</ul>
+</li>
+<li>4)通配符：from 模块名 import *：导入模块中所有的全局变量，使用的时候直接用</li>
+</ul>
+<hr>
+<h4 id="3-导入模块的原理"><a href="#3-导入模块的原理" class="headerlink" title="3. 导入模块的原理"></a>3. 导入模块的原理</h4><ul>
+<li>当执行导入模块的代码时，实质会执行被导入的模块对应的py文件</li>
+<li>将不希望被别的模块执行的代码放到下面的if语句中<ul>
+<li><code>if __name__ == &#39;__main__&#39;</code></li>
 </ul>
 </li>
 </ul>
@@ -422,6 +355,16 @@
 
     </main>
     <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/高阶函数/" rel="tag"><i class="fas fa-tags"></i>高阶函数</a>
+        
+        <a class="post-tag button" href="/tags/迭代器/" rel="tag"><i class="fas fa-tags"></i>迭代器</a>
+        
+        <a class="post-tag button" href="/tags/生成器/" rel="tag"><i class="fas fa-tags"></i>生成器</a>
+        
+      </div>
       
     </footer>
   </article>
@@ -453,12 +396,12 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2019/07/19/day11-高阶函数/" rel="next" title><i class="fas fa-angle-left"></i><span class="nav-title"></span></a>
+      <a href="/2019/07/09/day10-函数-02/" rel="next" title="函数02"><i class="fas fa-angle-left"></i><span class="nav-title">函数02</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
       
-      <a href="/2019/07/21/day16-内存管理和拷贝/" rel="prev" title="内存管理和拷贝"><span class="nav-title">内存管理和拷贝</span><i class="fas fa-angle-right"></i></a>
+      <a href="/2019/07/13/day12-文件操作和json数据/" rel="prev" title="文件操作和json数据"><span class="nav-title">文件操作和json数据</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -507,7 +450,7 @@
     
     <div class="tags-count count-block">
       <div class="site-count-title">Tags</div>
-      <div><a href="/tags/">18</a></div>
+      <div><a href="/tags/">32</a></div>
     </div>
     
     
@@ -531,7 +474,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>Table of Contents</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day12-文件操作和json数据"><span class="toc-text">day12-文件操作和json数据</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、文件操作"><span class="toc-text">一、文件操作</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-数据持久化"><span class="toc-text">1. 数据持久化</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-文件操作-对文件内容的操作"><span class="toc-text">2. 文件操作 - 对文件内容的操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、二进制文件的操作"><span class="toc-text">二、二进制文件的操作</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-二进制文件有哪些"><span class="toc-text">1. 二进制文件有哪些</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-文件不存在"><span class="toc-text">2. 文件不存在</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-打开文件的简写"><span class="toc-text">3. 打开文件的简写</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#三、json数据"><span class="toc-text">三、json数据</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是json数据：满足json格式的数据"><span class="toc-text">1. 什么是json数据：满足json格式的数据</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-json转python"><span class="toc-text">2. json转python</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-python转json"><span class="toc-text">3. python转json</span></a></li></ol></li></ol></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day11-高阶函数"><span class="toc-text">day11-高阶函数</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、函数作为变量"><span class="toc-text">一、函数作为变量</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-函数调用表达式"><span class="toc-text">1. 函数调用表达式</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-函数作为变量"><span class="toc-text">2. 函数作为变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、迭代器"><span class="toc-text">二、迭代器</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是迭代器-iter"><span class="toc-text">1. 什么是迭代器(iter)</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-获取迭代器中的元素"><span class="toc-text">2. 获取迭代器中的元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#三、生成器"><span class="toc-text">三、生成器</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是生成器"><span class="toc-text">1. 什么是生成器</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-yield"><span class="toc-text">2. yield</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-生成器怎么产生数据"><span class="toc-text">3. 生成器怎么产生数据</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#4-生成器生成数据的原理"><span class="toc-text">4. 生成器生成数据的原理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#四、生成式"><span class="toc-text">四、生成式</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是生成式"><span class="toc-text">1. 什么是生成式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#五、模块的使用"><span class="toc-text">五、模块的使用</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是模块"><span class="toc-text">1. 什么是模块</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-多个模块怎么协作：导入模块"><span class="toc-text">2. 多个模块怎么协作：导入模块</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-导入模块的原理"><span class="toc-text">3. 导入模块的原理</span></a></li></ol></li></ol></li></ol></div>
     </div>
     
     

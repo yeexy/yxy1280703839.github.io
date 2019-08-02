@@ -133,7 +133,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title> | 叶小永的技术专栏</title>
+    <title>函数01 | 叶小永的技术专栏</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN" data-spy="scroll" data-target=".list-group">
     
@@ -179,7 +179,7 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/19/day11-高阶函数/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/07/day9-函数-01/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="叶小永">
        <meta itemprop="description" content="技术宅，python新手">
@@ -190,153 +190,158 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline"></h1>
+      <h1 class="post-title" itemprop="name headline">函数01</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-19T17:33:54+08:00">2019-07-19 17:33:54</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-07T14:45:20+08:00">2019-07-07 14:45:20</time></span>
         </span>
         
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+        </span>
         
         
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h2 id="day11-高阶函数"><a href="#day11-高阶函数" class="headerlink" title="day11-高阶函数"></a>day11-高阶函数</h2><hr>
-<h3 id="一、函数作为变量"><a href="#一、函数作为变量" class="headerlink" title="一、函数作为变量"></a>一、函数作为变量</h3><hr>
-<h4 id="1-函数调用表达式"><a href="#1-函数调用表达式" class="headerlink" title="1. 函数调用表达式"></a>1. 函数调用表达式</h4><ul>
-<li>就是调用函数的语句</li>
-<li>普通值能做的事情函数调用表达式都可以做</li>
+      <p>这一部分主要讲了Python中什么是函数、函数如何声明、函数如何调用以及函数的参数。</p>
+<a id="more"></a>
+
+<h2 id="day9-函数-01"><a href="#day9-函数-01" class="headerlink" title="day9-函数-01"></a>day9-函数-01</h2><hr>
+<h3 id="一、函数基础"><a href="#一、函数基础" class="headerlink" title="一、函数基础"></a>一、函数基础</h3><hr>
+<h4 id="1-什么是函数"><a href="#1-什么是函数" class="headerlink" title="1. 什么是函数"></a>1. 什么是函数</h4><ul>
+<li>函数就是对实现某一特定功能的代码的封装</li>
 </ul>
 <hr>
-<h4 id="2-函数作为变量"><a href="#2-函数作为变量" class="headerlink" title="2. 函数作为变量"></a>2. 函数作为变量</h4><ul>
-<li><p>!!python中声明函数本质就是声明一个类型是function的变量，函数名就是变量名</p>
-</li>
-<li><p>变量能做的事情函数都可以做</p>
-</li>
-<li><p>1)一个变量可以给另外一个变量赋值</p>
-</li>
-<li><p>2)给变量重新赋值</p>
-</li>
-<li><p>3)变量作为容器的元素</p>
-</li>
-<li><p>4)变量可以作为函数的参数</p>
+<h4 id="2-函数的分类"><a href="#2-函数的分类" class="headerlink" title="2. 函数的分类"></a>2. 函数的分类</h4><ul>
+<li>系统函数：系统自己定义的函数(不需要程序去实现的函数)，程序员直接可以使用</li>
+<li>自定义函数：程序员自己实现的函数</li>
+</ul>
+<hr>
+<h4 id="3-声明函数"><a href="#3-声明函数" class="headerlink" title="3. 声明函数"></a>3. 声明函数</h4><ul>
+<li><p>1)语法</p>
 <ul>
-<li><p>一个函数可以作为另外一个函数的参数</p>
-</li>
-<li><p>如果一个函数的参数也是函数，这种函数叫做实参高阶函数</p>
-</li>
 <li><blockquote>
-<p>sort和sorted</p>
-<p>这两个函数是实参高阶函数，里面有个参数key要求传一个函数</p>
-<p>key参数对应的函数是用来决定排序规则：</p>
-<p>—函数需要一个参数和一个返回值</p>
-<p>—它的参数代表排序的序列的元素，返回值是比较对象</p>
-<p>实参高阶函数：列表.sort()、sorted()、max()、min()</p>
+<p>def 函数名(参数列表):</p>
+<p>​    函数体</p>
 </blockquote>
 </li>
 </ul>
 </li>
-<li><p>5)变量可以作为函数的返回值</p>
+<li><p>2)说明</p>
 <ul>
-<li>一个函数的返回值如果也是一个函数，这个函数就是返回值高阶函数</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="二、迭代器"><a href="#二、迭代器" class="headerlink" title="二、迭代器"></a>二、迭代器</h3><hr>
-<h4 id="1-什么是迭代器-iter"><a href="#1-什么是迭代器-iter" class="headerlink" title="1. 什么是迭代器(iter)"></a>1. 什么是迭代器(iter)</h4><ul>
-<li>迭代器是容器型数据类型(序列)，可变(但不支持增删改)、有序(但不支持下标操作)</li>
-<li>保存在迭代器中的元素，只能取，且取出来后迭代器中就不再保存，也不能再往迭代器中添加元素</li>
-<li>迭代器没有对应格式的数据，迭代器的产生只能通过：将其他序列转换成迭代器，或生成器</li>
-</ul>
-<hr>
-<h4 id="2-获取迭代器中的元素"><a href="#2-获取迭代器中的元素" class="headerlink" title="2. 获取迭代器中的元素"></a>2. 获取迭代器中的元素</h4><ul>
-<li>不管什么样的方式去获取迭代器中的元素，都是获取一个就会少一个</li>
-<li>1)获取单个元素：next(迭代器)<ul>
-<li>获取迭代器中最顶部(第一个)的元素</li>
-</ul>
-</li>
-<li>2)遍历：一个一个取，获取迭代器中所有的元素</li>
-</ul>
-<hr>
-<h3 id="三、生成器"><a href="#三、生成器" class="headerlink" title="三、生成器"></a>三、生成器</h3><hr>
-<h4 id="1-什么是生成器"><a href="#1-什么是生成器" class="headerlink" title="1. 什么是生成器"></a>1. 什么是生成器</h4><ul>
-<li>生成器本质就是迭代器：获取元素和迭代器一样</li>
-<li>调用函数体中有yield关键字的函数，就可以得到一个生成器</li>
-</ul>
-<hr>
-<h4 id="2-yield"><a href="#2-yield" class="headerlink" title="2. yield"></a>2. yield</h4><ul>
-<li>yield只能出现在函数体中</li>
-<li>调用有yield关键字的函数，不会再执行函数体，也不会获取返回值，而是得到一个生成器</li>
-</ul>
-<hr>
-<h4 id="3-生成器怎么产生数据"><a href="#3-生成器怎么产生数据" class="headerlink" title="3. 生成器怎么产生数据"></a>3. 生成器怎么产生数据</h4><ul>
-<li>看一个生成器能够产生几个数据，就看执行完生成器对应的函数会遇到几次yield，yield后面的值就是生成器能产生的数据</li>
-</ul>
-<hr>
-<h4 id="4-生成器生成数据的原理"><a href="#4-生成器生成数据的原理" class="headerlink" title="4. 生成器生成数据的原理"></a>4. 生成器生成数据的原理</h4><ul>
-<li>生成器不会同时将所有的元素保存起来，而是需要数据的时候临时产生数据</li>
-<li>获取生成器元素的时候，就去执行生成器对应的函数的函数体，从前往后执行，直到遇到yield为止，并且将yield后面的值作为结果，同时保存结束位置，下次获取下一个元素的时候，接着上次结束的位置往后执行，直到遇到下一个yield，以此类推…</li>
-<li>如果执行到函数结束都没有遇到yield，next函数会报StopIteration错误</li>
-</ul>
-<hr>
-<h3 id="四、生成式"><a href="#四、生成式" class="headerlink" title="四、生成式"></a>四、生成式</h3><hr>
-<h4 id="1-什么是生成式"><a href="#1-什么是生成式" class="headerlink" title="1. 什么是生成式"></a>1. 什么是生成式</h4><ul>
-<li><p>生成式本质就是生成器</p>
-</li>
-<li><p>语法1：</p>
-<ul>
-<li><p>(表达式 for 变量 in 序列)：创建一个生成器</p>
-</li>
 <li><blockquote>
-<p>展开成生成器：</p>
-<p>def func():</p>
-<p>​       for 变量 in 序列:</p>
-<p>​              yield 表达式</p>
+<p>def：声明函数的关键字</p>
+<p>函数名：和变量名一样，是标识符，不能是关键字(要求)；</p>
+<p>​        PEP8命名规范(所有字母小写，多个单词用下划线隔开)；</p>
+<p>​        见名知义(根据名字能够大概知道函数的功能)；</p>
+<p>(), :    -    固定写法</p>
+<p>参数列表：这儿的参数又叫形参，以’变量名1,变量名2,…’形式出现；形参可以没有，也可以有多个；作用：通过形参可以将函数外面的数据传递到函数里面</p>
+<p>函数体：实现函数功能的一条或多条语句</p>
 </blockquote>
 </li>
-<li><p>[表达式 for 变量 in 序列] - 将生成式对应的生成器转换成列表</p>
+</ul>
+</li>
+<li><p>3)初学声明函数的过程</p>
+<ul>
+<li><blockquote>
+<p>a.确定函数功能</p>
+<p>b.根据功能去确定函数名</p>
+<p>c.确定形参：看实现函数的功能需不需要从外面传数据，需要数据就对应一个参数</p>
+<p>d.实现函数的功能</p>
+<p>e.确定返回值</p>
+</blockquote>
+</li>
+<li><p>注意：声明函数的时候不会执行函数体!只有调用函数的时候才会执行函数体</p>
 </li>
 </ul>
 </li>
-<li><p>语法2：</p>
-<ul>
-<li><p>(表达式 for 变量 in 序列 if 条件语句)：创建一个生成器</p>
+</ul>
+<hr>
+<h4 id="4-函数的调用-同一个函数可以调用多次"><a href="#4-函数的调用-同一个函数可以调用多次" class="headerlink" title="4. 函数的调用 - 同一个函数可以调用多次"></a>4. 函数的调用 - 同一个函数可以调用多次</h4><ul>
+<li><p>调用函数就是使用函数</p>
 </li>
+<li><p>1)语法</p>
+<ul>
+<li>函数名(实参列表)</li>
+</ul>
+</li>
+<li><p>2)说明</p>
+<ul>
 <li><blockquote>
-<p>展开成生成器：</p>
-<p>def func():</p>
-<p>​       for 变量 in 序列:</p>
-<p>​              if 条件语句：</p>
-<p>​                    yield 表达式</p>
+<p>函数名：必须是已经声明过的函数的函数名</p>
+<p>()：固定写法</p>
+<p>实参列表：实参是给形参赋值的；实参是具体的值，如：数据、已赋值变量</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>3)函数的调用过程</p>
+<ul>
+<li><blockquote>
+<p>第一步：回到函数声明的位置</p>
+<p>第二步：传参-用实参给形参赋值</p>
+<p>第三步：执行函数体</p>
+<p>第四步：返回值</p>
+<p>第五步：执行完函数体，回到函数调用的位置接着往后执行</p>
 </blockquote>
 </li>
 </ul>
 </li>
 </ul>
 <hr>
-<h3 id="五、模块的使用"><a href="#五、模块的使用" class="headerlink" title="五、模块的使用"></a>五、模块的使用</h3><hr>
-<h4 id="1-什么是模块"><a href="#1-什么是模块" class="headerlink" title="1. 什么是模块"></a>1. 什么是模块</h4><ul>
-<li>在实际开发中，一个项目会分为多个模块</li>
-<li>一个python文件就是一个模块</li>
-</ul>
-<hr>
-<h4 id="2-多个模块怎么协作：导入模块"><a href="#2-多个模块怎么协作：导入模块" class="headerlink" title="2. 多个模块怎么协作：导入模块"></a>2. 多个模块怎么协作：导入模块</h4><ul>
-<li>1)import 模块名：在当前模块中导入指定模块，导入后可以使用指定模块中所有的全局变量，必须以’模块名.变量’的方式去使用</li>
-<li>2)from 模块名 import 全局变量1，全局变量2…：导入指定模块中指定的全局变量，被导入的全局变量在当前模块中可以直接使用</li>
-<li>3)重命名：<ul>
-<li>import 模块名 as 新模块名：模块重命名，通过新模块名来使用模块</li>
-<li>from 模块名 import 全局变量1 as 新变量1，全局变量2 as 新变量2…：变量重命名</li>
+<h3 id="二、函数的参数"><a href="#二、函数的参数" class="headerlink" title="二、函数的参数"></a>二、函数的参数</h3><hr>
+<h4 id="1-位置参数和关键字参数-针对实参"><a href="#1-位置参数和关键字参数-针对实参" class="headerlink" title="1. 位置参数和关键字参数 - 针对实参"></a>1. 位置参数和关键字参数 - 针对实参</h4><ul>
+<li>1)位置参数：调用参数的时候，让实参和形参的位置一一对应</li>
+<li>2)关键字参数：调用函数的时候，以’形参=实参’的形式传参；位置可以乱<ul>
+<li>注意：不管使用哪种方式传参要保证每个参数都有值</li>
+<li>如果既有位置参数，又有关键字参数，位置参数必须在关键字参数前面</li>
 </ul>
 </li>
-<li>4)通配符：from 模块名 import *：导入模块中所有的全局变量，使用的时候直接用</li>
 </ul>
 <hr>
-<h4 id="3-导入模块的原理"><a href="#3-导入模块的原理" class="headerlink" title="3. 导入模块的原理"></a>3. 导入模块的原理</h4><ul>
-<li>当执行导入模块的代码时，实质会执行被导入的模块对应的py文件</li>
-<li>将不希望被别的模块执行的代码放到下面的if语句中<ul>
-<li><code>if __name__ == &#39;__main__&#39;</code></li>
+<h4 id="2-参数默认值-形参"><a href="#2-参数默认值-形参" class="headerlink" title="2. 参数默认值(形参)"></a>2. 参数默认值(形参)</h4><ul>
+<li>声明函数的时候可以给参数设置默认值，以’形参=值’的方式来设置</li>
+<li>设置了默认值的参数，在调用函数的时候可以不用传参</li>
+<li>有默认值的参数必须放在没有默认值参数的后面</li>
+</ul>
+<hr>
+<h4 id="3-参数类型说明"><a href="#3-参数类型说明" class="headerlink" title="3. 参数类型说明"></a>3. 参数类型说明</h4><ul>
+<li>1)赋默认值</li>
+<li>2)以’形参:类型名’的方式说明类型<ul>
+<li>对参数类型进行说明可以引导函数调用者正确的传参</li>
+<li>也可以让实现函数体的时候有代码提示</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="4-不定长参数"><a href="#4-不定长参数" class="headerlink" title="4. 不定长参数"></a>4. 不定长参数</h4><ul>
+<li><p>1)声明函数的时候，在参数前面加*，那么这个参数就会变成不定长参数</p>
+<ul>
+<li>不定长参数实质是一个元组，接收到的实参就是元组中的元素</li>
+<li>带一个*的不定长参数，调用的时候需要使用位置参数</li>
+</ul>
+</li>
+<li><p>2)声明函数的时候，在参数前面加**，那么这个参数也会变成不定长参数</p>
+<ul>
+<li>带**的不定长参数实质是一个字典，调用的时候必须使用关键字参数</li>
+</ul>
+</li>
+<li><p>注意：参数中带<em>的参数需要放在不带\</em>参数的后面</p>
+</li>
+<li><p>带一个<em>的需要放在放在带\</em>*的前面</p>
+<ul>
+<li><blockquote>
+<p>def func(<em>args, *</em>kwargs):</p>
+<p>​    pass</p>
+</blockquote>
+</li>
 </ul>
 </li>
 </ul>
@@ -344,6 +349,16 @@
 
     </main>
     <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/函数的声明/" rel="tag"><i class="fas fa-tags"></i>函数的声明</a>
+        
+        <a class="post-tag button" href="/tags/函数的调用/" rel="tag"><i class="fas fa-tags"></i>函数的调用</a>
+        
+        <a class="post-tag button" href="/tags/函数的参数/" rel="tag"><i class="fas fa-tags"></i>函数的参数</a>
+        
+      </div>
       
     </footer>
   </article>
@@ -375,12 +390,10 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2019/07/19/day10-函数-02/" rel="next" title><i class="fas fa-angle-left"></i><span class="nav-title"></span></a>
-      
     </div>
     <div class="page-nav-prev page-nav-item">
       
-      <a href="/2019/07/19/day12-文件操作和json数据/" rel="prev" title><span class="nav-title"></span><i class="fas fa-angle-right"></i></a>
+      <a href="/2019/07/09/day10-函数-02/" rel="prev" title="函数02"><span class="nav-title">函数02</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -429,7 +442,7 @@
     
     <div class="tags-count count-block">
       <div class="site-count-title">Tags</div>
-      <div><a href="/tags/">18</a></div>
+      <div><a href="/tags/">32</a></div>
     </div>
     
     
@@ -453,7 +466,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>Table of Contents</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day11-高阶函数"><span class="toc-text">day11-高阶函数</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、函数作为变量"><span class="toc-text">一、函数作为变量</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-函数调用表达式"><span class="toc-text">1. 函数调用表达式</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-函数作为变量"><span class="toc-text">2. 函数作为变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、迭代器"><span class="toc-text">二、迭代器</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是迭代器-iter"><span class="toc-text">1. 什么是迭代器(iter)</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-获取迭代器中的元素"><span class="toc-text">2. 获取迭代器中的元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#三、生成器"><span class="toc-text">三、生成器</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是生成器"><span class="toc-text">1. 什么是生成器</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-yield"><span class="toc-text">2. yield</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-生成器怎么产生数据"><span class="toc-text">3. 生成器怎么产生数据</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#4-生成器生成数据的原理"><span class="toc-text">4. 生成器生成数据的原理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#四、生成式"><span class="toc-text">四、生成式</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是生成式"><span class="toc-text">1. 什么是生成式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#五、模块的使用"><span class="toc-text">五、模块的使用</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是模块"><span class="toc-text">1. 什么是模块</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-多个模块怎么协作：导入模块"><span class="toc-text">2. 多个模块怎么协作：导入模块</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-导入模块的原理"><span class="toc-text">3. 导入模块的原理</span></a></li></ol></li></ol></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day9-函数-01"><span class="toc-text">day9-函数-01</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、函数基础"><span class="toc-text">一、函数基础</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是函数"><span class="toc-text">1. 什么是函数</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-函数的分类"><span class="toc-text">2. 函数的分类</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-声明函数"><span class="toc-text">3. 声明函数</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#4-函数的调用-同一个函数可以调用多次"><span class="toc-text">4. 函数的调用 - 同一个函数可以调用多次</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、函数的参数"><span class="toc-text">二、函数的参数</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-位置参数和关键字参数-针对实参"><span class="toc-text">1. 位置参数和关键字参数 - 针对实参</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-参数默认值-形参"><span class="toc-text">2. 参数默认值(形参)</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-参数类型说明"><span class="toc-text">3. 参数类型说明</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#4-不定长参数"><span class="toc-text">4. 不定长参数</span></a></li></ol></li></ol></li></ol></div>
     </div>
     
     

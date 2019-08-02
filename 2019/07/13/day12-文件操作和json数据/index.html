@@ -133,7 +133,7 @@
     </script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title> | 叶小永的技术专栏</title>
+    <title>文件操作和json数据 | 叶小永的技术专栏</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN" data-spy="scroll" data-target=".list-group">
     
@@ -179,7 +179,7 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/19/day10-函数-02/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/13/day12-文件操作和json数据/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="叶小永">
        <meta itemprop="description" content="技术宅，python新手">
@@ -190,137 +190,258 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline"></h1>
+      <h1 class="post-title" itemprop="name headline">文件操作和json数据</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-19T17:33:48+08:00">2019-07-19 17:33:48</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-13T14:45:20+08:00">2019-07-13 14:45:20</time></span>
         </span>
         
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+        </span>
         
         
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h2 id="day10-函数-02"><a href="#day10-函数-02" class="headerlink" title="day10-函数-02"></a>day10-函数-02</h2><hr>
-<h3 id="一、函数的返回值"><a href="#一、函数的返回值" class="headerlink" title="一、函数的返回值"></a>一、函数的返回值</h3><hr>
-<h4 id="1-什么是返回值"><a href="#1-什么是返回值" class="headerlink" title="1. 什么是返回值"></a>1. 什么是返回值</h4><ul>
-<li>概念：返回值就是函数返回给函数调用者的值</li>
-<li>语法：返回值就是return后面的值</li>
-<li>获取返回值：返回值就是函数调用表达式的值</li>
-</ul>
-<hr>
-<h4 id="2-return"><a href="#2-return" class="headerlink" title="2. return"></a>2. return</h4><ul>
-<li>1)什么是return<ul>
-<li>是一个关键字，只能出现在函数体中</li>
-</ul>
+      <p>这一部分主要讲了Python中的文件操作以及json数据格式。</p>
+<a id="more"></a>
+
+
+<h2 id="day12-文件操作和json数据"><a href="#day12-文件操作和json数据" class="headerlink" title="day12-文件操作和json数据"></a>day12-文件操作和json数据</h2><hr>
+<h3 id="一、文件操作"><a href="#一、文件操作" class="headerlink" title="一、文件操作"></a>一、文件操作</h3><hr>
+<h4 id="1-数据持久化"><a href="#1-数据持久化" class="headerlink" title="1. 数据持久化"></a>1. 数据持久化</h4><ul>
+<li><p>计算机内存分为硬盘和运行内存</p>
 </li>
-<li>2)return作用<ul>
-<li>a.结束函数：执行函数体时，一旦遇到return，函数直接结束</li>
-<li>b.将函数内部的数据传到外部：return 需要返回的数据</li>
-</ul>
+<li><p>存储到本地文件中的数据，就是存储在硬盘中的数据，就能持久化</p>
 </li>
-<li>说明<ul>
-<li>看一个函数的返回值是什么，就看执行函数体过程中有没有遇到return，如果遇到return，return后面的值就是函数的返回值</li>
-</ul>
-</li>
-<li>3)什么样的数据应该作为函数的返回值<ul>
-<li>初学者：如果执行完函数会产生新的数据，那么产生的新数据就可以返回；产生几个返回几个；return 返回值1, 返回值2</li>
-</ul>
-</li>
-<li>4)怎么获取函数的返回值<ul>
-<li>获取函数调用表达式的值就是获取函数的返回值</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h4 id="3-函数调用过程-完整版-执行过程"><a href="#3-函数调用过程-完整版-执行过程" class="headerlink" title="3. 函数调用过程(完整版) - 执行过程"></a>3. 函数调用过程(完整版) - 执行过程</h4><ul>
-<li><blockquote>
-<p>1)回到函数调用的位置</p>
-<p>2)传参，用实参给形参赋值</p>
-<p>3)执行函数体</p>
-<p>4)执行完函数体，先确定函数返回值(函数结束：a.执行完函数体的最后一条语句 b.执行过程中遇到return)</p>
-<p>5)回到函数调用的位置(这时函数调用表达式的值才是函数的返回值)，接着往后执行</p>
-</blockquote>
-</li>
-</ul>
-<hr>
-<h4 id="4-函数调用过程中的内存变化"><a href="#4-函数调用过程中的内存变化" class="headerlink" title="4. 函数调用过程中的内存变化"></a>4. 函数调用过程中的内存变化</h4><ul>
-<li>函数调用过程其实是一个压栈的过程<ul>
-<li>每次调用函数，系统都会自动在内存中专门为这个函数开辟一个内存空间，用来保存在函数中声明的变量(形参也是声明在函数中的变量)。当函数调用结束，这个内存区域会自动释放。</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="二、匿名函数"><a href="#二、匿名函数" class="headerlink" title="二、匿名函数"></a>二、匿名函数</h3><hr>
-<h4 id="1-匿名函数：本质还是函数"><a href="#1-匿名函数：本质还是函数" class="headerlink" title="1. 匿名函数：本质还是函数"></a>1. 匿名函数：本质还是函数</h4><ul>
-<li><blockquote>
-<p>1)语法</p>
-<p>函数名 = lambda 参数列表:返回值</p>
-<p>2)lambda：关键字，固定写法</p>
-<p>参数列表：形参列表，以’参数名1,参数名2,…,’形式</p>
-<p>返回值：写任何有结果的表达式</p>
-<p>3)什么时候使用匿名函数</p>
-<p>a.函数的功能一行代码就可以实现</p>
-<p>b.函数的功能不会重复使用</p>
-</blockquote>
-</li>
-<li><p>注意：匿名函数的函数体只有一条语句，且这条语句的结果就是返回值</p>
-</li>
-<li><p>python中三目运算符</p>
+<li><p>编程中常用的数据持久化文件：</p>
 <ul>
-<li>值1 if 条件语句 else 值2：如果条件语句是True，整个表达式结果是值1，否则就是值2</li>
+<li><p>txt文件</p>
+</li>
+<li><p>二进制文件(图片、音频、视频、压缩文件)</p>
+</li>
+<li><p>json文件</p>
+</li>
+<li><p>数据库文件(.db、.sql)</p>
+</li>
+<li><p>plist文件</p>
+</li>
+</ul>
+</li>
+<li><p>数据持久化三步走：</p>
+<ul>
+<li>a.需要持久化的数据保存在本地文件中</li>
+<li>b.需要数据的时候去文件中读数据</li>
+<li>c.数据发生改变后将最新的数据写入文件中</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h3 id="三、变量的作用域"><a href="#三、变量的作用域" class="headerlink" title="三、变量的作用域"></a>三、变量的作用域</h3><hr>
-<h4 id="1-什么是作用域"><a href="#1-什么是作用域" class="headerlink" title="1. 什么是作用域"></a>1. 什么是作用域</h4><ul>
-<li>声明完变量后，这个变量能够作用的范围就是变量的作用域</li>
+<h4 id="2-文件操作-对文件内容的操作"><a href="#2-文件操作-对文件内容的操作" class="headerlink" title="2. 文件操作 - 对文件内容的操作"></a>2. 文件操作 - 对文件内容的操作</h4><ul>
+<li><p>基本步骤：打开文件；读/写操作；关闭文件</p>
+</li>
+<li><p>1)打开文件：</p>
+<ul>
+<li><p><code>open(file, mode=&#39;r&#39;, encoding=None)</code>：打开指定文件，返回文件对象</p>
+</li>
+<li><p>file：字符串，需要打开的文件的路径，可以是绝对路径，也可以是相对路径</p>
+<ul>
+<li><p>绝对路径：文件在电脑上的完整路径</p>
+</li>
+<li><blockquote>
+<p>相对路径：./(当前目录，当前py文件所在的目录)，可以省略</p>
+<p>​                   ../(当前目录的上层目录)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>mode：字符串，决定文件的打开方式；打开方式决定了打开文件后支持的操作</p>
+<ul>
+<li>‘r’：默认值，只读，读出来的数据就是字符串类型</li>
+<li>‘w’：只写；只能将字符串写入文件(先删除原文件内容，再写)</li>
+<li>‘rb/br’：二进制只读；以二进制的格式读</li>
+<li>‘wb/bw’：二进制只写；只能将二进制数据写入文件</li>
+<li>‘a’：只写；追加字符串内容(保留原文件内容)</li>
+<li>‘ab/ba’：二进制只写；追加二进制内容(保留原文件内容)</li>
+</ul>
+</li>
+<li><p>encoding：设置文件的编码方式，固定写’utf-8’；只针对文本文件有效</p>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>只有文本操作才能设置编码方式(二进制不行)</li>
+<li>文本文件在读和写(或编码和解码)的方式必须一致</li>
+<li>windows默认的是’gbk’</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2)操作文件：</p>
+<ul>
+<li>a.读操作：获取文件中的内容<ul>
+<li>文件对象.read()：获取文件中所有的内容，会返回文件中的内容</li>
+<li>文件对象.readline()：读一行内容(从读写位置到一行结尾)</li>
+</ul>
+</li>
+<li>b.写操作<ul>
+<li>文件对象.write(写的内容)：将指定的内容写入文件中</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3)关闭文件</p>
+<ul>
+<li>文件对象.close()</li>
+</ul>
+</li>
+<li><p>4)移动读写的位置(移动光标)</p>
+<ul>
+<li>文件对象.seek(0)：将读写位置移动到文件开头</li>
+</ul>
+</li>
 </ul>
 <hr>
-<h4 id="2-全局变量和局部变量"><a href="#2-全局变量和局部变量" class="headerlink" title="2. 全局变量和局部变量"></a>2. 全局变量和局部变量</h4><ul>
-<li>1)全局变量：声明在函数或者类外面的变量都是局部变量<ul>
-<li>全局变量的作用域：从声明开始到整个文件结束</li>
-<li>循环和循环体中声明的变量也是全局变量</li>
+<h3 id="二、二进制文件的操作"><a href="#二、二进制文件的操作" class="headerlink" title="二、二进制文件的操作"></a>二、二进制文件的操作</h3><hr>
+<h4 id="1-二进制文件有哪些"><a href="#1-二进制文件有哪些" class="headerlink" title="1. 二进制文件有哪些"></a>1. 二进制文件有哪些</h4><ul>
+<li>常见的二进制文件：图片文件、音频文件、视频文件、压缩文件等</li>
+<li>不是只有二进制文件才支持’b’操作(rb、wb、ab)，但是二进制文件只能采用’b’操作</li>
+<li>注意：所有带’b’的操作都不能设置encoding</li>
+</ul>
+<hr>
+<h4 id="2-文件不存在"><a href="#2-文件不存在" class="headerlink" title="2. 文件不存在"></a>2. 文件不存在</h4><ul>
+<li>如果以读的方式打开一个不存在的文件，程序会报错</li>
+<li>如果以写的方式打开一个不存在的文件，不会报错，而是自动创建这个文件</li>
+</ul>
+<hr>
+<h4 id="3-打开文件的简写"><a href="#3-打开文件的简写" class="headerlink" title="3. 打开文件的简写"></a>3. 打开文件的简写</h4><ul>
+<li>1)语法：<ul>
+<li>with open(‘文件路径’, ‘读写方式’, encoding=’编码方式’) as 文件对象：文件域(操作文件)</li>
 </ul>
 </li>
-<li>2)局部变量：声明在函数中的变量就是局部变量<ul>
-<li>局部变量的作用域：从声明开始到整个函数结束</li>
+<li>2)说明：以这种方式打开的文件，在文件域结束后，文件会自动关闭</li>
+</ul>
+<hr>
+<h3 id="三、json数据"><a href="#三、json数据" class="headerlink" title="三、json数据"></a>三、json数据</h3><hr>
+<h4 id="1-什么是json数据：满足json格式的数据"><a href="#1-什么是json数据：满足json格式的数据" class="headerlink" title="1. 什么是json数据：满足json格式的数据"></a>1. 什么是json数据：满足json格式的数据</h4><ul>
+<li>1)json格式：<ul>
+<li>a.一个json有且只有一个数据</li>
+<li>b.这个数据必须是json支持的数据类型对应的数据</li>
+</ul>
+</li>
+<li>2)json支持的数据类型<ul>
+<li>a.数据类型：包含所有的数字</li>
+<li>b.字符串：使用双引号引起来的字符集，支持转义字符和编码字符</li>
+<li>c.布尔：只有true和false两个值</li>
+<li>d.数组：相当于python中的列表</li>
+<li>e.字典：相当于python中的字典，但key只能是字符串</li>
+<li>f.null：相当于python中的None，表示空</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h4 id="3-global和nonlocal"><a href="#3-global和nonlocal" class="headerlink" title="3. global和nonlocal"></a>3. global和nonlocal</h4><ul>
-<li>这两个关键字只能在函数体中使用</li>
-<li>1)global：在函数中声明一个全局变量(或去修改一个全局变量的值)<ul>
-<li>global 变量名</li>
-<li>变量名 = 值</li>
+<h4 id="2-json转python"><a href="#2-json转python" class="headerlink" title="2. json转python"></a>2. json转python</h4><ul>
+<li>1)转换关系</li>
 </ul>
-</li>
-<li>nonlocal：在局部的局部中去修改局部变量的值<ul>
-<li>nonlocal 变量名</li>
-<li>变量名 = 值</li>
+<table>
+<thead>
+<tr>
+<th>json</th>
+<th>python</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数字类型</td>
+<td>int或float</td>
+</tr>
+<tr>
+<td>字符串</td>
+<td>str，双引号可能会变成单引号</td>
+</tr>
+<tr>
+<td>布尔</td>
+<td>bool，true-&gt;True,false-&gt;False</td>
+</tr>
+<tr>
+<td>数组</td>
+<td>list，内容也会跟着变</td>
+</tr>
+<tr>
+<td>字典</td>
+<td>dict，内容也会跟着变</td>
+</tr>
+<tr>
+<td>null</td>
+<td>None</td>
+</tr>
+</tbody></table>
+<ul>
+<li>2)方法<ul>
+<li><code>json.loads(字符串)</code>：将json格式的字符串转换成对应的python的数据</li>
+<li>注意：字符串的内容必须是json格式的数据</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h3 id="四、递归函数"><a href="#四、递归函数" class="headerlink" title="四、递归函数"></a>四、递归函数</h3><hr>
-<h4 id="1-什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数"><a href="#1-什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数" class="headerlink" title="1. 什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数"></a>1. 什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数</h4><ul>
-<li>循环能做的事情递归都能做</li>
-<li>1)怎么写递归函数<ul>
-<li>第一步：声明函数(和普通函数一样)</li>
-<li>第二步：找临界值(函数结束的条件)</li>
-<li>第三步：找关系(假设函数的功能已经实现了，找f(n)和f(n-1)的关系)</li>
-<li>第四步：使用f(n-1)去实现f(n)的功能</li>
+<h4 id="3-python转json"><a href="#3-python转json" class="headerlink" title="3. python转json"></a>3. python转json</h4><ul>
+<li>1)转换关系</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>python</th>
+<th>json</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int/float</td>
+<td>数字</td>
+</tr>
+<tr>
+<td>str</td>
+<td>字符串，单引号变双引号</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>布尔，True-&gt;true,False-&gt;false</td>
+</tr>
+<tr>
+<td>list/tuple</td>
+<td>数组</td>
+</tr>
+<tr>
+<td>dict</td>
+<td>字典</td>
+</tr>
+<tr>
+<td>None</td>
+<td>null</td>
+</tr>
+</tbody></table>
+<ul>
+<li>2)方法<ul>
+<li><code>json.dumps(python数据)</code>：将数据转换成json格式的字符串</li>
 </ul>
 </li>
-<li>2)总结：通过for或while循环能做的事情就不要用递归函数</li>
 </ul>
 <hr>
 
     </main>
     <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/文件操作/" rel="tag"><i class="fas fa-tags"></i>文件操作</a>
+        
+        <a class="post-tag button" href="/tags/json/" rel="tag"><i class="fas fa-tags"></i>json</a>
+        
+      </div>
       
     </footer>
   </article>
@@ -352,12 +473,12 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2019/07/19/day9-函数-01/" rel="next" title><i class="fas fa-angle-left"></i><span class="nav-title"></span></a>
+      <a href="/2019/07/11/day11-高阶函数/" rel="next" title="高阶函数"><i class="fas fa-angle-left"></i><span class="nav-title">高阶函数</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
       
-      <a href="/2019/07/19/day11-高阶函数/" rel="prev" title><span class="nav-title"></span><i class="fas fa-angle-right"></i></a>
+      <a href="/2019/07/15/day13-异常/" rel="prev" title="异常"><span class="nav-title">异常</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -406,7 +527,7 @@
     
     <div class="tags-count count-block">
       <div class="site-count-title">Tags</div>
-      <div><a href="/tags/">18</a></div>
+      <div><a href="/tags/">32</a></div>
     </div>
     
     
@@ -430,7 +551,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>Table of Contents</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day10-函数-02"><span class="toc-text">day10-函数-02</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、函数的返回值"><span class="toc-text">一、函数的返回值</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是返回值"><span class="toc-text">1. 什么是返回值</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-return"><span class="toc-text">2. return</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-函数调用过程-完整版-执行过程"><span class="toc-text">3. 函数调用过程(完整版) - 执行过程</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#4-函数调用过程中的内存变化"><span class="toc-text">4. 函数调用过程中的内存变化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、匿名函数"><span class="toc-text">二、匿名函数</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-匿名函数：本质还是函数"><span class="toc-text">1. 匿名函数：本质还是函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#三、变量的作用域"><span class="toc-text">三、变量的作用域</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是作用域"><span class="toc-text">1. 什么是作用域</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-全局变量和局部变量"><span class="toc-text">2. 全局变量和局部变量</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-global和nonlocal"><span class="toc-text">3. global和nonlocal</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#四、递归函数"><span class="toc-text">四、递归函数</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数"><span class="toc-text">1. 什么是递归函数：在函数中调用函数本身，这样的函数就是递归函数</span></a></li></ol></li></ol></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day12-文件操作和json数据"><span class="toc-text">day12-文件操作和json数据</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、文件操作"><span class="toc-text">一、文件操作</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-数据持久化"><span class="toc-text">1. 数据持久化</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-文件操作-对文件内容的操作"><span class="toc-text">2. 文件操作 - 对文件内容的操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、二进制文件的操作"><span class="toc-text">二、二进制文件的操作</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-二进制文件有哪些"><span class="toc-text">1. 二进制文件有哪些</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-文件不存在"><span class="toc-text">2. 文件不存在</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-打开文件的简写"><span class="toc-text">3. 打开文件的简写</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#三、json数据"><span class="toc-text">三、json数据</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是json数据：满足json格式的数据"><span class="toc-text">1. 什么是json数据：满足json格式的数据</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-json转python"><span class="toc-text">2. json转python</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-python转json"><span class="toc-text">3. python转json</span></a></li></ol></li></ol></li></ol></div>
     </div>
     
     
