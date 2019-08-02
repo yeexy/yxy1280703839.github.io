@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    
+    <meta name="keywords" content="Python, HTML5, CSS, JavaScript, jQuery, Vue.js, Linux, MySQL, Redis, Django">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="叶小永的技术专栏" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>python基础语法 | 叶小永的技术专栏</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">叶小永的技术专栏</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/logo.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="Toggle Navbar"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">Archives</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">Categories</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">Tags</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">About</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/26/day2-pyhton基础语法/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="叶小永">
+       <meta itemprop="description" content="技术宅，python新手">
+       <meta itemprop="image" content="/images/FutureGazerSmall.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="叶小永的技术专栏">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">python基础语法</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-06-26T14:45:20+08:00">2019-06-26 14:45:20</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>这一部分主要讲了Python中的注释、关键字、变量。</p>
+<a id="more"></a>
+
+<h2 id="day2-Python基础语法"><a href="#day2-Python基础语法" class="headerlink" title="day2-Python基础语法"></a>day2-Python基础语法</h2><hr>
+<h3 id="一、基础语法"><a href="#一、基础语法" class="headerlink" title="一、基础语法"></a>一、基础语法</h3><hr>
+<h4 id="1-注释"><a href="#1-注释" class="headerlink" title="1. 注释"></a>1. 注释</h4><ul>
+<li>单行注释：开头用#来表示单行注释</li>
+<li>多行注释：在代码块前后用3个单引号或3个双引号表示</li>
+<li>快捷键：ctrl + /</li>
+</ul>
+<hr>
+<h4 id="2-语句"><a href="#2-语句" class="headerlink" title="2. 语句"></a>2. 语句</h4><ul>
+<li>一行一般只写一条语句，结尾不需要分号；需要写多行语句，之间要用分号隔开</li>
+<li>如果语句过长需要多行显示，在换行位置前加一个\。注意：加\不能破坏数据</li>
+</ul>
+<hr>
+<h4 id="3-行和缩进"><a href="#3-行和缩进" class="headerlink" title="3. 行和缩进"></a>3. 行和缩进</h4><ul>
+<li>缩进：python要求一条语句不能随意加空格或制表符</li>
+<li>行：python要求声明函数和类的前后需要2个换行</li>
+</ul>
+<hr>
+<h4 id="4-标识符"><a href="#4-标识符" class="headerlink" title="4. 标识符"></a>4. 标识符</h4><ul>
+<li>作用：是用来给变量、函数或类命名的</li>
+<li>规范：1)由字母、数字和下划线组成；2)不能用数字做开头；3)不能是关键字</li>
+</ul>
+<hr>
+<h4 id="5-关键字-又叫保留字"><a href="#5-关键字-又叫保留字" class="headerlink" title="5. 关键字(又叫保留字)"></a>5. 关键字(又叫保留字)</h4><ul>
+<li>定义：python保留下来有自己的特殊功能或特殊意义的一些标识符</li>
+<li>python中关键字一共有35个<ul>
+<li><code>[&#39;False&#39;, &#39;None&#39;, &#39;True&#39;, &#39;and&#39;, &#39;as&#39;, &#39;assert&#39;, &#39;async&#39;, &#39;await&#39;, &#39;break&#39;, &#39;class&#39;, &#39;continue&#39;, &#39;def&#39;, &#39;del&#39;, &#39;elif&#39;, &#39;else&#39;, &#39;except&#39;, &#39;finally&#39;, &#39;for&#39;, &#39;from&#39;, &#39;global&#39;, &#39;if&#39;, &#39;import&#39;, &#39;in&#39;, &#39;is&#39;, &#39;lambda&#39;, &#39;nonlocal&#39;, &#39;not&#39;, &#39;or&#39;, &#39;pass&#39;, &#39;raise&#39;, &#39;return&#39;, &#39;try&#39;, &#39;while&#39;, &#39;with&#39;, &#39;yield&#39;]</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="6-常见数据及其类型"><a href="#6-常见数据及其类型" class="headerlink" title="6. 常见数据及其类型"></a>6. 常见数据及其类型</h4><ul>
+<li>数字数据(number)：<code>int</code>-整型，<code>float</code>-浮点型</li>
+<li>文本数据(string)：<code>str</code>-字符串</li>
+<li>布尔值(bool)：<code>True</code>-真，<code>False</code>-假</li>
+<li>以及列表(<code>list</code>)、字典(<code>dict</code>)、元组(<code>tuple</code>)、集合(<code>set</code>)、迭代器(<code>iter</code>)、生成器、函数(<code>function</code>)、自定义的类等等</li>
+</ul>
+<hr>
+<h4 id="7-输入和输出函数"><a href="#7-输入和输出函数" class="headerlink" title="7. 输入和输出函数"></a>7. 输入和输出函数</h4><ul>
+<li><code>print()</code>函数：在控制台输出括号里的内容<ul>
+<li>()内可以是数据、运算表达式、变量</li>
+<li>一个<code>print()</code>可以同时打印多个数据，多个数据之间用逗号隔开</li>
+</ul>
+</li>
+<li><code>input()</code>函数：从控制台获取输入的内容，输入以回车结束。将输入的内容返回<ul>
+<li>使用value变量去获取输入的内容：<code>value = input(&#39;请输入年龄:&#39;)</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="二、python变量"><a href="#二、python变量" class="headerlink" title="二、python变量"></a>二、python变量</h3><hr>
+<h4 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h4><ul>
+<li>定义：程序中需要通过变量来保存数据</li>
+<li>语法：变量名 = 值</li>
+<li>变量名：程序员自己命名，必须是标识符，不能是关键字<ul>
+<li>规范1：所有的字母都要小写，多个单词之间用下划线隔开</li>
+<li>规范2：见名知义，看到变量名就知道变量中保存的是什么数据</li>
+</ul>
+</li>
+<li>=：赋值运算符，左边必须是变量名。将右边的数据赋值给左边的变量</li>
+<li>值：一切有结果的表达式都可作为值，如：数据、运算表达式、函数调用、已赋值过的变量</li>
+</ul>
+<hr>
+<h4 id="2-用法"><a href="#2-用法" class="headerlink" title="2. 用法"></a>2. 用法</h4><ul>
+<li>同时声明多个变量赋相同的值<ul>
+<li><code>a = b = c = 10</code></li>
+</ul>
+</li>
+<li>同时声明多个变量赋不同的值<ul>
+<li><code>x, y = 10, 20</code></li>
+</ul>
+</li>
+<li>变量的重新赋值<ul>
+<li><code>x = 100</code></li>
+<li><code>x = 1000</code></li>
+</ul>
+</li>
+<li>声明变量、变量赋值的原理<ul>
+<li>先开辟空间存储数据，然后让变量指向指定的内存区域，重新赋值时就重新开辟一个新的空间存储数据，再让变量指向新的存储区域</li>
+</ul>
+</li>
+</ul>
+<hr>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/基础语法/" rel="tag"><i class="fas fa-tags"></i>基础语法</a>
+        
+        <a class="post-tag button" href="/tags/变量/" rel="tag"><i class="fas fa-tags"></i>变量</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+<div class="reward" id="reward">
+  <p>坚持原创技术分享，您的支持是我前进的动力！</p>
+  <button id="reward-button" class="button" disable="enable">Reward</button>
+  <div id="qr" class="qr" style="display: none;" aria-hidden="true">
+    
+    <div id="wechat">
+      <img id="wechat_qr" src="/images/WeChatPay.jpg" alt="WechatPay">
+      <span>WechatPay</span>
+    </div>
+    
+    
+    <div id="alipay">
+      <img id="alipay_qr" src="/images/AliPay.jpg" alt="AliPay">
+      <span>AliPay</span>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/06/24/day1-markdown语法/" rel="next" title="markdown语法"><i class="fas fa-angle-left"></i><span class="nav-title">markdown语法</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2019/06/28/day3-运算符和数据类型/" rel="prev" title="运算符、数据类型和if语句"><span class="nav-title">运算符、数据类型和if语句</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/FutureGazerSmall.png" alt="叶小永">
+  
+  <h1 class="author-name">叶小永</h1>
+  <h2 class="author-description">技术宅，python新手</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">Archives</div>
+      <div><a href="/archives/">19</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">Categories</div>
+      <div><a href="/categories/">1</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">Tags</div>
+      <div><a href="/tags/">44</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>Table of Contents</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day2-Python基础语法"><span class="toc-text">day2-Python基础语法</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、基础语法"><span class="toc-text">一、基础语法</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-注释"><span class="toc-text">1. 注释</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-语句"><span class="toc-text">2. 语句</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-行和缩进"><span class="toc-text">3. 行和缩进</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#4-标识符"><span class="toc-text">4. 标识符</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#5-关键字-又叫保留字"><span class="toc-text">5. 关键字(又叫保留字)</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#6-常见数据及其类型"><span class="toc-text">6. 常见数据及其类型</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#7-输入和输出函数"><span class="toc-text">7. 输入和输出函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、python变量"><span class="toc-text">二、python变量</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-变量"><span class="toc-text">1. 变量</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-用法"><span class="toc-text">2. 用法</span></a></li></ol></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>Social Links<p></p></div>
+      <ul>
+        
+        <li><i class="fab fa-qq"></i><a href target="_blank">787271413</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/yxy1280703839/yxy1280703839.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weixin"></i><a href target="_blank">cdut201413040119</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>Blogroll</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="Back to Top"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">叶小永</span><span class="year"><i class="far fa-copyright"></i>2019 - 2019</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">BY-NC-SA 4.0</a></span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="Site Visit Count" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="Site User Count" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="Page Click Count" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+           
+        </div>
+        <div class="powered-by">
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="http://www.beian.miit.gov.cn/" target="_blank">蜀ICP备19023847号</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

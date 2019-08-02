@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    
+    <meta name="keywords" content="Python, HTML5, CSS, JavaScript, jQuery, Vue.js, Linux, MySQL, Redis, Django">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="叶小永的技术专栏" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>字符串 | 叶小永的技术专栏</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">叶小永的技术专栏</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/logo.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="Toggle Navbar"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">Archives</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">Categories</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">Tags</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">About</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/03/day6-字符串/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="叶小永">
+       <meta itemprop="description" content="技术宅，python新手">
+       <meta itemprop="image" content="/images/FutureGazerSmall.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="叶小永的技术专栏">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">字符串</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-03T14:45:20+08:00">2019-07-03 14:45:20</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>这一部分主要讲了Python中的字符串和字符串的操作。</p>
+<a id="more"></a>
+
+<h2 id="day6-字符串"><a href="#day6-字符串" class="headerlink" title="day6-字符串"></a>day6-字符串</h2><hr>
+<h3 id="一、认识字符串"><a href="#一、认识字符串" class="headerlink" title="一、认识字符串"></a>一、认识字符串</h3><hr>
+<h4 id="1-什么是字符串-str"><a href="#1-什么是字符串-str" class="headerlink" title="1. 什么是字符串(str)"></a>1. 什么是字符串(str)</h4><ul>
+<li>定义：字符串属于容器型数据类型，又叫序列，将引号作为容器，字符是元素</li>
+<li>特点：不可变(字符个数和顺序都不可变)、有序(字符顺序影响值)</li>
+</ul>
+<hr>
+<h4 id="2-字符串中的内容"><a href="#2-字符串中的内容" class="headerlink" title="2. 字符串中的内容"></a>2. 字符串中的内容</h4><ul>
+<li>字符串中的每个基本单元是字符；python中有字符的概念，但是没有字符对应的数据类型</li>
+<li>1)普通字符：如，字母、数字、文字、符号</li>
+<li>2)转义字符：在指定的符号前加\来表示一些具有特殊功能或特殊意义的符号<ul>
+<li><code>\n</code>  -  换行</li>
+<li><code>\t</code>  -  制表符</li>
+<li><code>\&#39;</code>  -  一个单引号</li>
+<li><code>\&quot;</code>  -  一个双引号</li>
+<li><code>\\</code>  -  一个反斜杠 </li>
+</ul>
+</li>
+<li>3)编码字符：在\u后加四位十六进制编码值，表示一个编码值对应的字符</li>
+<li>4)编码：计算机存储字符的时候实质是字符对应的编码值，每个字符编码值是固定的<ul>
+<li>计算机本身只有存储数字的能力，而且存的是补码(二进制)</li>
+<li>字符和字符编码的一一对应关系就叫编码表。常见的编码表：ASCII、Unicode</li>
+<li>python中采用的是Unicode编码，中文范围：4e00-9fa5</li>
+<li><code>chr(编码值)</code> - 获取编码值对应的字符</li>
+<li><code>ord(字符)</code> - 获取字符的编码值</li>
+</ul>
+</li>
+<li>5)阻止转义：在字符串的最前面加r/R可以阻止当前字符串的所有的转义字符转义<ul>
+<li>一个转义字符和一个编码字符长度都是1</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="二、字符串操作"><a href="#二、字符串操作" class="headerlink" title="二、字符串操作"></a>二、字符串操作</h3><hr>
+<h4 id="1-获取字符"><a href="#1-获取字符" class="headerlink" title="1. 获取字符"></a>1. 获取字符</h4><ul>
+<li><p>获取单个字符</p>
+<ul>
+<li><blockquote>
+<p>a.语法</p>
+<p>字符串[下标] - 获取指定下标对应的字符</p>
+<p>b.说明</p>
+<p>字符串 - 可以是字符串值、字符串变量或结果是字符串的表达式</p>
+<p>[] - 固定写法</p>
+<p>下标 - 又叫索引，字符一旦确定，那么字符串中的每个字符位置就确定了，每个字符都会对应固定的下标来表示字符在字符中的位置</p>
+<p>下标值有两种：0<del>字符串长度-1、-1</del>-字符串的长度</p>
+<p>0对应的是第一个字符，-1对应最后一个字符</p>
+<p>c.注意：下标不能越界</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>获取部分字符(字符串切片)</p>
+<ul>
+<li><blockquote>
+<p>a.语法</p>
+<p>字符串[开始下标:结束下标:步长] - 从开始下标开始获取，每次增加步长去取下一个字符，直到获取结束下标为止</p>
+<p>b.说明</p>
+<p>字符串 - 字符串值或字符串变量</p>
+<p>[] - 固定写法</p>
+<p>开始下标，结束下标 - 范围内下标值</p>
+<p>步长 - 整数</p>
+<p>c.注意</p>
+<p>结束下标对应的字符永远都取不到</p>
+<p>当步长为正，开始下标到结束下标从前往后取，这时开始下标对应的字符必须在结束下标对应的字符的前面；否则取到的是空串</p>
+<p>当步长为负，开始下标到结束下标从后往前取，这时开始下标对应的字符必须在结束下标对应的字符的后面；否则取到的是空串</p>
+<p>获取部分下标可以越界</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>省略部分内容</p>
+<ul>
+<li>a)省略步长 - 默认步长为1</li>
+<li>字符串[开始下标:结束下标]</li>
+<li>b)省略开始下标</li>
+<li>字符串[:结束下标:步长] / 字符串[:结束下标]</li>
+<li>步长为正：从第一个字符开始往后取；步长为负：从最后一个字符往前取</li>
+<li>c)省略结束下标</li>
+<li>字符串[开始下标::步长] / 字符串[开始下标:]</li>
+<li>步长为正：从开始下标往后取到最后一个字符；步长为负：从开始下标往前取到第一个字符</li>
+<li>d)省略下标</li>
+<li>字符串[::步长] / 字符串[:]</li>
+</ul>
+</li>
+<li><p>遍历字符串</p>
+<ul>
+<li><blockquote>
+<p>a)直接遍历拿到每个字符<br>for 变量 in 字符串:</p>
+<p>​    循环体</p>
+<p>b)通过遍历下标来遍历字符串</p>
+<p><code>len(字符串)</code> - 获取字符串的长度</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="三、字符串运算"><a href="#三、字符串运算" class="headerlink" title="三、字符串运算"></a>三、字符串运算</h3><hr>
+<h4 id="1-数学运算："><a href="#1-数学运算：" class="headerlink" title="1. 数学运算：+, *"></a>1. 数学运算：+, *</h4><ul>
+<li>1)字符串1 + 字符串2 - 将两个字符串拼接在一起产生一个新的字符串</li>
+<li>注意：字符串只能和字符串相加</li>
+<li>2)字符串 * N - 字符串重复N次产生一个新的字符串</li>
+</ul>
+<hr>
+<h4 id="2-比较运算"><a href="#2-比较运算" class="headerlink" title="2. 比较运算"></a>2. 比较运算</h4><ul>
+<li>1)比较相等：==, !=</li>
+<li>2)比较大小：&gt;, &lt;, &lt;=, &gt;=</li>
+<li>比较字符串中每一对字符的编码值大小，如果相等就继续比较下一对，直到一对不相等为止</li>
+<li>应用：判断一个字符是否是大写字母，是否是小写字母，是否是中文，是否是数字等…</li>
+</ul>
+<hr>
+<h4 id="3-in-not-in"><a href="#3-in-not-in" class="headerlink" title="3. in / not in"></a>3. in / not in</h4><ul>
+<li>字符串1 in 字符串2 - 判断字符串2中是否包含字符串1</li>
+<li>字符串1 not in 字符串2 - 判断字符串2中是否不包含字符串1</li>
+</ul>
+<hr>
+<h4 id="4-len"><a href="#4-len" class="headerlink" title="4. len()"></a>4. len()</h4><ul>
+<li><code>len(序列)</code> - 获取序列的长度(序列中元素的个数)</li>
+</ul>
+<hr>
+<h4 id="5-str-数据-将指定数据转换成字符串"><a href="#5-str-数据-将指定数据转换成字符串" class="headerlink" title="5. str(数据) - 将指定数据转换成字符串"></a>5. str(数据) - 将指定数据转换成字符串</h4><ul>
+<li>所有的数据都可以转换成字符串；直接在数据外面加引号</li>
+</ul>
+<hr>
+<h4 id="6-格式字符串：在字符串中用格式占位符来表示字符串中变化的部分"><a href="#6-格式字符串：在字符串中用格式占位符来表示字符串中变化的部分" class="headerlink" title="6. 格式字符串：在字符串中用格式占位符来表示字符串中变化的部分"></a>6. 格式字符串：在字符串中用格式占位符来表示字符串中变化的部分</h4><ul>
+<li>语法：包含格式占位符的字符串 % (格式字符串对应的多个数据)<ul>
+<li>%s - 字符串</li>
+<li>%d - 整数</li>
+<li>%.Nf - 小数，N用来约束小数的位数</li>
+<li>%c - 字符(可以将数字转换成字符)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="7-字符串相关的函数"><a href="#7-字符串相关的函数" class="headerlink" title="7. 字符串相关的函数"></a>7. 字符串相关的函数</h4><ul>
+<li><p>格式：字符串.函数名()</p>
+</li>
+<li><p>1)对齐方式</p>
+<ul>
+<li><blockquote>
+<p>字符串.center(宽度, 填充字符) - 居中填充</p>
+<p>字符串.ljust(宽度, 填充字符) - 左对齐填充</p>
+<p>字符串.rjust(宽度, 填充字符) - 右对齐填充</p>
+<p>字符串.zfill(宽度) - 填充0</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>2)统计个数</p>
+<ul>
+<li>字符串1.count(字符串2) - 统计字符串1中字符串2的个数</li>
+</ul>
+</li>
+<li><p>3)join()函数</p>
+<ul>
+<li>字符串.join(序列) - 将序列中的元素用指定的字符串连接在一起产生一个新的字符串</li>
+<li>注意：序列的元素必须是字符串</li>
+</ul>
+</li>
+<li><p>4)去掉空白符</p>
+<ul>
+<li><blockquote>
+<p>字符串.lstrip() - 去掉字符串左边的空白</p>
+<p>字符串.rstrip() - 去掉字符串右边的空白</p>
+<p>字符串.strip() - 去掉字符串左边和右边的空白</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>5) 字符串的替换</p>
+<ul>
+<li>字符串.replace(字符串1, 字符串2) - 将字符串中的字符串1替换为字符换2</li>
+</ul>
+</li>
+<li><p>6)字符串切割</p>
+<ul>
+<li>字符串.split(字符串1) - 将字符串按照字符串1进行切割</li>
+<li>结果是一个序列，列表中元素是多个小字符串</li>
+</ul>
+</li>
+</ul>
+<hr>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/str/" rel="tag"><i class="fas fa-tags"></i>str</a>
+        
+        <a class="post-tag button" href="/tags/字符串操作/" rel="tag"><i class="fas fa-tags"></i>字符串操作</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+<div class="reward" id="reward">
+  <p>坚持原创技术分享，您的支持是我前进的动力！</p>
+  <button id="reward-button" class="button" disable="enable">Reward</button>
+  <div id="qr" class="qr" style="display: none;" aria-hidden="true">
+    
+    <div id="wechat">
+      <img id="wechat_qr" src="/images/WeChatPay.jpg" alt="WechatPay">
+      <span>WechatPay</span>
+    </div>
+    
+    
+    <div id="alipay">
+      <img id="alipay_qr" src="/images/AliPay.jpg" alt="AliPay">
+      <span>AliPay</span>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/07/01/day4-循环结构/" rel="next" title="循环结构"><i class="fas fa-angle-left"></i><span class="nav-title">循环结构</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2019/07/05/day7-列表/" rel="prev" title="列表"><span class="nav-title">列表</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/FutureGazerSmall.png" alt="叶小永">
+  
+  <h1 class="author-name">叶小永</h1>
+  <h2 class="author-description">技术宅，python新手</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">Archives</div>
+      <div><a href="/archives/">19</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">Categories</div>
+      <div><a href="/categories/">1</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">Tags</div>
+      <div><a href="/tags/">44</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>Table of Contents</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day6-字符串"><span class="toc-text">day6-字符串</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、认识字符串"><span class="toc-text">一、认识字符串</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是字符串-str"><span class="toc-text">1. 什么是字符串(str)</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-字符串中的内容"><span class="toc-text">2. 字符串中的内容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、字符串操作"><span class="toc-text">二、字符串操作</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-获取字符"><span class="toc-text">1. 获取字符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#三、字符串运算"><span class="toc-text">三、字符串运算</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-数学运算："><span class="toc-text">1. 数学运算：+, *</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-比较运算"><span class="toc-text">2. 比较运算</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-in-not-in"><span class="toc-text">3. in / not in</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#4-len"><span class="toc-text">4. len()</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#5-str-数据-将指定数据转换成字符串"><span class="toc-text">5. str(数据) - 将指定数据转换成字符串</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#6-格式字符串：在字符串中用格式占位符来表示字符串中变化的部分"><span class="toc-text">6. 格式字符串：在字符串中用格式占位符来表示字符串中变化的部分</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#7-字符串相关的函数"><span class="toc-text">7. 字符串相关的函数</span></a></li></ol></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>Social Links<p></p></div>
+      <ul>
+        
+        <li><i class="fab fa-qq"></i><a href target="_blank">787271413</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/yxy1280703839/yxy1280703839.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weixin"></i><a href target="_blank">cdut201413040119</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>Blogroll</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="Back to Top"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">叶小永</span><span class="year"><i class="far fa-copyright"></i>2019 - 2019</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">BY-NC-SA 4.0</a></span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="Site Visit Count" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="Site User Count" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="Page Click Count" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+           
+        </div>
+        <div class="powered-by">
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="http://www.beian.miit.gov.cn/" target="_blank">蜀ICP备19023847号</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

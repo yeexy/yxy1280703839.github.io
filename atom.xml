@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-02T12:54:47.837Z</updated>
+  <updated>2019-07-31T11:56:33.377Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>时间模块</title>
+    <link href="http://yoursite.com/2019/07/29/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/"/>
+    <id>http://yoursite.com/2019/07/29/day20-时间模块/</id>
+    <published>2019-07-29T06:45:20.000Z</published>
+    <updated>2019-07-31T11:56:33.377Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一部分主要讲了Python中有关时间的模块。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="time" scheme="http://yoursite.com/tags/time/"/>
+    
+      <category term="Datetime" scheme="http://yoursite.com/tags/Datetime/"/>
+    
+  </entry>
   
   <entry>
     <title>元组字典和集合</title>
@@ -37,28 +59,6 @@
       <category term="字典" scheme="http://yoursite.com/tags/%E5%AD%97%E5%85%B8/"/>
     
       <category term="集合" scheme="http://yoursite.com/tags/%E9%9B%86%E5%90%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>时间模块</title>
-    <link href="http://yoursite.com/2019/07/29/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/"/>
-    <id>http://yoursite.com/2019/07/29/day20-时间模块/</id>
-    <published>2019-07-29T06:45:20.000Z</published>
-    <updated>2019-07-31T11:56:33.377Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这一部分主要讲了Python中有关时间的模块。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
-    
-    
-      <category term="time" scheme="http://yoursite.com/tags/time/"/>
-    
-      <category term="Datetime" scheme="http://yoursite.com/tags/Datetime/"/>
     
   </entry>
   
@@ -151,126 +151,6 @@
       <category term="浅拷贝和深拷贝" scheme="http://yoursite.com/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
     
       <category term="内存管理机制" scheme="http://yoursite.com/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day7-%E5%88%97%E8%A1%A8/"/>
-    <id>http://yoursite.com/2019/07/19/day7-列表/</id>
-    <published>2019-07-19T09:31:55.271Z</published>
-    <updated>2019-07-19T09:31:55.271Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day7-列表&quot;&gt;&lt;a href=&quot;#day7-列表&quot; class=&quot;headerlink&quot; title=&quot;day7-列表&quot;&gt;&lt;/a&gt;day7-列表&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、认识列表&quot;&gt;&lt;a href=&quot;#一、认识列表&quot; class=&quot;headerl
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day6-%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    <id>http://yoursite.com/2019/07/19/day6-字符串/</id>
-    <published>2019-07-19T09:31:51.863Z</published>
-    <updated>2019-07-19T09:31:51.863Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day6-字符串&quot;&gt;&lt;a href=&quot;#day6-字符串&quot; class=&quot;headerlink&quot; title=&quot;day6-字符串&quot;&gt;&lt;/a&gt;day6-字符串&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、认识字符串&quot;&gt;&lt;a href=&quot;#一、认识字符串&quot; class=&quot;h
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day4-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/"/>
-    <id>http://yoursite.com/2019/07/19/day4-循环结构/</id>
-    <published>2019-07-19T09:31:36.493Z</published>
-    <updated>2019-07-19T09:31:36.493Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day4-循环结构&quot;&gt;&lt;a href=&quot;#day4-循环结构&quot; class=&quot;headerlink&quot; title=&quot;day4-循环结构&quot;&gt;&lt;/a&gt;day4-循环结构&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、for循环&quot;&gt;&lt;a href=&quot;#一、for循环&quot; clas
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day3-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://yoursite.com/2019/07/19/day3-运算符和数据类型/</id>
-    <published>2019-07-19T09:30:31.876Z</published>
-    <updated>2019-07-19T09:30:31.876Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day3-运算符、数据类型和if语句&quot;&gt;&lt;a href=&quot;#day3-运算符、数据类型和if语句&quot; class=&quot;headerlink&quot; title=&quot;day3-运算符、数据类型和if语句&quot;&gt;&lt;/a&gt;day3-运算符、数据类型和if语句&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day2-pyhton%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2019/07/19/day2-pyhton基础语法/</id>
-    <published>2019-07-19T09:30:15.433Z</published>
-    <updated>2019-07-19T09:30:15.433Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day2-Python基础语法&quot;&gt;&lt;a href=&quot;#day2-Python基础语法&quot; class=&quot;headerlink&quot; title=&quot;day2-Python基础语法&quot;&gt;&lt;/a&gt;day2-Python基础语法&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、基础语法&quot;&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day1-markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2019/07/19/day1-markdown语法/</id>
-    <published>2019-07-19T09:30:11.814Z</published>
-    <updated>2019-07-19T09:30:11.814Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day1-markdown语法&quot;&gt;&lt;a href=&quot;#day1-markdown语法&quot; class=&quot;headerlink&quot; title=&quot;day1-markdown语法&quot;&gt;&lt;/a&gt;day1-markdown语法&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&quot;1-markdo
-      
-    
-    </summary>
-    
     
   </entry>
   
@@ -431,6 +311,138 @@
       <category term="函数的调用" scheme="http://yoursite.com/tags/%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8/"/>
     
       <category term="函数的参数" scheme="http://yoursite.com/tags/%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>列表</title>
+    <link href="http://yoursite.com/2019/07/05/day7-%E5%88%97%E8%A1%A8/"/>
+    <id>http://yoursite.com/2019/07/05/day7-列表/</id>
+    <published>2019-07-05T06:45:20.000Z</published>
+    <updated>2019-08-02T14:55:36.921Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一部分主要讲了Python中的列表的运算、列表相关的函数。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="列表" scheme="http://yoursite.com/tags/%E5%88%97%E8%A1%A8/"/>
+    
+      <category term="列表的函数" scheme="http://yoursite.com/tags/%E5%88%97%E8%A1%A8%E7%9A%84%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字符串</title>
+    <link href="http://yoursite.com/2019/07/03/day6-%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://yoursite.com/2019/07/03/day6-字符串/</id>
+    <published>2019-07-03T06:45:20.000Z</published>
+    <updated>2019-08-02T14:59:59.985Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一部分主要讲了Python中的字符串和字符串的操作。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="str" scheme="http://yoursite.com/tags/str/"/>
+    
+      <category term="字符串操作" scheme="http://yoursite.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>循环结构</title>
+    <link href="http://yoursite.com/2019/07/01/day4-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2019/07/01/day4-循环结构/</id>
+    <published>2019-07-01T06:45:20.000Z</published>
+    <updated>2019-08-02T15:01:41.810Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一部分主要讲了Python中的for、while循环结构以及continue、break关键字。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="for循环" scheme="http://yoursite.com/tags/for%E5%BE%AA%E7%8E%AF/"/>
+    
+      <category term="while循环" scheme="http://yoursite.com/tags/while%E5%BE%AA%E7%8E%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>运算符、数据类型和if语句</title>
+    <link href="http://yoursite.com/2019/06/28/day3-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://yoursite.com/2019/06/28/day3-运算符和数据类型/</id>
+    <published>2019-06-28T06:45:20.000Z</published>
+    <updated>2019-08-02T15:05:19.247Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一部分主要讲了Python中的的各种运算符、几种常见的数据类型和if语句。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="运算符" scheme="http://yoursite.com/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    
+      <category term="数据类型" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+      <category term="if语句" scheme="http://yoursite.com/tags/if%E8%AF%AD%E5%8F%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python基础语法</title>
+    <link href="http://yoursite.com/2019/06/26/day2-pyhton%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/06/26/day2-pyhton基础语法/</id>
+    <published>2019-06-26T06:45:20.000Z</published>
+    <updated>2019-08-02T15:11:27.290Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一部分主要讲了Python中的注释、关键字、变量。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="基础语法" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="变量" scheme="http://yoursite.com/tags/%E5%8F%98%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown语法</title>
+    <link href="http://yoursite.com/2019/06/24/day1-markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/06/24/day1-markdown语法/</id>
+    <published>2019-06-24T06:45:20.000Z</published>
+    <updated>2019-08-02T15:12:57.328Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一部分主要讲了如何用markdown写技术文档。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
     
   </entry>
   

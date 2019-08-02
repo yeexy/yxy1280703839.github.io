@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>时间模块</title>
+      <link href="/2019/07/29/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/"/>
+      <url>/2019/07/29/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/</url>
+      
+        <content type="html"><![CDATA[<p>这一部分主要讲了Python中有关时间的模块。</p><a id="more"></a><h2 id="day20-时间模块"><a href="#day20-时间模块" class="headerlink" title="day20-时间模块"></a>day20-时间模块</h2><hr><h3 id="一、time模块"><a href="#一、time模块" class="headerlink" title="一、time模块"></a>一、time模块</h3><hr><h4 id="1-包的使用"><a href="#1-包的使用" class="headerlink" title="1.包的使用"></a>1.包的使用</h4><ul><li>1)导入包中的模块<ul><li>from 包名 import 模块名</li><li>from 包名.模块名 import *(或内容)</li></ul></li><li>2)普通文件和包的区别<ul><li>包有一个默认的py文件，文件名是<code>&#39;__init__&#39;</code>，不管用什么方式去导入包中的内容，这个默认文件都会被导入</li></ul></li></ul><hr><h4 id="2-time模块-提供和时间操作相关的函数"><a href="#2-time模块-提供和时间操作相关的函数" class="headerlink" title="2.time模块 - 提供和时间操作相关的函数"></a>2.time模块 - 提供和时间操作相关的函数</h4><ul><li>1)<code>asctime()</code>：获取当前时间，并且以’星期 月份 日期 时:分:秒 年份’的格式返回</li><li>2)<code>localtime()</code>：获取当地的当前时间，返回结构体时间对象</li><li>3)<code>time()</code>：获取当前时间，返回时间戳<ul><li>时间戳：当前时间到格林威治时间的1970年1月1日00时00分00秒的时间差(单位是秒)</li><li>特点：a.方便对时间加密；b.可以节约存储空间</li><li><code>%H：24小时制的时；%I：12小时制的时；%w：星期几</code></li></ul></li><li>4)<code>strftime(时间格式,结构体时间对象)</code>：将时间对象以指定的格式转换成字符串时间</li><li>5)<code>strptime(时间字符串,时间格式)</code>：将字符串时间转换成结构体时间对象</li></ul><hr><h4 id="二、datetime模块"><a href="#二、datetime模块" class="headerlink" title="二、datetime模块"></a>二、datetime模块</h4><hr><h4 id="1-各种时间类"><a href="#1-各种时间类" class="headerlink" title="1.各种时间类"></a>1.各种时间类</h4><ul><li>time类：和时、分、秒、毫秒相关的时间</li><li>date类：和年、月、日相关的时间</li><li>datetime类：和time类、date类都相关的时间</li><li>timedelta：用来时间的加减操作类</li></ul><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> time </tag>
+            
+            <tag> Datetime </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>元组字典和集合</title>
       <link href="/2019/07/29/day8-%E5%85%83%E7%BB%84%E5%AD%97%E5%85%B8%E5%92%8C%E9%9B%86%E5%90%88/"/>
       <url>/2019/07/29/day8-%E5%85%83%E7%BB%84%E5%AD%97%E5%85%B8%E5%92%8C%E9%9B%86%E5%90%88/</url>
@@ -25,33 +52,6 @@
             <tag> 字典 </tag>
             
             <tag> 集合 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>时间模块</title>
-      <link href="/2019/07/29/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/"/>
-      <url>/2019/07/29/day20-%E6%97%B6%E9%97%B4%E6%A8%A1%E5%9D%97/</url>
-      
-        <content type="html"><![CDATA[<p>这一部分主要讲了Python中有关时间的模块。</p><a id="more"></a><h2 id="day20-时间模块"><a href="#day20-时间模块" class="headerlink" title="day20-时间模块"></a>day20-时间模块</h2><hr><h3 id="一、time模块"><a href="#一、time模块" class="headerlink" title="一、time模块"></a>一、time模块</h3><hr><h4 id="1-包的使用"><a href="#1-包的使用" class="headerlink" title="1.包的使用"></a>1.包的使用</h4><ul><li>1)导入包中的模块<ul><li>from 包名 import 模块名</li><li>from 包名.模块名 import *(或内容)</li></ul></li><li>2)普通文件和包的区别<ul><li>包有一个默认的py文件，文件名是<code>&#39;__init__&#39;</code>，不管用什么方式去导入包中的内容，这个默认文件都会被导入</li></ul></li></ul><hr><h4 id="2-time模块-提供和时间操作相关的函数"><a href="#2-time模块-提供和时间操作相关的函数" class="headerlink" title="2.time模块 - 提供和时间操作相关的函数"></a>2.time模块 - 提供和时间操作相关的函数</h4><ul><li>1)<code>asctime()</code>：获取当前时间，并且以’星期 月份 日期 时:分:秒 年份’的格式返回</li><li>2)<code>localtime()</code>：获取当地的当前时间，返回结构体时间对象</li><li>3)<code>time()</code>：获取当前时间，返回时间戳<ul><li>时间戳：当前时间到格林威治时间的1970年1月1日00时00分00秒的时间差(单位是秒)</li><li>特点：a.方便对时间加密；b.可以节约存储空间</li><li><code>%H：24小时制的时；%I：12小时制的时；%w：星期几</code></li></ul></li><li>4)<code>strftime(时间格式,结构体时间对象)</code>：将时间对象以指定的格式转换成字符串时间</li><li>5)<code>strptime(时间字符串,时间格式)</code>：将字符串时间转换成结构体时间对象</li></ul><hr><h4 id="二、datetime模块"><a href="#二、datetime模块" class="headerlink" title="二、datetime模块"></a>二、datetime模块</h4><hr><h4 id="1-各种时间类"><a href="#1-各种时间类" class="headerlink" title="1.各种时间类"></a>1.各种时间类</h4><ul><li>time类：和时、分、秒、毫秒相关的时间</li><li>date类：和年、月、日相关的时间</li><li>datetime类：和time类、date类都相关的时间</li><li>timedelta：用来时间的加减操作类</li></ul><hr>]]></content>
-      
-      
-      <categories>
-          
-          <category> Python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> time </tag>
-            
-            <tag> Datetime </tag>
             
         </tags>
       
@@ -166,84 +166,6 @@
             <tag> 内存管理机制 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2019/07/19/day7-%E5%88%97%E8%A1%A8/"/>
-      <url>/2019/07/19/day7-%E5%88%97%E8%A1%A8/</url>
-      
-        <content type="html"><![CDATA[<h2 id="day7-列表"><a href="#day7-列表" class="headerlink" title="day7-列表"></a>day7-列表</h2><hr><h3 id="一、认识列表"><a href="#一、认识列表" class="headerlink" title="一、认识列表"></a>一、认识列表</h3><hr><h4 id="1-什么是列表-list"><a href="#1-什么是列表-list" class="headerlink" title="1. 什么是列表(list)"></a>1. 什么是列表(list)</h4><ul><li>列表是容器型数据类型(序列)</li><li>特点：可变(支持元素的增删改)、有序(支持下标操作)</li><li>说明：将[]作为容器，里面的元素用,隔开</li></ul><hr><h4 id="2-列表中的元素"><a href="#2-列表中的元素" class="headerlink" title="2. 列表中的元素"></a>2. 列表中的元素</h4><ul><li>任何类型的数据都可以作为列表的元素，如：数字、字符串、列表、字典、元组、函数等</li><li>同一个列表中的不同元素的类型可以不一样</li></ul><hr><h3 id="二、增删改查"><a href="#二、增删改查" class="headerlink" title="二、增删改查"></a>二、增删改查</h3><hr><h4 id="1-查-获取列表中的元素"><a href="#1-查-获取列表中的元素" class="headerlink" title="1. 查 - 获取列表中的元素"></a>1. 查 - 获取列表中的元素</h4><ul><li>获取单个元素：列表[下标]<ul><li>语法和字符串一样</li></ul></li><li>获取部分元素(列表切片)：列表[开始下标:结束下标:步长]<ul><li>列表切片和字符串切片语法一样，但是列表切片结果是一个列表</li><li>空列表：[]</li></ul></li><li>遍历<ul><li>直接遍历：通过for循环取出每一个元素</li><li>通过遍历下标去遍历列表</li></ul></li></ul><hr><h4 id="2-增-在列表中添加元素"><a href="#2-增-在列表中添加元素" class="headerlink" title="2. 增 - 在列表中添加元素"></a>2. 增 - 在列表中添加元素</h4><ul><li>列表.append(元素)：在列表的最后面追加一个元素</li><li>列表.insert(下标,元素)：在列表指定的下标前面插入指定元素</li></ul><hr><h4 id="3-删除-删除列表中的元素"><a href="#3-删除-删除列表中的元素" class="headerlink" title="3. 删除 - 删除列表中的元素"></a>3. 删除 - 删除列表中的元素</h4><ul><li>del 列表[下标]：删除列表中指定下标对应的元素；没有下标则删除整个列表</li><li>列表.remove(元素)：删除列表中第一个指定的元素<ul><li>元素必须在列表中，否则会报错</li></ul></li><li>列表.pop()：取出列表中最后一个元素，返回被取出的数据<ul><li>列表.pop(下标)：取出列表中指定下标的元素，返回被取出的数据</li></ul></li></ul><hr><h4 id="4-改-修改列表中某个元素的值"><a href="#4-改-修改列表中某个元素的值" class="headerlink" title="4. 改 - 修改列表中某个元素的值"></a>4. 改 - 修改列表中某个元素的值</h4><ul><li>列表[下标] = 新值：将列表中指定下标对应的元素设置为新值</li></ul><hr><h3 id="三、列表的运算"><a href="#三、列表的运算" class="headerlink" title="三、列表的运算"></a>三、列表的运算</h3><hr><h4 id="1-数学运算："><a href="#1-数学运算：" class="headerlink" title="1. 数学运算：+, *"></a>1. 数学运算：+, *</h4><ul><li>列表1 + 列表2：将两个列表中的元素合并产生一个新的列表</li><li>列表 * N：将列表中的元素重复N次产生一个新的列表</li></ul><hr><h4 id="2-比较运算："><a href="#2-比较运算：" class="headerlink" title="2. 比较运算：==, !="></a>2. 比较运算：==, !=</h4><ul><li>列表大小没有实际的意义，所以只关心相等和不相等</li></ul><hr><h4 id="3-in-not-in"><a href="#3-in-not-in" class="headerlink" title="3. in / not in"></a>3. in / not in</h4><ul><li>元素 in 列表：判断列表中是否存在指定的元素</li><li>元素 not in 列表：判断列表中是否不存在指定的元素</li></ul><hr><h4 id="4-len-序列"><a href="#4-len-序列" class="headerlink" title="4. len(序列)"></a>4. len(序列)</h4><ul><li>len()：获取指定列表中的个数</li></ul><hr><h4 id="5-list-数据-：将数据转换成列表"><a href="#5-list-数据-：将数据转换成列表" class="headerlink" title="5. list(数据)：将数据转换成列表"></a>5. list(数据)：将数据转换成列表</h4><ul><li>所有的序列都可以转换成列表</li><li>将序列中的元素转换成列表元素</li></ul><hr><h3 id="四、列表函数"><a href="#四、列表函数" class="headerlink" title="四、列表函数"></a>四、列表函数</h3><hr><h4 id="1-内置函数"><a href="#1-内置函数" class="headerlink" title="1. 内置函数"></a>1. 内置函数</h4><ul><li><code>max(序列)、min(序列)、sum(序列)</code></li><li>max、min：序列中元素类型必须一样；序列中元素必须支持比较运算符</li><li>sum：只支持数字序列的求和</li></ul><hr><h4 id="2-列表相关函数"><a href="#2-列表相关函数" class="headerlink" title="2. 列表相关函数"></a>2. 列表相关函数</h4><ul><li>列表.count(元素)：统计列表中指定元素的个数</li><li>列表.extend(序列)：将序列中的元素依次添加到列表的最后</li><li>列表.index(元素)：获取列表中指定元素对应的下标(只获取第一个)<ul><li>注意：元素不存在会报错</li></ul></li><li>列表.reverse()：对原列表倒序，不会产生新列表</li><li>列表.sort()：将列表中元素从小到大排序<ul><li>列表.sort(reverse=True)：将列表中元素从大到小排序</li><li>要求：列表的元素类型必须一样；元素支持比较运算符</li></ul></li><li>列表.clear()：清空列表</li><li>列表.copy()：复制列表中的元素产生一个新的列表，跟列表[:]功能一样<ul><li>注意：这是一个浅拷贝</li></ul></li></ul><hr>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2019/07/19/day6-%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-      <url>/2019/07/19/day6-%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
-      
-        <content type="html"><![CDATA[<h2 id="day6-字符串"><a href="#day6-字符串" class="headerlink" title="day6-字符串"></a>day6-字符串</h2><hr><h3 id="一、认识字符串"><a href="#一、认识字符串" class="headerlink" title="一、认识字符串"></a>一、认识字符串</h3><hr><h4 id="1-什么是字符串-str"><a href="#1-什么是字符串-str" class="headerlink" title="1. 什么是字符串(str)"></a>1. 什么是字符串(str)</h4><ul><li>定义：字符串属于容器型数据类型，又叫序列，将引号作为容器，字符是元素</li><li>特点：不可变(字符个数和顺序都不可变)、有序(字符顺序影响值)</li></ul><hr><h4 id="2-字符串中的内容"><a href="#2-字符串中的内容" class="headerlink" title="2. 字符串中的内容"></a>2. 字符串中的内容</h4><ul><li>字符串中的每个基本单元是字符；python中有字符的概念，但是没有字符对应的数据类型</li><li>1)普通字符：如，字母、数字、文字、符号</li><li>2)转义字符：在指定的符号前加\来表示一些具有特殊功能或特殊意义的符号<ul><li><code>\n</code>  -  换行</li><li><code>\t</code>  -  制表符</li><li><code>\&#39;</code>  -  一个单引号</li><li><code>\&quot;</code>  -  一个双引号</li><li><code>\\</code>  -  一个反斜杠 </li></ul></li><li>3)编码字符：在\u后加四位十六进制编码值，表示一个编码值对应的字符</li><li>4)编码：计算机存储字符的时候实质是字符对应的编码值，每个字符编码值是固定的<ul><li>计算机本身只有存储数字的能力，而且存的是补码(二进制)</li><li>字符和字符编码的一一对应关系就叫编码表。常见的编码表：ASCII、Unicode</li><li>python中采用的是Unicode编码，中文范围：4e00-9fa5</li><li><code>chr(编码值)</code> - 获取编码值对应的字符</li><li><code>ord(字符)</code> - 获取字符的编码值</li></ul></li><li>5)阻止转义：在字符串的最前面加r/R可以阻止当前字符串的所有的转义字符转义<ul><li>一个转义字符和一个编码字符长度都是1</li></ul></li></ul><hr><h3 id="二、字符串操作"><a href="#二、字符串操作" class="headerlink" title="二、字符串操作"></a>二、字符串操作</h3><hr><h4 id="1-获取字符"><a href="#1-获取字符" class="headerlink" title="1. 获取字符"></a>1. 获取字符</h4><ul><li><p>获取单个字符</p><ul><li><blockquote><p>a.语法</p><p>字符串[下标] - 获取指定下标对应的字符</p><p>b.说明</p><p>字符串 - 可以是字符串值、字符串变量或结果是字符串的表达式</p><p>[] - 固定写法</p><p>下标 - 又叫索引，字符一旦确定，那么字符串中的每个字符位置就确定了，每个字符都会对应固定的下标来表示字符在字符中的位置</p><p>下标值有两种：0<del>字符串长度-1、-1</del>-字符串的长度</p><p>0对应的是第一个字符，-1对应最后一个字符</p><p>c.注意：下标不能越界</p></blockquote></li></ul></li><li><p>获取部分字符(字符串切片)</p><ul><li><blockquote><p>a.语法</p><p>字符串[开始下标:结束下标:步长] - 从开始下标开始获取，每次增加步长去取下一个字符，直到获取结束下标为止</p><p>b.说明</p><p>字符串 - 字符串值或字符串变量</p><p>[] - 固定写法</p><p>开始下标，结束下标 - 范围内下标值</p><p>步长 - 整数</p><p>c.注意</p><p>结束下标对应的字符永远都取不到</p><p>当步长为正，开始下标到结束下标从前往后取，这时开始下标对应的字符必须在结束下标对应的字符的前面；否则取到的是空串</p><p>当步长为负，开始下标到结束下标从后往前取，这时开始下标对应的字符必须在结束下标对应的字符的后面；否则取到的是空串</p><p>获取部分下标可以越界</p></blockquote></li></ul></li><li><p>省略部分内容</p><ul><li>a)省略步长 - 默认步长为1</li><li>字符串[开始下标:结束下标]</li><li>b)省略开始下标</li><li>字符串[:结束下标:步长] / 字符串[:结束下标]</li><li>步长为正：从第一个字符开始往后取；步长为负：从最后一个字符往前取</li><li>c)省略结束下标</li><li>字符串[开始下标::步长] / 字符串[开始下标:]</li><li>步长为正：从开始下标往后取到最后一个字符；步长为负：从开始下标往前取到第一个字符</li><li>d)省略下标</li><li>字符串[::步长] / 字符串[:]</li></ul></li><li><p>遍历字符串</p><ul><li><blockquote><p>a)直接遍历拿到每个字符<br>for 变量 in 字符串:</p><p>​    循环体</p><p>b)通过遍历下标来遍历字符串</p><p><code>len(字符串)</code> - 获取字符串的长度</p></blockquote></li></ul></li></ul><hr><h3 id="三、字符串运算"><a href="#三、字符串运算" class="headerlink" title="三、字符串运算"></a>三、字符串运算</h3><hr><h4 id="1-数学运算："><a href="#1-数学运算：" class="headerlink" title="1. 数学运算：+, *"></a>1. 数学运算：+, *</h4><ul><li>1)字符串1 + 字符串2 - 将两个字符串拼接在一起产生一个新的字符串</li><li>注意：字符串只能和字符串相加</li><li>2)字符串 * N - 字符串重复N次产生一个新的字符串</li></ul><hr><h4 id="2-比较运算"><a href="#2-比较运算" class="headerlink" title="2. 比较运算"></a>2. 比较运算</h4><ul><li>1)比较相等：==, !=</li><li>2)比较大小：&gt;, &lt;, &lt;=, &gt;=</li><li>比较字符串中每一对字符的编码值大小，如果相等就继续比较下一对，直到一对不相等为止</li><li>应用：判断一个字符是否是大写字母，是否是小写字母，是否是中文，是否是数字等…</li></ul><hr><h4 id="3-in-not-in"><a href="#3-in-not-in" class="headerlink" title="3. in / not in"></a>3. in / not in</h4><ul><li>字符串1 in 字符串2 - 判断字符串2中是否包含字符串1</li><li>字符串1 not in 字符串2 - 判断字符串2中是否不包含字符串1</li></ul><hr><h4 id="4-len"><a href="#4-len" class="headerlink" title="4. len()"></a>4. len()</h4><ul><li><code>len(序列)</code> - 获取序列的长度(序列中元素的个数)</li></ul><hr><h4 id="5-str-数据-将指定数据转换成字符串"><a href="#5-str-数据-将指定数据转换成字符串" class="headerlink" title="5. str(数据) - 将指定数据转换成字符串"></a>5. str(数据) - 将指定数据转换成字符串</h4><ul><li>所有的数据都可以转换成字符串；直接在数据外面加引号</li></ul><hr><h4 id="6-格式字符串：在字符串中用格式占位符来表示字符串中变化的部分"><a href="#6-格式字符串：在字符串中用格式占位符来表示字符串中变化的部分" class="headerlink" title="6. 格式字符串：在字符串中用格式占位符来表示字符串中变化的部分"></a>6. 格式字符串：在字符串中用格式占位符来表示字符串中变化的部分</h4><ul><li>语法：包含格式占位符的字符串 % (格式字符串对应的多个数据)<ul><li>%s - 字符串</li><li>%d - 整数</li><li>%.Nf - 小数，N用来约束小数的位数</li><li>%c - 字符(可以将数字转换成字符)</li></ul></li></ul><hr><h4 id="7-字符串相关的函数"><a href="#7-字符串相关的函数" class="headerlink" title="7. 字符串相关的函数"></a>7. 字符串相关的函数</h4><ul><li><p>格式：字符串.函数名()</p></li><li><p>1)对齐方式</p><ul><li><blockquote><p>字符串.center(宽度, 填充字符) - 居中填充</p><p>字符串.ljust(宽度, 填充字符) - 左对齐填充</p><p>字符串.rjust(宽度, 填充字符) - 右对齐填充</p><p>字符串.zfill(宽度) - 填充0</p></blockquote></li></ul></li><li><p>2)统计个数</p><ul><li>字符串1.count(字符串2) - 统计字符串1中字符串2的个数</li></ul></li><li><p>3)join()函数</p><ul><li>字符串.join(序列) - 将序列中的元素用指定的字符串连接在一起产生一个新的字符串</li><li>注意：序列的元素必须是字符串</li></ul></li><li><p>4)去掉空白符</p><ul><li><blockquote><p>字符串.lstrip() - 去掉字符串左边的空白</p><p>字符串.rstrip() - 去掉字符串右边的空白</p><p>字符串.strip() - 去掉字符串左边和右边的空白</p></blockquote></li></ul></li><li><p>5) 字符串的替换</p><ul><li>字符串.replace(字符串1, 字符串2) - 将字符串中的字符串1替换为字符换2</li></ul></li><li><p>6)字符串切割</p><ul><li>字符串.split(字符串1) - 将字符串按照字符串1进行切割</li><li>结果是一个序列，列表中元素是多个小字符串</li></ul></li></ul><hr>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2019/07/19/day4-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/"/>
-      <url>/2019/07/19/day4-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</url>
-      
-        <content type="html"><![CDATA[<h2 id="day4-循环结构"><a href="#day4-循环结构" class="headerlink" title="day4-循环结构"></a>day4-循环结构</h2><hr><h3 id="一、for循环"><a href="#一、for循环" class="headerlink" title="一、for循环"></a>一、for循环</h3><hr><h4 id="1-什么时候使用循环"><a href="#1-什么时候使用循环" class="headerlink" title="1. 什么时候使用循环"></a>1. 什么时候使用循环</h4><ul><li>代码中需要重复执行某个操作的时候，就可以使用循环</li><li>python中有for循环和while循环</li></ul><hr><h4 id="2-for循环语法"><a href="#2-for循环语法" class="headerlink" title="2. for循环语法"></a>2. for循环语法</h4><ul><li><blockquote><p>for 变量名 in 序列:</p><p>​    循环体</p><p>a.说明</p><p>for，in   -   关键字，固定写法</p><p>:    -    固定写法</p><p>变量名    -    和声明变量时的变量名要求一样</p><p>序列    -    容器型数据，python常见序列有：range、字符串、列表、字典、集合、元组、迭代器、生成器</p><p>循环体    -    和for保持一个缩进的一条或多条语句，会被重读执行的代码</p><p>b.执行过程</p><p>让变量去序列中取值，一个一个的取，取完为止，每取一个值执行一次循环体</p><p>for循环的循环次数由序列中元素的个数来控制</p></blockquote></li></ul><hr><h4 id="3-range-函数-专门产生一定范围的数字序列"><a href="#3-range-函数-专门产生一定范围的数字序列" class="headerlink" title="3. range()函数   -   专门产生一定范围的数字序列"></a>3. <code>range()</code>函数   -   专门产生一定范围的数字序列</h4><ul><li>1) <code>range(n)</code>-产生一个0~n-1的数字序列（整数），n必须是大于0的整数</li><li>2) <code>range(m,n)</code>-产生m~n-1的数字序列，m和n都必须是整数，n必须大于m</li><li>3) <code>range(m,n,step)</code>-从m开始，每次加step，直到n-1</li></ul><hr><h3 id="二、while循环"><a href="#二、while循环" class="headerlink" title="二、while循环"></a>二、while循环</h3><hr><h4 id="1-while循环的语法"><a href="#1-while循环的语法" class="headerlink" title="1. while循环的语法"></a>1. while循环的语法</h4><ul><li><blockquote><p>while 条件语句:</p><p>​    循环体</p><p>a.说明</p><p>while   -   关键字</p><p>条件语句   -   和if后面的条件语句要求一样，任何有结果的表达式，除了赋值语句都可以</p><p>循环体   -   和while保持一个缩进的一条或多条语句</p><p>b.执行过程</p><p>先判断条件语句是否为True，如果是True就执行循环体；执行完循环体，再判断条件是否为True，如果为True又执行循环体；以此类推，直到条件语句结果是False，整个循环结束</p></blockquote></li></ul><hr><h4 id="2-for循环和while循环的使用"><a href="#2-for循环和while循环的使用" class="headerlink" title="2. for循环和while循环的使用"></a>2. for循环和while循环的使用</h4><ul><li>for：当循环次数确定的时候都选择for循环</li><li>while：死循环，循环次数不确定</li></ul><hr><h4 id="3-随机数"><a href="#3-随机数" class="headerlink" title="3. 随机数"></a>3. 随机数</h4><ul><li><code>randint(m,n)</code>-产生一个m~n的随机整数</li></ul><hr><h3 id="三、循环相关的关键字"><a href="#三、循环相关的关键字" class="headerlink" title="三、循环相关的关键字"></a>三、循环相关的关键字</h3><hr><h4 id="1-continue关键字"><a href="#1-continue关键字" class="headerlink" title="1. continue关键字"></a>1. continue关键字</h4><ul><li>continue只能出现在循环体中；当执行循环体遇到continue时，结束当次循环，进入下次循环的判断</li></ul><hr><h4 id="2-break关键字"><a href="#2-break关键字" class="headerlink" title="2. break关键字"></a>2. break关键字</h4><ul><li>break只能出现在循环体中；当执行循环体遇到break，整个循环直接结束</li></ul><hr><h4 id="3-else关键字"><a href="#3-else关键字" class="headerlink" title="3. else关键字"></a>3. else关键字</h4><ul><li><blockquote><p>1) 完整的for循环</p><p>for 变量 in 序列:</p><p>​    循环体</p><p>else:</p><p>​    代码块</p><p>2) 完整的while循环</p><p>while 条件语句:</p><p>​    循环体</p><p>else:</p><p>​    代码块</p><p>当程序自然死亡，会执行和循环相关的else中的代码块；如果循环是因为遇到break结束，就不会执行else中的代码块</p></blockquote></li></ul><hr>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2019/07/19/day3-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-      <url>/2019/07/19/day3-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-      
-        <content type="html"><![CDATA[<h2 id="day3-运算符、数据类型和if语句"><a href="#day3-运算符、数据类型和if语句" class="headerlink" title="day3-运算符、数据类型和if语句"></a>day3-运算符、数据类型和if语句</h2><hr><h3 id="一、运算符"><a href="#一、运算符" class="headerlink" title="一、运算符"></a>一、运算符</h3><hr><h4 id="1-数学运算符"><a href="#1-数学运算符" class="headerlink" title="1. 数学运算符"></a>1. 数学运算符</h4><ul><li>+，-，*，/    —    和数学中的加、减、乘、除一样</li><li>%    —    取余，求余数<ul><li>应用1：通过对2取余来判断一个数是偶数还是奇数</li><li>应用2：通过对10取余来获取一个数的个位数</li></ul></li><li>//    —    取整，求商取商的整数部分<ul><li><code>print(5 // 2)    #结果为2</code>    </li></ul></li><li>**    —    求幂运算<ul><li><code>print(9 ** 0.5)    #幂运算可以用来开方</code></li></ul></li></ul><hr><h4 id="2-比较运算符"><a href="#2-比较运算符" class="headerlink" title="2. 比较运算符"></a>2. 比较运算符</h4><ul><li>python中有&gt;(大于), &lt;(小于), &gt;=(大于等于), &lt;=(小于等于), ==(等于), !=(不等于)几种比较运算符</li><li>所有比较运算符的的运算结果都是布尔值(True/False)</li><li>python中还可以使用多个比较运算符来表示一个范围</li></ul><hr><h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3. 逻辑运算符"></a>3. 逻辑运算符</h4><ul><li>逻辑运算符有：and，or，not</li><li>and(逻辑与运算)：真真为真，其他为假<ul><li>应用：如果需要多个条件同时满足，这个时候条件才用and连接</li></ul></li><li>or(逻辑或运算)：假假为假，其他为真<ul><li>应用：如果多个条件只要有一个条件满足就可以用or将多个条件连接起来</li></ul></li><li>not(逻辑非运算)：结果取反<ul><li>应用：对一个条件进行否定</li></ul></li><li>短路操作：<ul><li>and短路操作：如果and前的结果是False，不会执行and后面的语句，结果直接为False</li><li>or短路操作：如果or前的结果是True，不会执行or后面的语句，结果直接为True</li></ul></li></ul><hr><h4 id="4-赋值运算符"><a href="#4-赋值运算符" class="headerlink" title="4. 赋值运算符"></a>4. 赋值运算符</h4><ul><li>python中有=，+=，-=，/=，<em>=，%=，//=，*</em>=</li><li>赋值符号的左边必须是变量；复合的赋值运算符的左边必须是已经赋值过的变量</li></ul><hr><h4 id="5-运算顺序"><a href="#5-运算顺序" class="headerlink" title="5. 运算顺序"></a>5. 运算顺序</h4><ul><li>数学运算符 &gt; 比较运算符 &gt; 逻辑运算符 &gt; 赋值运算符</li><li>数学运算符中：** &gt; *, /, //, % &gt; +, -</li><li>加()可以改变运算顺序，有()先算口号里的</li></ul><hr><h3 id="二、数字类型"><a href="#二、数字类型" class="headerlink" title="二、数字类型"></a>二、数字类型</h3><hr><h4 id="1-数字类型：整型-int-、浮点型-float-、布尔-bool-、复数-complex"><a href="#1-数字类型：整型-int-、浮点型-float-、布尔-bool-、复数-complex" class="headerlink" title="1. 数字类型：整型(int)、浮点型(float)、布尔(bool)、复数(complex)"></a>1. 数字类型：整型(int)、浮点型(float)、布尔(bool)、复数(complex)</h4><ul><li><p>整型(int)：包含所有的整数</p></li><li><p>python中整数支持二进制、八进制、十进制、十六进制</p><ul><li><blockquote><p>十进制：</p><p>a.基数：0，1，2，3，4，5，6，7，8，9</p><p>b.进位：逢10进1</p><p>c.位权：10的n次方</p><p>d.表示方式：直接写的所有的数字都是10进制</p><p>e.转换方式：直接print打印</p></blockquote></li><li><blockquote><p>二进制：</p><p>a.基数：0，1</p><p>b.进位：逢2进1</p><p>c.位权：2的n次方</p><p>d.表示方式：在二进制数的前面加前缀0b/0B，例如0b110</p><p>e.转换方式：<code>bin()</code>-把其他进制的数转换为二进制</p></blockquote></li><li><blockquote><p>八进制：</p><p>a.基数：0，1，2，3，4，5，6，7</p><p>b.进位：逢8进1</p><p>c.位权：8的n次方</p><p>d.表示方式：在八进制数的前面加前缀0o/0O，例如0o110</p><p>e.转换方式：<code>oct()</code>-把其他进制的数转换为八进制</p></blockquote></li><li><blockquote><p>十六进制：</p><p>a.基数：0，1，2，3，4，5，6，7，8，9，a/A，b/B，c/C，d/D，e/E，f/F</p><p>b.进位：逢16进1</p><p>c.位权：16的n次方</p><p>d.表示方式：在十六进制数前加前缀0x/0X，例如0x110</p><p>e.转换方式：<code>hex()</code>-把其他进制的数转换为十六进制</p></blockquote></li></ul></li><li><p>浮点型(float)：所有的小数对应的类型</p><ul><li>支持科学计数法：3e4，3e-4</li></ul></li><li><p>布尔值(bool)：只有True和False两个值，True实质是1，False实质是0</p></li><li><p>复数(complex)：包括所有由实数和虚数组成的数字，python中用j表示虚部</p><ul><li>python中直接支持复数运算</li></ul></li></ul><hr><h4 id="2-type-函数"><a href="#2-type-函数" class="headerlink" title="2. type()函数"></a>2. type()函数</h4><ul><li><code>type(数据)</code>-返回指定数据对应的类型</li></ul><hr><h4 id="3-类型转换：类型名-数据"><a href="#3-类型转换：类型名-数据" class="headerlink" title="3. 类型转换：类型名(数据)"></a>3. 类型转换：类型名(数据)</h4><ul><li>将指定的数据转换为指定类型，返回新的数据</li><li><code>int()</code>-转换成整型，数字转换成整型只保留整数部分；不是所有的字符串都能转换成整型，只有去掉引号后本身就是一个整数的字符串才可以</li><li><code>float()</code>-转换成浮点型，数字后面加.0；只有去掉引号后本身就是一个数字的才能转换成浮点型</li><li><code>bool()</code>-所有的数据都可以转换成布尔值；所有为0、为空的值会转换成False，其他都是True</li></ul><hr><h3 id="三、if分支结构"><a href="#三、if分支结构" class="headerlink" title="三、if分支结构"></a>三、if分支结构</h3><hr><h4 id="1-if使用的条件"><a href="#1-if使用的条件" class="headerlink" title="1. if使用的条件"></a>1. if使用的条件</h4><ul><li>当某段代码是需要在满足某个条件的时候才会执行，这个时候就会使用if分支结构</li></ul><hr><h4 id="2-怎么使用if"><a href="#2-怎么使用if" class="headerlink" title="2. 怎么使用if"></a>2. 怎么使用if</h4><ul><li><p>语法1</p><ul><li><blockquote><p>if 条件语句:</p><p>​    代码块</p><p>a.说明</p><p>if    -    关键字，固定写法</p><p>条件语句        -    除了赋值语句以外的所有由结果的表达式</p><p>:    -    固定写法</p><p>代码块    -    和if保持一个缩进的一条或多条语句</p><p>b.执行过程</p><p>先判断条件语句是否为True(如果结果不是布尔就先转换成布尔再判断)，如果是True就执行代码块，否则不执行，继续执行后面的代码</p></blockquote></li></ul></li><li><p>语法2</p><ul><li><blockquote><p>if 条件语句:</p><p>​    代码块1</p><p>else:</p><p>​    代码块2</p><p>a.说明</p><p>if    -    和上面的一样</p><p>代码块1   -   和if保持一个缩进的一条或多条语句</p><p>else        -    关键字，固定写法</p><p>代码块2   -   和else保持一个缩进的一条或多条语句</p><p>b.执行过程</p><p>先判断条件语句是否为True(如果不是也要布尔先转换成布尔)，如果是True就执行带买块1，否则就执行代码块2</p></blockquote></li></ul></li><li><p>语法3</p><ul><li><blockquote><p>if 条件语句1:</p><p>​    代码块1</p><p>elif 条件语句2:</p><p>​    代码块2</p><p>…</p><p>else:</p><p>​    代码块3</p><p>a.说明</p><p>elif   -   关键字，固定写法</p><p>b.执行过程</p><p>先判断条件语句1是否为True，如果是True就执行代码块1，然后整个if结束，直接执行其他语句；如果是False，就判断条件语句2是否为True，如果为True就执行代码块2，然后整个if结束；以此类推，如果前面所有条件语句都是False，就只想else中的代码块</p></blockquote></li></ul></li></ul><hr><h4 id="3-if嵌套"><a href="#3-if嵌套" class="headerlink" title="3. if嵌套"></a>3. if嵌套</h4><ul><li>可以在if结构中再嵌套其他的if语句</li></ul><hr>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2019/07/19/day2-pyhton%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
-      <url>/2019/07/19/day2-pyhton%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<h2 id="day2-Python基础语法"><a href="#day2-Python基础语法" class="headerlink" title="day2-Python基础语法"></a>day2-Python基础语法</h2><hr><h3 id="一、基础语法"><a href="#一、基础语法" class="headerlink" title="一、基础语法"></a>一、基础语法</h3><hr><h4 id="1-注释"><a href="#1-注释" class="headerlink" title="1. 注释"></a>1. 注释</h4><ul><li>单行注释：开头用#来表示单行注释</li><li>多行注释：在代码块前后用3个单引号或3个双引号表示</li><li>快捷键：ctrl + /</li></ul><hr><h4 id="2-语句"><a href="#2-语句" class="headerlink" title="2. 语句"></a>2. 语句</h4><ul><li>一行一般只写一条语句，结尾不需要分号；需要写多行语句，之间要用分号隔开</li><li>如果语句过长需要多行显示，在换行位置前加一个\。注意：加\不能破坏数据</li></ul><hr><h4 id="3-行和缩进"><a href="#3-行和缩进" class="headerlink" title="3. 行和缩进"></a>3. 行和缩进</h4><ul><li>缩进：python要求一条语句不能随意加空格或制表符</li><li>行：python要求声明函数和类的前后需要2个换行</li></ul><hr><h4 id="4-标识符"><a href="#4-标识符" class="headerlink" title="4. 标识符"></a>4. 标识符</h4><ul><li>作用：是用来给变量、函数或类命名的</li><li>规范：1)由字母、数字和下划线组成；2)不能用数字做开头；3)不能是关键字</li></ul><hr><h4 id="5-关键字-又叫保留字"><a href="#5-关键字-又叫保留字" class="headerlink" title="5. 关键字(又叫保留字)"></a>5. 关键字(又叫保留字)</h4><ul><li>定义：python保留下来有自己的特殊功能或特殊意义的一些标识符</li><li>python中关键字一共有35个<ul><li><code>[&#39;False&#39;, &#39;None&#39;, &#39;True&#39;, &#39;and&#39;, &#39;as&#39;, &#39;assert&#39;, &#39;async&#39;, &#39;await&#39;, &#39;break&#39;, &#39;class&#39;, &#39;continue&#39;, &#39;def&#39;, &#39;del&#39;, &#39;elif&#39;, &#39;else&#39;, &#39;except&#39;, &#39;finally&#39;, &#39;for&#39;, &#39;from&#39;, &#39;global&#39;, &#39;if&#39;, &#39;import&#39;, &#39;in&#39;, &#39;is&#39;, &#39;lambda&#39;, &#39;nonlocal&#39;, &#39;not&#39;, &#39;or&#39;, &#39;pass&#39;, &#39;raise&#39;, &#39;return&#39;, &#39;try&#39;, &#39;while&#39;, &#39;with&#39;, &#39;yield&#39;]</code></li></ul></li></ul><hr><h4 id="6-常见数据及其类型"><a href="#6-常见数据及其类型" class="headerlink" title="6. 常见数据及其类型"></a>6. 常见数据及其类型</h4><ul><li>数字数据(number)：<code>int</code>-整型，<code>float</code>-浮点型</li><li>文本数据(string)：<code>str</code>-字符串</li><li>布尔值(bool)：<code>True</code>-真，<code>False</code>-假</li><li>以及列表(<code>list</code>)、字典(<code>dict</code>)、元组(<code>tuple</code>)、集合(<code>set</code>)、迭代器(<code>iter</code>)、生成器、函数(<code>function</code>)、自定义的类等等</li></ul><hr><h4 id="7-输入和输出函数"><a href="#7-输入和输出函数" class="headerlink" title="7. 输入和输出函数"></a>7. 输入和输出函数</h4><ul><li><code>print()</code>函数：在控制台输出括号里的内容<ul><li>()内可以是数据、运算表达式、变量</li><li>一个<code>print()</code>可以同时打印多个数据，多个数据之间用逗号隔开</li></ul></li><li><code>input()</code>函数：从控制台获取输入的内容，输入以回车结束。将输入的内容返回<ul><li>使用value变量去获取输入的内容：<code>value = input(&#39;请输入年龄:&#39;)</code></li></ul></li></ul><hr><h3 id="二、python变量"><a href="#二、python变量" class="headerlink" title="二、python变量"></a>二、python变量</h3><hr><h4 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h4><ul><li>定义：程序中需要通过变量来保存数据</li><li>语法：变量名 = 值</li><li>变量名：程序员自己命名，必须是标识符，不能是关键字<ul><li>规范1：所有的字母都要小写，多个单词之间用下划线隔开</li><li>规范2：见名知义，看到变量名就知道变量中保存的是什么数据</li></ul></li><li>=：赋值运算符，左边必须是变量名。将右边的数据赋值给左边的变量</li><li>值：一切有结果的表达式都可作为值，如：数据、运算表达式、函数调用、已赋值过的变量</li></ul><hr><h4 id="2-用法"><a href="#2-用法" class="headerlink" title="2. 用法"></a>2. 用法</h4><ul><li>同时声明多个变量赋相同的值<ul><li><code>a = b = c = 10</code></li></ul></li><li>同时声明多个变量赋不同的值<ul><li><code>x, y = 10, 20</code></li></ul></li><li>变量的重新赋值<ul><li><code>x = 100</code></li><li><code>x = 1000</code></li></ul></li><li>声明变量、变量赋值的原理<ul><li>先开辟空间存储数据，然后让变量指向指定的内存区域，重新赋值时就重新开辟一个新的空间存储数据，再让变量指向新的存储区域</li></ul></li></ul><hr>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2019/07/19/day1-markdown%E8%AF%AD%E6%B3%95/"/>
-      <url>/2019/07/19/day1-markdown%E8%AF%AD%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<h2 id="day1-markdown语法"><a href="#day1-markdown语法" class="headerlink" title="day1-markdown语法"></a>day1-markdown语法</h2><hr><h4 id="1-markdown标题"><a href="#1-markdown标题" class="headerlink" title="1. markdown标题"></a>1. markdown标题</h4><ul><li>使用#标记，1-6个#分别对应1-6级标题</li><li>使用=标记一级标题，-标记二级标题</li></ul><hr><h4 id="2-markdown段落"><a href="#2-markdown段落" class="headerlink" title="2. markdown段落"></a>2. markdown段落</h4><ul><li>在文字的末尾加2个空格表示换行</li><li>在文字的末尾加1个空格表示重新开始一个段落</li><li>段落末尾加上三个以上*或-来表示分割线</li></ul><hr><h4 id="3-markdown字体"><a href="#3-markdown字体" class="headerlink" title="3. markdown字体"></a>3. markdown字体</h4><ul><li>文字两头加上*或_表示斜体</li><li>文字两头加上**或__表示粗体</li><li>文字两头加上***或___表示粗斜体</li><li>文字两头加上~~表示删除线</li><li>文字两头加上<u></u>表示下划线</li></ul><hr><h4 id="4-markdown列表"><a href="#4-markdown列表" class="headerlink" title="4. markdown列表"></a>4. markdown列表</h4><ul><li>在开头使用*或+或-来表示无序列表</li><li>在开头用数字加上.来表示有序列表</li><li>列表也可以进行嵌套使用</li></ul><hr><h4 id="5-markdown区块"><a href="#5-markdown区块" class="headerlink" title="5. markdown区块"></a>5. markdown区块</h4><ul><li>在开头用&gt;表示区块引用</li><li>区块引用可以嵌套，&gt;&gt;表示第一层嵌套，&gt;&gt;&gt;表示第二层</li><li>区块中可以使用列表，列表中也可以使用区块</li></ul><hr><h4 id="6-markdown代码"><a href="#6-markdown代码" class="headerlink" title="6. markdown代码"></a>6. markdown代码</h4><ul><li>在一行代码的前后加上`表示代码</li><li>在代码开头用制表符或4个空格表示代码区块</li><li>在代码前后用分别用```也可以表示代码区块，并在第一个后面可以指定语言</li></ul><hr><h4 id="7-markdown超链接"><a href="#7-markdown超链接" class="headerlink" title="7. markdown超链接"></a>7. markdown超链接</h4><ul><li>使用<a href></a>来完成超链接，[]中是链接名称，()填链接地址</li><li>使用&lt;&gt;来直接表示链接地址</li><li>也可以用变量来表示，文档末尾附带变量地址</li></ul><hr><h4 id="8-markdown图片显示"><a href="#8-markdown图片显示" class="headerlink" title="8. markdown图片显示"></a>8. markdown图片显示</h4><ul><li>通过<img src alt>来显示图片，[]填图片的名称，()填图片的绝对路径或相对路径</li><li>图片链接也可以像超链接那样对图片网址使用变量来表示</li></ul><hr><h4 id="9-markdown表格"><a href="#9-markdown表格" class="headerlink" title="9. markdown表格"></a>9. markdown表格</h4><ul><li>|  表头  |  表头  |  表头  |</li><li>|———:|:———|:——-:|：分别表示右对齐，左对齐，居中对齐</li><li>|单元格|单元格|单元格|</li></ul><hr>]]></content>
-      
-      
       
     </entry>
     
@@ -437,6 +359,168 @@
             <tag> 函数的调用 </tag>
             
             <tag> 函数的参数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>列表</title>
+      <link href="/2019/07/05/day7-%E5%88%97%E8%A1%A8/"/>
+      <url>/2019/07/05/day7-%E5%88%97%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[<p>这一部分主要讲了Python中的列表的运算、列表相关的函数。</p><a id="more"></a><h2 id="day7-列表"><a href="#day7-列表" class="headerlink" title="day7-列表"></a>day7-列表</h2><hr><h3 id="一、认识列表"><a href="#一、认识列表" class="headerlink" title="一、认识列表"></a>一、认识列表</h3><hr><h4 id="1-什么是列表-list"><a href="#1-什么是列表-list" class="headerlink" title="1. 什么是列表(list)"></a>1. 什么是列表(list)</h4><ul><li>列表是容器型数据类型(序列)</li><li>特点：可变(支持元素的增删改)、有序(支持下标操作)</li><li>说明：将[]作为容器，里面的元素用,隔开</li></ul><hr><h4 id="2-列表中的元素"><a href="#2-列表中的元素" class="headerlink" title="2. 列表中的元素"></a>2. 列表中的元素</h4><ul><li>任何类型的数据都可以作为列表的元素，如：数字、字符串、列表、字典、元组、函数等</li><li>同一个列表中的不同元素的类型可以不一样</li></ul><hr><h3 id="二、增删改查"><a href="#二、增删改查" class="headerlink" title="二、增删改查"></a>二、增删改查</h3><hr><h4 id="1-查-获取列表中的元素"><a href="#1-查-获取列表中的元素" class="headerlink" title="1. 查 - 获取列表中的元素"></a>1. 查 - 获取列表中的元素</h4><ul><li>获取单个元素：列表[下标]<ul><li>语法和字符串一样</li></ul></li><li>获取部分元素(列表切片)：列表[开始下标:结束下标:步长]<ul><li>列表切片和字符串切片语法一样，但是列表切片结果是一个列表</li><li>空列表：[]</li></ul></li><li>遍历<ul><li>直接遍历：通过for循环取出每一个元素</li><li>通过遍历下标去遍历列表</li></ul></li></ul><hr><h4 id="2-增-在列表中添加元素"><a href="#2-增-在列表中添加元素" class="headerlink" title="2. 增 - 在列表中添加元素"></a>2. 增 - 在列表中添加元素</h4><ul><li>列表.append(元素)：在列表的最后面追加一个元素</li><li>列表.insert(下标,元素)：在列表指定的下标前面插入指定元素</li></ul><hr><h4 id="3-删除-删除列表中的元素"><a href="#3-删除-删除列表中的元素" class="headerlink" title="3. 删除 - 删除列表中的元素"></a>3. 删除 - 删除列表中的元素</h4><ul><li>del 列表[下标]：删除列表中指定下标对应的元素；没有下标则删除整个列表</li><li>列表.remove(元素)：删除列表中第一个指定的元素<ul><li>元素必须在列表中，否则会报错</li></ul></li><li>列表.pop()：取出列表中最后一个元素，返回被取出的数据<ul><li>列表.pop(下标)：取出列表中指定下标的元素，返回被取出的数据</li></ul></li></ul><hr><h4 id="4-改-修改列表中某个元素的值"><a href="#4-改-修改列表中某个元素的值" class="headerlink" title="4. 改 - 修改列表中某个元素的值"></a>4. 改 - 修改列表中某个元素的值</h4><ul><li>列表[下标] = 新值：将列表中指定下标对应的元素设置为新值</li></ul><hr><h3 id="三、列表的运算"><a href="#三、列表的运算" class="headerlink" title="三、列表的运算"></a>三、列表的运算</h3><hr><h4 id="1-数学运算："><a href="#1-数学运算：" class="headerlink" title="1. 数学运算：+, *"></a>1. 数学运算：+, *</h4><ul><li>列表1 + 列表2：将两个列表中的元素合并产生一个新的列表</li><li>列表 * N：将列表中的元素重复N次产生一个新的列表</li></ul><hr><h4 id="2-比较运算："><a href="#2-比较运算：" class="headerlink" title="2. 比较运算：==, !="></a>2. 比较运算：==, !=</h4><ul><li>列表大小没有实际的意义，所以只关心相等和不相等</li></ul><hr><h4 id="3-in-not-in"><a href="#3-in-not-in" class="headerlink" title="3. in / not in"></a>3. in / not in</h4><ul><li>元素 in 列表：判断列表中是否存在指定的元素</li><li>元素 not in 列表：判断列表中是否不存在指定的元素</li></ul><hr><h4 id="4-len-序列"><a href="#4-len-序列" class="headerlink" title="4. len(序列)"></a>4. len(序列)</h4><ul><li>len()：获取指定列表中的个数</li></ul><hr><h4 id="5-list-数据-：将数据转换成列表"><a href="#5-list-数据-：将数据转换成列表" class="headerlink" title="5. list(数据)：将数据转换成列表"></a>5. list(数据)：将数据转换成列表</h4><ul><li>所有的序列都可以转换成列表</li><li>将序列中的元素转换成列表元素</li></ul><hr><h3 id="四、列表函数"><a href="#四、列表函数" class="headerlink" title="四、列表函数"></a>四、列表函数</h3><hr><h4 id="1-内置函数"><a href="#1-内置函数" class="headerlink" title="1. 内置函数"></a>1. 内置函数</h4><ul><li><code>max(序列)、min(序列)、sum(序列)</code></li><li>max、min：序列中元素类型必须一样；序列中元素必须支持比较运算符</li><li>sum：只支持数字序列的求和</li></ul><hr><h4 id="2-列表相关函数"><a href="#2-列表相关函数" class="headerlink" title="2. 列表相关函数"></a>2. 列表相关函数</h4><ul><li>列表.count(元素)：统计列表中指定元素的个数</li><li>列表.extend(序列)：将序列中的元素依次添加到列表的最后</li><li>列表.index(元素)：获取列表中指定元素对应的下标(只获取第一个)<ul><li>注意：元素不存在会报错</li></ul></li><li>列表.reverse()：对原列表倒序，不会产生新列表</li><li>列表.sort()：将列表中元素从小到大排序<ul><li>列表.sort(reverse=True)：将列表中元素从大到小排序</li><li>要求：列表的元素类型必须一样；元素支持比较运算符</li></ul></li><li>列表.clear()：清空列表</li><li>列表.copy()：复制列表中的元素产生一个新的列表，跟列表[:]功能一样<ul><li>注意：这是一个浅拷贝</li></ul></li></ul><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 列表 </tag>
+            
+            <tag> 列表的函数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>字符串</title>
+      <link href="/2019/07/03/day6-%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <url>/2019/07/03/day6-%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<p>这一部分主要讲了Python中的字符串和字符串的操作。</p><a id="more"></a><h2 id="day6-字符串"><a href="#day6-字符串" class="headerlink" title="day6-字符串"></a>day6-字符串</h2><hr><h3 id="一、认识字符串"><a href="#一、认识字符串" class="headerlink" title="一、认识字符串"></a>一、认识字符串</h3><hr><h4 id="1-什么是字符串-str"><a href="#1-什么是字符串-str" class="headerlink" title="1. 什么是字符串(str)"></a>1. 什么是字符串(str)</h4><ul><li>定义：字符串属于容器型数据类型，又叫序列，将引号作为容器，字符是元素</li><li>特点：不可变(字符个数和顺序都不可变)、有序(字符顺序影响值)</li></ul><hr><h4 id="2-字符串中的内容"><a href="#2-字符串中的内容" class="headerlink" title="2. 字符串中的内容"></a>2. 字符串中的内容</h4><ul><li>字符串中的每个基本单元是字符；python中有字符的概念，但是没有字符对应的数据类型</li><li>1)普通字符：如，字母、数字、文字、符号</li><li>2)转义字符：在指定的符号前加\来表示一些具有特殊功能或特殊意义的符号<ul><li><code>\n</code>  -  换行</li><li><code>\t</code>  -  制表符</li><li><code>\&#39;</code>  -  一个单引号</li><li><code>\&quot;</code>  -  一个双引号</li><li><code>\\</code>  -  一个反斜杠 </li></ul></li><li>3)编码字符：在\u后加四位十六进制编码值，表示一个编码值对应的字符</li><li>4)编码：计算机存储字符的时候实质是字符对应的编码值，每个字符编码值是固定的<ul><li>计算机本身只有存储数字的能力，而且存的是补码(二进制)</li><li>字符和字符编码的一一对应关系就叫编码表。常见的编码表：ASCII、Unicode</li><li>python中采用的是Unicode编码，中文范围：4e00-9fa5</li><li><code>chr(编码值)</code> - 获取编码值对应的字符</li><li><code>ord(字符)</code> - 获取字符的编码值</li></ul></li><li>5)阻止转义：在字符串的最前面加r/R可以阻止当前字符串的所有的转义字符转义<ul><li>一个转义字符和一个编码字符长度都是1</li></ul></li></ul><hr><h3 id="二、字符串操作"><a href="#二、字符串操作" class="headerlink" title="二、字符串操作"></a>二、字符串操作</h3><hr><h4 id="1-获取字符"><a href="#1-获取字符" class="headerlink" title="1. 获取字符"></a>1. 获取字符</h4><ul><li><p>获取单个字符</p><ul><li><blockquote><p>a.语法</p><p>字符串[下标] - 获取指定下标对应的字符</p><p>b.说明</p><p>字符串 - 可以是字符串值、字符串变量或结果是字符串的表达式</p><p>[] - 固定写法</p><p>下标 - 又叫索引，字符一旦确定，那么字符串中的每个字符位置就确定了，每个字符都会对应固定的下标来表示字符在字符中的位置</p><p>下标值有两种：0<del>字符串长度-1、-1</del>-字符串的长度</p><p>0对应的是第一个字符，-1对应最后一个字符</p><p>c.注意：下标不能越界</p></blockquote></li></ul></li><li><p>获取部分字符(字符串切片)</p><ul><li><blockquote><p>a.语法</p><p>字符串[开始下标:结束下标:步长] - 从开始下标开始获取，每次增加步长去取下一个字符，直到获取结束下标为止</p><p>b.说明</p><p>字符串 - 字符串值或字符串变量</p><p>[] - 固定写法</p><p>开始下标，结束下标 - 范围内下标值</p><p>步长 - 整数</p><p>c.注意</p><p>结束下标对应的字符永远都取不到</p><p>当步长为正，开始下标到结束下标从前往后取，这时开始下标对应的字符必须在结束下标对应的字符的前面；否则取到的是空串</p><p>当步长为负，开始下标到结束下标从后往前取，这时开始下标对应的字符必须在结束下标对应的字符的后面；否则取到的是空串</p><p>获取部分下标可以越界</p></blockquote></li></ul></li><li><p>省略部分内容</p><ul><li>a)省略步长 - 默认步长为1</li><li>字符串[开始下标:结束下标]</li><li>b)省略开始下标</li><li>字符串[:结束下标:步长] / 字符串[:结束下标]</li><li>步长为正：从第一个字符开始往后取；步长为负：从最后一个字符往前取</li><li>c)省略结束下标</li><li>字符串[开始下标::步长] / 字符串[开始下标:]</li><li>步长为正：从开始下标往后取到最后一个字符；步长为负：从开始下标往前取到第一个字符</li><li>d)省略下标</li><li>字符串[::步长] / 字符串[:]</li></ul></li><li><p>遍历字符串</p><ul><li><blockquote><p>a)直接遍历拿到每个字符<br>for 变量 in 字符串:</p><p>​    循环体</p><p>b)通过遍历下标来遍历字符串</p><p><code>len(字符串)</code> - 获取字符串的长度</p></blockquote></li></ul></li></ul><hr><h3 id="三、字符串运算"><a href="#三、字符串运算" class="headerlink" title="三、字符串运算"></a>三、字符串运算</h3><hr><h4 id="1-数学运算："><a href="#1-数学运算：" class="headerlink" title="1. 数学运算：+, *"></a>1. 数学运算：+, *</h4><ul><li>1)字符串1 + 字符串2 - 将两个字符串拼接在一起产生一个新的字符串</li><li>注意：字符串只能和字符串相加</li><li>2)字符串 * N - 字符串重复N次产生一个新的字符串</li></ul><hr><h4 id="2-比较运算"><a href="#2-比较运算" class="headerlink" title="2. 比较运算"></a>2. 比较运算</h4><ul><li>1)比较相等：==, !=</li><li>2)比较大小：&gt;, &lt;, &lt;=, &gt;=</li><li>比较字符串中每一对字符的编码值大小，如果相等就继续比较下一对，直到一对不相等为止</li><li>应用：判断一个字符是否是大写字母，是否是小写字母，是否是中文，是否是数字等…</li></ul><hr><h4 id="3-in-not-in"><a href="#3-in-not-in" class="headerlink" title="3. in / not in"></a>3. in / not in</h4><ul><li>字符串1 in 字符串2 - 判断字符串2中是否包含字符串1</li><li>字符串1 not in 字符串2 - 判断字符串2中是否不包含字符串1</li></ul><hr><h4 id="4-len"><a href="#4-len" class="headerlink" title="4. len()"></a>4. len()</h4><ul><li><code>len(序列)</code> - 获取序列的长度(序列中元素的个数)</li></ul><hr><h4 id="5-str-数据-将指定数据转换成字符串"><a href="#5-str-数据-将指定数据转换成字符串" class="headerlink" title="5. str(数据) - 将指定数据转换成字符串"></a>5. str(数据) - 将指定数据转换成字符串</h4><ul><li>所有的数据都可以转换成字符串；直接在数据外面加引号</li></ul><hr><h4 id="6-格式字符串：在字符串中用格式占位符来表示字符串中变化的部分"><a href="#6-格式字符串：在字符串中用格式占位符来表示字符串中变化的部分" class="headerlink" title="6. 格式字符串：在字符串中用格式占位符来表示字符串中变化的部分"></a>6. 格式字符串：在字符串中用格式占位符来表示字符串中变化的部分</h4><ul><li>语法：包含格式占位符的字符串 % (格式字符串对应的多个数据)<ul><li>%s - 字符串</li><li>%d - 整数</li><li>%.Nf - 小数，N用来约束小数的位数</li><li>%c - 字符(可以将数字转换成字符)</li></ul></li></ul><hr><h4 id="7-字符串相关的函数"><a href="#7-字符串相关的函数" class="headerlink" title="7. 字符串相关的函数"></a>7. 字符串相关的函数</h4><ul><li><p>格式：字符串.函数名()</p></li><li><p>1)对齐方式</p><ul><li><blockquote><p>字符串.center(宽度, 填充字符) - 居中填充</p><p>字符串.ljust(宽度, 填充字符) - 左对齐填充</p><p>字符串.rjust(宽度, 填充字符) - 右对齐填充</p><p>字符串.zfill(宽度) - 填充0</p></blockquote></li></ul></li><li><p>2)统计个数</p><ul><li>字符串1.count(字符串2) - 统计字符串1中字符串2的个数</li></ul></li><li><p>3)join()函数</p><ul><li>字符串.join(序列) - 将序列中的元素用指定的字符串连接在一起产生一个新的字符串</li><li>注意：序列的元素必须是字符串</li></ul></li><li><p>4)去掉空白符</p><ul><li><blockquote><p>字符串.lstrip() - 去掉字符串左边的空白</p><p>字符串.rstrip() - 去掉字符串右边的空白</p><p>字符串.strip() - 去掉字符串左边和右边的空白</p></blockquote></li></ul></li><li><p>5) 字符串的替换</p><ul><li>字符串.replace(字符串1, 字符串2) - 将字符串中的字符串1替换为字符换2</li></ul></li><li><p>6)字符串切割</p><ul><li>字符串.split(字符串1) - 将字符串按照字符串1进行切割</li><li>结果是一个序列，列表中元素是多个小字符串</li></ul></li></ul><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> str </tag>
+            
+            <tag> 字符串操作 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>循环结构</title>
+      <link href="/2019/07/01/day4-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/"/>
+      <url>/2019/07/01/day4-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</url>
+      
+        <content type="html"><![CDATA[<p>这一部分主要讲了Python中的for、while循环结构以及continue、break关键字。</p><a id="more"></a><h2 id="day4-循环结构"><a href="#day4-循环结构" class="headerlink" title="day4-循环结构"></a>day4-循环结构</h2><hr><h3 id="一、for循环"><a href="#一、for循环" class="headerlink" title="一、for循环"></a>一、for循环</h3><hr><h4 id="1-什么时候使用循环"><a href="#1-什么时候使用循环" class="headerlink" title="1. 什么时候使用循环"></a>1. 什么时候使用循环</h4><ul><li>代码中需要重复执行某个操作的时候，就可以使用循环</li><li>python中有for循环和while循环</li></ul><hr><h4 id="2-for循环语法"><a href="#2-for循环语法" class="headerlink" title="2. for循环语法"></a>2. for循环语法</h4><ul><li><blockquote><p>for 变量名 in 序列:</p><p>​    循环体</p><p>a.说明</p><p>for，in   -   关键字，固定写法</p><p>:    -    固定写法</p><p>变量名    -    和声明变量时的变量名要求一样</p><p>序列    -    容器型数据，python常见序列有：range、字符串、列表、字典、集合、元组、迭代器、生成器</p><p>循环体    -    和for保持一个缩进的一条或多条语句，会被重读执行的代码</p><p>b.执行过程</p><p>让变量去序列中取值，一个一个的取，取完为止，每取一个值执行一次循环体</p><p>for循环的循环次数由序列中元素的个数来控制</p></blockquote></li></ul><hr><h4 id="3-range-函数-专门产生一定范围的数字序列"><a href="#3-range-函数-专门产生一定范围的数字序列" class="headerlink" title="3. range()函数   -   专门产生一定范围的数字序列"></a>3. <code>range()</code>函数   -   专门产生一定范围的数字序列</h4><ul><li>1) <code>range(n)</code>-产生一个0~n-1的数字序列（整数），n必须是大于0的整数</li><li>2) <code>range(m,n)</code>-产生m~n-1的数字序列，m和n都必须是整数，n必须大于m</li><li>3) <code>range(m,n,step)</code>-从m开始，每次加step，直到n-1</li></ul><hr><h3 id="二、while循环"><a href="#二、while循环" class="headerlink" title="二、while循环"></a>二、while循环</h3><hr><h4 id="1-while循环的语法"><a href="#1-while循环的语法" class="headerlink" title="1. while循环的语法"></a>1. while循环的语法</h4><ul><li><blockquote><p>while 条件语句:</p><p>​    循环体</p><p>a.说明</p><p>while   -   关键字</p><p>条件语句   -   和if后面的条件语句要求一样，任何有结果的表达式，除了赋值语句都可以</p><p>循环体   -   和while保持一个缩进的一条或多条语句</p><p>b.执行过程</p><p>先判断条件语句是否为True，如果是True就执行循环体；执行完循环体，再判断条件是否为True，如果为True又执行循环体；以此类推，直到条件语句结果是False，整个循环结束</p></blockquote></li></ul><hr><h4 id="2-for循环和while循环的使用"><a href="#2-for循环和while循环的使用" class="headerlink" title="2. for循环和while循环的使用"></a>2. for循环和while循环的使用</h4><ul><li>for：当循环次数确定的时候都选择for循环</li><li>while：死循环，循环次数不确定</li></ul><hr><h4 id="3-随机数"><a href="#3-随机数" class="headerlink" title="3. 随机数"></a>3. 随机数</h4><ul><li><code>randint(m,n)</code>-产生一个m~n的随机整数</li></ul><hr><h3 id="三、循环相关的关键字"><a href="#三、循环相关的关键字" class="headerlink" title="三、循环相关的关键字"></a>三、循环相关的关键字</h3><hr><h4 id="1-continue关键字"><a href="#1-continue关键字" class="headerlink" title="1. continue关键字"></a>1. continue关键字</h4><ul><li>continue只能出现在循环体中；当执行循环体遇到continue时，结束当次循环，进入下次循环的判断</li></ul><hr><h4 id="2-break关键字"><a href="#2-break关键字" class="headerlink" title="2. break关键字"></a>2. break关键字</h4><ul><li>break只能出现在循环体中；当执行循环体遇到break，整个循环直接结束</li></ul><hr><h4 id="3-else关键字"><a href="#3-else关键字" class="headerlink" title="3. else关键字"></a>3. else关键字</h4><ul><li><blockquote><p>1) 完整的for循环</p><p>for 变量 in 序列:</p><p>​    循环体</p><p>else:</p><p>​    代码块</p><p>2) 完整的while循环</p><p>while 条件语句:</p><p>​    循环体</p><p>else:</p><p>​    代码块</p><p>当程序自然死亡，会执行和循环相关的else中的代码块；如果循环是因为遇到break结束，就不会执行else中的代码块</p></blockquote></li></ul><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> for循环 </tag>
+            
+            <tag> while循环 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>运算符、数据类型和if语句</title>
+      <link href="/2019/06/28/day3-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+      <url>/2019/06/28/day3-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<p>这一部分主要讲了Python中的的各种运算符、几种常见的数据类型和if语句。</p><a id="more"></a><h2 id="day3-运算符、数据类型和if语句"><a href="#day3-运算符、数据类型和if语句" class="headerlink" title="day3-运算符、数据类型和if语句"></a>day3-运算符、数据类型和if语句</h2><hr><h3 id="一、运算符"><a href="#一、运算符" class="headerlink" title="一、运算符"></a>一、运算符</h3><hr><h4 id="1-数学运算符"><a href="#1-数学运算符" class="headerlink" title="1. 数学运算符"></a>1. 数学运算符</h4><ul><li>+，-，*，/    —    和数学中的加、减、乘、除一样</li><li>%    —    取余，求余数<ul><li>应用1：通过对2取余来判断一个数是偶数还是奇数</li><li>应用2：通过对10取余来获取一个数的个位数</li></ul></li><li>//    —    取整，求商取商的整数部分<ul><li><code>print(5 // 2)    #结果为2</code>    </li></ul></li><li>**    —    求幂运算<ul><li><code>print(9 ** 0.5)    #幂运算可以用来开方</code></li></ul></li></ul><hr><h4 id="2-比较运算符"><a href="#2-比较运算符" class="headerlink" title="2. 比较运算符"></a>2. 比较运算符</h4><ul><li>python中有&gt;(大于), &lt;(小于), &gt;=(大于等于), &lt;=(小于等于), ==(等于), !=(不等于)几种比较运算符</li><li>所有比较运算符的的运算结果都是布尔值(True/False)</li><li>python中还可以使用多个比较运算符来表示一个范围</li></ul><hr><h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3. 逻辑运算符"></a>3. 逻辑运算符</h4><ul><li>逻辑运算符有：and，or，not</li><li>and(逻辑与运算)：真真为真，其他为假<ul><li>应用：如果需要多个条件同时满足，这个时候条件才用and连接</li></ul></li><li>or(逻辑或运算)：假假为假，其他为真<ul><li>应用：如果多个条件只要有一个条件满足就可以用or将多个条件连接起来</li></ul></li><li>not(逻辑非运算)：结果取反<ul><li>应用：对一个条件进行否定</li></ul></li><li>短路操作：<ul><li>and短路操作：如果and前的结果是False，不会执行and后面的语句，结果直接为False</li><li>or短路操作：如果or前的结果是True，不会执行or后面的语句，结果直接为True</li></ul></li></ul><hr><h4 id="4-赋值运算符"><a href="#4-赋值运算符" class="headerlink" title="4. 赋值运算符"></a>4. 赋值运算符</h4><ul><li>python中有=，+=，-=，/=，<em>=，%=，//=，*</em>=</li><li>赋值符号的左边必须是变量；复合的赋值运算符的左边必须是已经赋值过的变量</li></ul><hr><h4 id="5-运算顺序"><a href="#5-运算顺序" class="headerlink" title="5. 运算顺序"></a>5. 运算顺序</h4><ul><li>数学运算符 &gt; 比较运算符 &gt; 逻辑运算符 &gt; 赋值运算符</li><li>数学运算符中：** &gt; *, /, //, % &gt; +, -</li><li>加()可以改变运算顺序，有()先算口号里的</li></ul><hr><h3 id="二、数字类型"><a href="#二、数字类型" class="headerlink" title="二、数字类型"></a>二、数字类型</h3><hr><h4 id="1-数字类型：整型-int-、浮点型-float-、布尔-bool-、复数-complex"><a href="#1-数字类型：整型-int-、浮点型-float-、布尔-bool-、复数-complex" class="headerlink" title="1. 数字类型：整型(int)、浮点型(float)、布尔(bool)、复数(complex)"></a>1. 数字类型：整型(int)、浮点型(float)、布尔(bool)、复数(complex)</h4><ul><li><p>整型(int)：包含所有的整数</p></li><li><p>python中整数支持二进制、八进制、十进制、十六进制</p><ul><li><blockquote><p>十进制：</p><p>a.基数：0，1，2，3，4，5，6，7，8，9</p><p>b.进位：逢10进1</p><p>c.位权：10的n次方</p><p>d.表示方式：直接写的所有的数字都是10进制</p><p>e.转换方式：直接print打印</p></blockquote></li><li><blockquote><p>二进制：</p><p>a.基数：0，1</p><p>b.进位：逢2进1</p><p>c.位权：2的n次方</p><p>d.表示方式：在二进制数的前面加前缀0b/0B，例如0b110</p><p>e.转换方式：<code>bin()</code>-把其他进制的数转换为二进制</p></blockquote></li><li><blockquote><p>八进制：</p><p>a.基数：0，1，2，3，4，5，6，7</p><p>b.进位：逢8进1</p><p>c.位权：8的n次方</p><p>d.表示方式：在八进制数的前面加前缀0o/0O，例如0o110</p><p>e.转换方式：<code>oct()</code>-把其他进制的数转换为八进制</p></blockquote></li><li><blockquote><p>十六进制：</p><p>a.基数：0，1，2，3，4，5，6，7，8，9，a/A，b/B，c/C，d/D，e/E，f/F</p><p>b.进位：逢16进1</p><p>c.位权：16的n次方</p><p>d.表示方式：在十六进制数前加前缀0x/0X，例如0x110</p><p>e.转换方式：<code>hex()</code>-把其他进制的数转换为十六进制</p></blockquote></li></ul></li><li><p>浮点型(float)：所有的小数对应的类型</p><ul><li>支持科学计数法：3e4，3e-4</li></ul></li><li><p>布尔值(bool)：只有True和False两个值，True实质是1，False实质是0</p></li><li><p>复数(complex)：包括所有由实数和虚数组成的数字，python中用j表示虚部</p><ul><li>python中直接支持复数运算</li></ul></li></ul><hr><h4 id="2-type-函数"><a href="#2-type-函数" class="headerlink" title="2. type()函数"></a>2. type()函数</h4><ul><li><code>type(数据)</code>-返回指定数据对应的类型</li></ul><hr><h4 id="3-类型转换：类型名-数据"><a href="#3-类型转换：类型名-数据" class="headerlink" title="3. 类型转换：类型名(数据)"></a>3. 类型转换：类型名(数据)</h4><ul><li>将指定的数据转换为指定类型，返回新的数据</li><li><code>int()</code>-转换成整型，数字转换成整型只保留整数部分；不是所有的字符串都能转换成整型，只有去掉引号后本身就是一个整数的字符串才可以</li><li><code>float()</code>-转换成浮点型，数字后面加.0；只有去掉引号后本身就是一个数字的才能转换成浮点型</li><li><code>bool()</code>-所有的数据都可以转换成布尔值；所有为0、为空的值会转换成False，其他都是True</li></ul><hr><h3 id="三、if分支结构"><a href="#三、if分支结构" class="headerlink" title="三、if分支结构"></a>三、if分支结构</h3><hr><h4 id="1-if使用的条件"><a href="#1-if使用的条件" class="headerlink" title="1. if使用的条件"></a>1. if使用的条件</h4><ul><li>当某段代码是需要在满足某个条件的时候才会执行，这个时候就会使用if分支结构</li></ul><hr><h4 id="2-怎么使用if"><a href="#2-怎么使用if" class="headerlink" title="2. 怎么使用if"></a>2. 怎么使用if</h4><ul><li><p>语法1</p><ul><li><blockquote><p>if 条件语句:</p><p>​    代码块</p><p>a.说明</p><p>if    -    关键字，固定写法</p><p>条件语句        -    除了赋值语句以外的所有由结果的表达式</p><p>:    -    固定写法</p><p>代码块    -    和if保持一个缩进的一条或多条语句</p><p>b.执行过程</p><p>先判断条件语句是否为True(如果结果不是布尔就先转换成布尔再判断)，如果是True就执行代码块，否则不执行，继续执行后面的代码</p></blockquote></li></ul></li><li><p>语法2</p><ul><li><blockquote><p>if 条件语句:</p><p>​    代码块1</p><p>else:</p><p>​    代码块2</p><p>a.说明</p><p>if    -    和上面的一样</p><p>代码块1   -   和if保持一个缩进的一条或多条语句</p><p>else        -    关键字，固定写法</p><p>代码块2   -   和else保持一个缩进的一条或多条语句</p><p>b.执行过程</p><p>先判断条件语句是否为True(如果不是也要布尔先转换成布尔)，如果是True就执行带买块1，否则就执行代码块2</p></blockquote></li></ul></li><li><p>语法3</p><ul><li><blockquote><p>if 条件语句1:</p><p>​    代码块1</p><p>elif 条件语句2:</p><p>​    代码块2</p><p>…</p><p>else:</p><p>​    代码块3</p><p>a.说明</p><p>elif   -   关键字，固定写法</p><p>b.执行过程</p><p>先判断条件语句1是否为True，如果是True就执行代码块1，然后整个if结束，直接执行其他语句；如果是False，就判断条件语句2是否为True，如果为True就执行代码块2，然后整个if结束；以此类推，如果前面所有条件语句都是False，就只想else中的代码块</p></blockquote></li></ul></li></ul><hr><h4 id="3-if嵌套"><a href="#3-if嵌套" class="headerlink" title="3. if嵌套"></a>3. if嵌套</h4><ul><li>可以在if结构中再嵌套其他的if语句</li></ul><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 运算符 </tag>
+            
+            <tag> 数据类型 </tag>
+            
+            <tag> if语句 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python基础语法</title>
+      <link href="/2019/06/26/day2-pyhton%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+      <url>/2019/06/26/day2-pyhton%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>这一部分主要讲了Python中的注释、关键字、变量。</p><a id="more"></a><h2 id="day2-Python基础语法"><a href="#day2-Python基础语法" class="headerlink" title="day2-Python基础语法"></a>day2-Python基础语法</h2><hr><h3 id="一、基础语法"><a href="#一、基础语法" class="headerlink" title="一、基础语法"></a>一、基础语法</h3><hr><h4 id="1-注释"><a href="#1-注释" class="headerlink" title="1. 注释"></a>1. 注释</h4><ul><li>单行注释：开头用#来表示单行注释</li><li>多行注释：在代码块前后用3个单引号或3个双引号表示</li><li>快捷键：ctrl + /</li></ul><hr><h4 id="2-语句"><a href="#2-语句" class="headerlink" title="2. 语句"></a>2. 语句</h4><ul><li>一行一般只写一条语句，结尾不需要分号；需要写多行语句，之间要用分号隔开</li><li>如果语句过长需要多行显示，在换行位置前加一个\。注意：加\不能破坏数据</li></ul><hr><h4 id="3-行和缩进"><a href="#3-行和缩进" class="headerlink" title="3. 行和缩进"></a>3. 行和缩进</h4><ul><li>缩进：python要求一条语句不能随意加空格或制表符</li><li>行：python要求声明函数和类的前后需要2个换行</li></ul><hr><h4 id="4-标识符"><a href="#4-标识符" class="headerlink" title="4. 标识符"></a>4. 标识符</h4><ul><li>作用：是用来给变量、函数或类命名的</li><li>规范：1)由字母、数字和下划线组成；2)不能用数字做开头；3)不能是关键字</li></ul><hr><h4 id="5-关键字-又叫保留字"><a href="#5-关键字-又叫保留字" class="headerlink" title="5. 关键字(又叫保留字)"></a>5. 关键字(又叫保留字)</h4><ul><li>定义：python保留下来有自己的特殊功能或特殊意义的一些标识符</li><li>python中关键字一共有35个<ul><li><code>[&#39;False&#39;, &#39;None&#39;, &#39;True&#39;, &#39;and&#39;, &#39;as&#39;, &#39;assert&#39;, &#39;async&#39;, &#39;await&#39;, &#39;break&#39;, &#39;class&#39;, &#39;continue&#39;, &#39;def&#39;, &#39;del&#39;, &#39;elif&#39;, &#39;else&#39;, &#39;except&#39;, &#39;finally&#39;, &#39;for&#39;, &#39;from&#39;, &#39;global&#39;, &#39;if&#39;, &#39;import&#39;, &#39;in&#39;, &#39;is&#39;, &#39;lambda&#39;, &#39;nonlocal&#39;, &#39;not&#39;, &#39;or&#39;, &#39;pass&#39;, &#39;raise&#39;, &#39;return&#39;, &#39;try&#39;, &#39;while&#39;, &#39;with&#39;, &#39;yield&#39;]</code></li></ul></li></ul><hr><h4 id="6-常见数据及其类型"><a href="#6-常见数据及其类型" class="headerlink" title="6. 常见数据及其类型"></a>6. 常见数据及其类型</h4><ul><li>数字数据(number)：<code>int</code>-整型，<code>float</code>-浮点型</li><li>文本数据(string)：<code>str</code>-字符串</li><li>布尔值(bool)：<code>True</code>-真，<code>False</code>-假</li><li>以及列表(<code>list</code>)、字典(<code>dict</code>)、元组(<code>tuple</code>)、集合(<code>set</code>)、迭代器(<code>iter</code>)、生成器、函数(<code>function</code>)、自定义的类等等</li></ul><hr><h4 id="7-输入和输出函数"><a href="#7-输入和输出函数" class="headerlink" title="7. 输入和输出函数"></a>7. 输入和输出函数</h4><ul><li><code>print()</code>函数：在控制台输出括号里的内容<ul><li>()内可以是数据、运算表达式、变量</li><li>一个<code>print()</code>可以同时打印多个数据，多个数据之间用逗号隔开</li></ul></li><li><code>input()</code>函数：从控制台获取输入的内容，输入以回车结束。将输入的内容返回<ul><li>使用value变量去获取输入的内容：<code>value = input(&#39;请输入年龄:&#39;)</code></li></ul></li></ul><hr><h3 id="二、python变量"><a href="#二、python变量" class="headerlink" title="二、python变量"></a>二、python变量</h3><hr><h4 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h4><ul><li>定义：程序中需要通过变量来保存数据</li><li>语法：变量名 = 值</li><li>变量名：程序员自己命名，必须是标识符，不能是关键字<ul><li>规范1：所有的字母都要小写，多个单词之间用下划线隔开</li><li>规范2：见名知义，看到变量名就知道变量中保存的是什么数据</li></ul></li><li>=：赋值运算符，左边必须是变量名。将右边的数据赋值给左边的变量</li><li>值：一切有结果的表达式都可作为值，如：数据、运算表达式、函数调用、已赋值过的变量</li></ul><hr><h4 id="2-用法"><a href="#2-用法" class="headerlink" title="2. 用法"></a>2. 用法</h4><ul><li>同时声明多个变量赋相同的值<ul><li><code>a = b = c = 10</code></li></ul></li><li>同时声明多个变量赋不同的值<ul><li><code>x, y = 10, 20</code></li></ul></li><li>变量的重新赋值<ul><li><code>x = 100</code></li><li><code>x = 1000</code></li></ul></li><li>声明变量、变量赋值的原理<ul><li>先开辟空间存储数据，然后让变量指向指定的内存区域，重新赋值时就重新开辟一个新的空间存储数据，再让变量指向新的存储区域</li></ul></li></ul><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础语法 </tag>
+            
+            <tag> 变量 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>markdown语法</title>
+      <link href="/2019/06/24/day1-markdown%E8%AF%AD%E6%B3%95/"/>
+      <url>/2019/06/24/day1-markdown%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>这一部分主要讲了如何用markdown写技术文档。</p><a id="more"></a><h2 id="day1-markdown语法"><a href="#day1-markdown语法" class="headerlink" title="day1-markdown语法"></a>day1-markdown语法</h2><hr><h4 id="1-markdown标题"><a href="#1-markdown标题" class="headerlink" title="1. markdown标题"></a>1. markdown标题</h4><ul><li>使用#标记，1-6个#分别对应1-6级标题</li><li>使用=标记一级标题，-标记二级标题</li></ul><hr><h4 id="2-markdown段落"><a href="#2-markdown段落" class="headerlink" title="2. markdown段落"></a>2. markdown段落</h4><ul><li>在文字的末尾加2个空格表示换行</li><li>在文字的末尾加1个空格表示重新开始一个段落</li><li>段落末尾加上三个以上*或-来表示分割线</li></ul><hr><h4 id="3-markdown字体"><a href="#3-markdown字体" class="headerlink" title="3. markdown字体"></a>3. markdown字体</h4><ul><li>文字两头加上*或_表示斜体</li><li>文字两头加上**或__表示粗体</li><li>文字两头加上***或___表示粗斜体</li><li>文字两头加上~~表示删除线</li><li>文字两头加上<u></u>表示下划线</li></ul><hr><h4 id="4-markdown列表"><a href="#4-markdown列表" class="headerlink" title="4. markdown列表"></a>4. markdown列表</h4><ul><li>在开头使用*或+或-来表示无序列表</li><li>在开头用数字加上.来表示有序列表</li><li>列表也可以进行嵌套使用</li></ul><hr><h4 id="5-markdown区块"><a href="#5-markdown区块" class="headerlink" title="5. markdown区块"></a>5. markdown区块</h4><ul><li>在开头用&gt;表示区块引用</li><li>区块引用可以嵌套，&gt;&gt;表示第一层嵌套，&gt;&gt;&gt;表示第二层</li><li>区块中可以使用列表，列表中也可以使用区块</li></ul><hr><h4 id="6-markdown代码"><a href="#6-markdown代码" class="headerlink" title="6. markdown代码"></a>6. markdown代码</h4><ul><li>在一行代码的前后加上`表示代码</li><li>在代码开头用制表符或4个空格表示代码区块</li><li>在代码前后用分别用```也可以表示代码区块，并在第一个后面可以指定语言</li></ul><hr><h4 id="7-markdown超链接"><a href="#7-markdown超链接" class="headerlink" title="7. markdown超链接"></a>7. markdown超链接</h4><ul><li>使用<a href></a>来完成超链接，[]中是链接名称，()填链接地址</li><li>使用&lt;&gt;来直接表示链接地址</li><li>也可以用变量来表示，文档末尾附带变量地址</li></ul><hr><h4 id="8-markdown图片显示"><a href="#8-markdown图片显示" class="headerlink" title="8. markdown图片显示"></a>8. markdown图片显示</h4><ul><li>通过<img src alt>来显示图片，[]填图片的名称，()填图片的绝对路径或相对路径</li><li>图片链接也可以像超链接那样对图片网址使用变量来表示</li></ul><hr><h4 id="9-markdown表格"><a href="#9-markdown表格" class="headerlink" title="9. markdown表格"></a>9. markdown表格</h4><ul><li>|  表头  |  表头  |  表头  |</li><li>|———:|:———|:——-:|：分别表示右对齐，左对齐，居中对齐</li><li>|单元格|单元格|单元格|</li></ul><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
             
         </tags>
       
