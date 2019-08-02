@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    
+    <meta name="keywords" content="Python, HTML5, CSS, JavaScript, jQuery, Vue.js, Linux, MySQL, Redis, Django">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="叶小永的技术专栏" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>内存管理和拷贝 | 叶小永的技术专栏</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">叶小永的技术专栏</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/logo.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="Toggle Navbar"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">Archives</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">Categories</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">Tags</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">About</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/21/day16-内存管理和拷贝/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="叶小永">
+       <meta itemprop="description" content="技术宅，python新手">
+       <meta itemprop="image" content="/images/FutureGazerSmall.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="叶小永的技术专栏">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">内存管理和拷贝</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-21T14:45:20+08:00">2019-07-21 14:45:20</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>这一部分主要讲了Python中有关内存管理以及浅拷贝、深拷贝的问题。</p>
+<a id="more"></a>
+
+
+<h2 id="day16-内存管理和拷贝"><a href="#day16-内存管理和拷贝" class="headerlink" title="day16-内存管理和拷贝"></a>day16-内存管理和拷贝</h2><hr>
+<h3 id="一、多继承"><a href="#一、多继承" class="headerlink" title="一、多继承"></a>一、多继承</h3><hr>
+<h4 id="1-多继承"><a href="#1-多继承" class="headerlink" title="1. 多继承"></a>1. 多继承</h4><ul>
+<li>python中的类支持多继承</li>
+<li>class 子类(父类1,父类2,…)</li>
+<li>多继承只能继承第一个父类的对象属性</li>
+</ul>
+<hr>
+<h3 id="二、运算符重载"><a href="#二、运算符重载" class="headerlink" title="二、运算符重载"></a>二、运算符重载</h3><hr>
+<h4 id="1-运算符"><a href="#1-运算符" class="headerlink" title="1. 运算符"></a>1. 运算符</h4><ul>
+<li>python中所有的数据类型本质都是类，所有的数据本质都是对象</li>
+<li>在使用运算符对数据进行操作的时候，实质是在调用运算符对应的魔法方法，运算符前面的数据类型，决定了函数调用哪个类中对应的魔法方法</li>
+<li>每个运算符都有自己固定的魔法方法，看某种类型的数据是否支持某种运算符就看这个类型中有没有实现对应的魔法方法</li>
+<li>注意：&gt;和&lt;符号只需要重载一个，另外一个自动支持</li>
+</ul>
+<hr>
+<h3 id="三、内存管理"><a href="#三、内存管理" class="headerlink" title="三、内存管理"></a>三、内存管理</h3><hr>
+<h4 id="手动内存管理"><a href="#手动内存管理" class="headerlink" title="手动内存管理"></a>手动内存管理</h4><ul>
+<li>内存分为栈区间和堆区间，栈区间中的内存是自动开辟自动释放的；堆里的内存需要程序员写代码申请和释放</li>
+</ul>
+<h4 id="1-内存的开辟"><a href="#1-内存的开辟" class="headerlink" title="1. 内存的开辟"></a>1. 内存的开辟</h4><ul>
+<li>python中所有的类型都是类，所以所有的数据都是对象。对象都是保存在堆区间；变量是保存在栈区间，变量中实际保存的堆中存储的数据的地址。(变量的本质就是指针)</li>
+<li>注意：除了数字和字符串对象，其他数据都是每次需要的时候直接在堆中开辟区间。数字和字符串会先检查这个数据之前是否保存过，如果保存过就直接用之前的数据，否则才开辟新的空间。</li>
+</ul>
+<hr>
+<h4 id="2-内存的释放"><a href="#2-内存的释放" class="headerlink" title="2. 内存的释放"></a>2. 内存的释放</h4><ul>
+<li>python中内存的释放采用的是’垃圾回收机制’自动释放</li>
+<li>垃圾回收机制原理：<ul>
+<li>1)看一个数据是否需要销毁(回收)，就看这个对象的引用计数是否为0(引用：保存对象地址的数据)</li>
+<li>2)如果这个对象引用计数不为0就假设当前对象消失，然后看会不会有其他对象因为它的消失引用计数变为0，如果有，就将另外一个对象也回收(循环引用释放)</li>
+</ul>
+</li>
+<li>注意：用一个变量给另外一个变量赋值实质上赋的是地址</li>
+<li>==和is的区别：==(判断的是值是否相等)；is(判读的是地址是否相等)</li>
+</ul>
+<hr>
+<h3 id="四、浅拷贝和深拷贝"><a href="#四、浅拷贝和深拷贝" class="headerlink" title="四、浅拷贝和深拷贝"></a>四、浅拷贝和深拷贝</h3><hr>
+<h4 id="1-使用变量的3种情况"><a href="#1-使用变量的3种情况" class="headerlink" title="1. 使用变量的3种情况"></a>1. 使用变量的3种情况</h4><ul>
+<li>1)直接赋值：赋的是地址，赋完值后两个变量一模一样</li>
+<li>2)浅拷贝：列表[:]、列表.copy()、copy.copy()<ul>
+<li>直接复制被拷贝的数据，产生一个新的地址，将新的地址赋值给变量；</li>
+<li>如果被拷贝的对象有子对象，子对象不会被赋值</li>
+</ul>
+</li>
+<li>3)深拷贝：<code>copy.deepcopy()</code><ul>
+<li>直接复制被拷贝的数据，产生一个新的地址，将新的地址赋值给变量；</li>
+<li>如果被拷贝的对象有子对象，子对象也会被赋值</li>
+</ul>
+</li>
+</ul>
+<hr>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/浅拷贝和深拷贝/" rel="tag"><i class="fas fa-tags"></i>浅拷贝和深拷贝</a>
+        
+        <a class="post-tag button" href="/tags/内存管理机制/" rel="tag"><i class="fas fa-tags"></i>内存管理机制</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+<div class="reward" id="reward">
+  <p>坚持原创技术分享，您的支持是我前进的动力！</p>
+  <button id="reward-button" class="button" disable="enable">Reward</button>
+  <div id="qr" class="qr" style="display: none;" aria-hidden="true">
+    
+    <div id="wechat">
+      <img id="wechat_qr" src="/images/WeChatPay.jpg" alt="WechatPay">
+      <span>WechatPay</span>
+    </div>
+    
+    
+    <div id="alipay">
+      <img id="alipay_qr" src="/images/AliPay.jpg" alt="AliPay">
+      <span>AliPay</span>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/07/19/day12-文件操作和json数据/" rel="next" title><i class="fas fa-angle-left"></i><span class="nav-title"></span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2019/07/23/day17-正则表达式/" rel="prev" title="正则表达式"><span class="nav-title">正则表达式</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/FutureGazerSmall.png" alt="叶小永">
+  
+  <h1 class="author-name">叶小永</h1>
+  <h2 class="author-description">技术宅，python新手</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">Archives</div>
+      <div><a href="/archives/">19</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">Categories</div>
+      <div><a href="/categories/">1</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">Tags</div>
+      <div><a href="/tags/">18</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>Table of Contents</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day16-内存管理和拷贝"><span class="toc-text">day16-内存管理和拷贝</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、多继承"><span class="toc-text">一、多继承</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-多继承"><span class="toc-text">1. 多继承</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、运算符重载"><span class="toc-text">二、运算符重载</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-运算符"><span class="toc-text">1. 运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#三、内存管理"><span class="toc-text">三、内存管理</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#手动内存管理"><span class="toc-text">手动内存管理</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-内存的开辟"><span class="toc-text">1. 内存的开辟</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-内存的释放"><span class="toc-text">2. 内存的释放</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#四、浅拷贝和深拷贝"><span class="toc-text">四、浅拷贝和深拷贝</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-使用变量的3种情况"><span class="toc-text">1. 使用变量的3种情况</span></a></li></ol></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>Social Links<p></p></div>
+      <ul>
+        
+        <li><i class="fab fa-qq"></i><a href target="_blank">787271413</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/yxy1280703839/yxy1280703839.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weixin"></i><a href target="_blank">cdut201413040119</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>Blogroll</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="Back to Top"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">叶小永</span><span class="year"><i class="far fa-copyright"></i>2019 - 2019</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">BY-NC-SA 4.0</a></span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="Site Visit Count" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="Site User Count" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="Page Click Count" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+           
+        </div>
+        <div class="powered-by">
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="http://www.beian.miit.gov.cn/" target="_blank">蜀ICP备19023847号</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

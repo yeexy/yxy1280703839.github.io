@@ -39,222 +39,94 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day19-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2019/07/19/day19-多线程基础/</id>
-    <published>2019-07-19T09:35:45.245Z</published>
-    <updated>2019-07-19T09:35:45.245Z</updated>
+    <title>多线程基础</title>
+    <link href="http://yoursite.com/2019/07/27/day19-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2019/07/27/day19-多线程基础/</id>
+    <published>2019-07-27T06:45:20.000Z</published>
+    <updated>2019-08-02T12:22:20.016Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;day19-多线程基础&quot;&gt;&lt;a href=&quot;#day19-多线程基础&quot; class=&quot;headerlink&quot; title=&quot;day19-多线程基础&quot;&gt;&lt;/a&gt;day19-多线程基础&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、多线程理论&quot;&gt;&lt;a href=&quot;#一、多线程
-      
+      &lt;p&gt;这一部分主要讲了Python中的多线程基础，了解什么是进程，什么是线程。&lt;/p&gt;
     
     </summary>
     
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="进程" scheme="http://yoursite.com/tags/%E8%BF%9B%E7%A8%8B/"/>
+    
+      <category term="线程" scheme="http://yoursite.com/tags/%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="多线程技术" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day18-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
-    <id>http://yoursite.com/2019/07/19/day18-网络编程/</id>
-    <published>2019-07-19T09:35:44.140Z</published>
-    <updated>2019-07-19T09:35:44.140Z</updated>
+    <title>网络编程</title>
+    <link href="http://yoursite.com/2019/07/25/day18-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <id>http://yoursite.com/2019/07/25/day18-网络编程/</id>
+    <published>2019-07-25T06:45:20.000Z</published>
+    <updated>2019-08-02T12:26:32.983Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;day18-网络编程&quot;&gt;&lt;a href=&quot;#day18-网络编程&quot; class=&quot;headerlink&quot; title=&quot;day18-网络编程&quot;&gt;&lt;/a&gt;day18-网络编程&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、socket服务器&quot;&gt;&lt;a href=&quot;#一、soc
-      
+      &lt;p&gt;这一部分主要讲了Python中的网络编程技术，什么是socket套接字以及requests的使用。&lt;/p&gt;
     
     </summary>
     
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="网络编程" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="Socket" scheme="http://yoursite.com/tags/Socket/"/>
+    
+      <category term="requests" scheme="http://yoursite.com/tags/requests/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day17-%E4%BD%9C%E4%B8%9A/"/>
-    <id>http://yoursite.com/2019/07/19/day17-作业/</id>
-    <published>2019-07-19T09:35:42.843Z</published>
-    <updated>2019-07-19T09:35:42.843Z</updated>
+    <title>正则表达式</title>
+    <link href="http://yoursite.com/2019/07/23/day17-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>http://yoursite.com/2019/07/23/day17-正则表达式/</id>
+    <published>2019-07-23T06:45:20.000Z</published>
+    <updated>2019-08-02T12:28:56.764Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;day17-作业&quot;&gt;&lt;a href=&quot;#day17-作业&quot; class=&quot;headerlink&quot; title=&quot;day17-作业&quot;&gt;&lt;/a&gt;day17-作业&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&quot;1-写一个正则表达式判断一个字符串是否是ip地址-规则：一个ip地址由4
-      
+      &lt;p&gt;这一部分主要讲了Python中正则表达式和re模块部分。&lt;/p&gt;
     
     </summary>
     
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="正则表达式" scheme="http://yoursite.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+      <category term="re模块" scheme="http://yoursite.com/tags/re%E6%A8%A1%E5%9D%97/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day17-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    <id>http://yoursite.com/2019/07/19/day17-正则表达式/</id>
-    <published>2019-07-19T09:35:41.639Z</published>
-    <updated>2019-07-19T09:35:41.639Z</updated>
+    <title>内存管理和拷贝</title>
+    <link href="http://yoursite.com/2019/07/21/day16-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%E6%8B%B7%E8%B4%9D/"/>
+    <id>http://yoursite.com/2019/07/21/day16-内存管理和拷贝/</id>
+    <published>2019-07-21T06:45:20.000Z</published>
+    <updated>2019-08-02T12:30:52.748Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;day17-正则表达式&quot;&gt;&lt;a href=&quot;#day17-正则表达式&quot; class=&quot;headerlink&quot; title=&quot;day17-正则表达式&quot;&gt;&lt;/a&gt;day17-正则表达式&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、正则符号&quot;&gt;&lt;a href=&quot;#一、正则符号
-      
+      &lt;p&gt;这一部分主要讲了Python中有关内存管理以及浅拷贝、深拷贝的问题。&lt;/p&gt;
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day16-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%E6%8B%B7%E8%B4%9D/"/>
-    <id>http://yoursite.com/2019/07/19/day16-内存管理和拷贝/</id>
-    <published>2019-07-19T09:35:40.079Z</published>
-    <updated>2019-07-19T09:35:40.079Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day16-内存管理和拷贝&quot;&gt;&lt;a href=&quot;#day16-内存管理和拷贝&quot; class=&quot;headerlink&quot; title=&quot;day16-内存管理和拷贝&quot;&gt;&lt;/a&gt;day16-内存管理和拷贝&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、多继承&quot;&gt;&lt;a href=&quot;
-      
-    
-    </summary>
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
     
     
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day15-%E4%BD%9C%E4%B8%9A/"/>
-    <id>http://yoursite.com/2019/07/19/day15-作业/</id>
-    <published>2019-07-19T09:35:38.730Z</published>
-    <updated>2019-07-19T09:35:38.730Z</updated>
+      <category term="浅拷贝和深拷贝" scheme="http://yoursite.com/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
     
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day15-作业&quot;&gt;&lt;a href=&quot;#day15-作业&quot; class=&quot;headerlink&quot; title=&quot;day15-作业&quot;&gt;&lt;/a&gt;day15-作业&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&quot;1-建立一个汽车类Auto，包括轮胎个数，汽车颜色，车身重量，速度等属性
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day15-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A12/"/>
-    <id>http://yoursite.com/2019/07/19/day15-类和对象2/</id>
-    <published>2019-07-19T09:35:37.092Z</published>
-    <updated>2019-07-19T09:35:37.092Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day15-类和对象2&quot;&gt;&lt;a href=&quot;#day15-类和对象2&quot; class=&quot;headerlink&quot; title=&quot;day15-类和对象2&quot;&gt;&lt;/a&gt;day15-类和对象2&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、类方法和静态方法&quot;&gt;&lt;a href=&quot;#一、
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day14-%E4%BD%9C%E4%B8%9A/"/>
-    <id>http://yoursite.com/2019/07/19/day14-作业/</id>
-    <published>2019-07-19T09:35:35.349Z</published>
-    <updated>2019-07-19T09:35:35.349Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day14-作业&quot;&gt;&lt;a href=&quot;#day14-作业&quot; class=&quot;headerlink&quot; title=&quot;day14-作业&quot;&gt;&lt;/a&gt;day14-作业&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&quot;1-声明⼀个电脑类-属性-品牌、颜色、内存大小-方法-打游戏、写代码、看
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day14-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A11/"/>
-    <id>http://yoursite.com/2019/07/19/day14-类和对象1/</id>
-    <published>2019-07-19T09:35:33.834Z</published>
-    <updated>2019-07-19T09:35:33.834Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day14-类和对象1&quot;&gt;&lt;a href=&quot;#day14-类和对象1&quot; class=&quot;headerlink&quot; title=&quot;day14-类和对象1&quot;&gt;&lt;/a&gt;day14-类和对象1&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、面向对象&quot;&gt;&lt;a href=&quot;#一、面向对象
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day13-%E4%BD%9C%E4%B8%9A/"/>
-    <id>http://yoursite.com/2019/07/19/day13-作业/</id>
-    <published>2019-07-19T09:35:32.105Z</published>
-    <updated>2019-07-19T09:35:32.105Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day13-作业&quot;&gt;&lt;a href=&quot;#day13-作业&quot; class=&quot;headerlink&quot; title=&quot;day13-作业&quot;&gt;&lt;/a&gt;day13-作业&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&quot;1-学生管理系统的修改学生信息部分的代码&quot;&gt;&lt;a href=&quot;#1-学生
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day13-%E5%BC%82%E5%B8%B8/"/>
-    <id>http://yoursite.com/2019/07/19/day13-异常/</id>
-    <published>2019-07-19T09:35:25.000Z</published>
-    <updated>2019-07-19T09:35:25.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day13-异常&quot;&gt;&lt;a href=&quot;#day13-异常&quot; class=&quot;headerlink&quot; title=&quot;day13-异常&quot;&gt;&lt;/a&gt;day13-异常&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;一、异常捕获&quot;&gt;&lt;a href=&quot;#一、异常捕获&quot; class=&quot;hea
-      
-    
-    </summary>
-    
+      <category term="内存管理机制" scheme="http://yoursite.com/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/"/>
     
   </entry>
   
@@ -300,26 +172,6 @@
   
   <entry>
     <title></title>
-    <link href="http://yoursite.com/2019/07/19/day10-%E4%BD%9C%E4%B8%9A/"/>
-    <id>http://yoursite.com/2019/07/19/day10-作业/</id>
-    <published>2019-07-19T09:33:51.726Z</published>
-    <updated>2019-07-19T09:33:51.726Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day10-作业&quot;&gt;&lt;a href=&quot;#day10-作业&quot; class=&quot;headerlink&quot; title=&quot;day10-作业&quot;&gt;&lt;/a&gt;day10-作业&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&quot;1-写一个匿名函数，判断指定的年是否是闰年&quot;&gt;&lt;a href=&quot;#1-写
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="http://yoursite.com/2019/07/19/day10-%E5%87%BD%E6%95%B0-02/"/>
     <id>http://yoursite.com/2019/07/19/day10-函数-02/</id>
     <published>2019-07-19T09:33:48.679Z</published>
@@ -331,26 +183,6 @@
       
         &lt;h2 id=&quot;day10-函数-02&quot;&gt;&lt;a href=&quot;#day10-函数-02&quot; class=&quot;headerlink&quot; title=&quot;day10-函数-02&quot;&gt;&lt;/a&gt;day10-函数-02&lt;/h2&gt;&lt;hr&gt;
 &lt;h3 id=&quot;一、函数的返回值&quot;&gt;&lt;a href=&quot;#一、函数
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/19/day9-%E4%BD%9C%E4%B8%9A/"/>
-    <id>http://yoursite.com/2019/07/19/day9-作业/</id>
-    <published>2019-07-19T09:32:02.305Z</published>
-    <updated>2019-07-19T09:32:02.305Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day9-作业&quot;&gt;&lt;a href=&quot;#day9-作业&quot; class=&quot;headerlink&quot; title=&quot;day9-作业&quot;&gt;&lt;/a&gt;day9-作业&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&quot;1-编写函数，求1-2-3-…N的和&quot;&gt;&lt;a href=&quot;#1-编写函数，求1-
       
     
     </summary>
@@ -380,26 +212,6 @@
   
   <entry>
     <title></title>
-    <link href="http://yoursite.com/2019/07/19/day8-%E4%BD%9C%E4%B8%9A/"/>
-    <id>http://yoursite.com/2019/07/19/day8-作业/</id>
-    <published>2019-07-19T09:31:59.533Z</published>
-    <updated>2019-07-19T09:31:59.533Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;day8-作业&quot;&gt;&lt;a href=&quot;#day8-作业&quot; class=&quot;headerlink&quot; title=&quot;day8-作业&quot;&gt;&lt;/a&gt;day8-作业&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&quot;1-声明一个字典保存一个学生的信息，学生信息中包括-姓名、年龄、成绩-单科-、电
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="http://yoursite.com/2019/07/19/day8-%E5%85%83%E7%BB%84%E5%AD%97%E5%85%B8%E5%92%8C%E9%9B%86%E5%90%88/"/>
     <id>http://yoursite.com/2019/07/19/day8-元组字典和集合/</id>
     <published>2019-07-19T09:31:58.093Z</published>
@@ -415,6 +227,192 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/07/19/day7-%E5%88%97%E8%A1%A8/"/>
+    <id>http://yoursite.com/2019/07/19/day7-列表/</id>
+    <published>2019-07-19T09:31:55.271Z</published>
+    <updated>2019-07-19T09:31:55.271Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;day7-列表&quot;&gt;&lt;a href=&quot;#day7-列表&quot; class=&quot;headerlink&quot; title=&quot;day7-列表&quot;&gt;&lt;/a&gt;day7-列表&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&quot;一、认识列表&quot;&gt;&lt;a href=&quot;#一、认识列表&quot; class=&quot;headerl
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/07/19/day6-%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://yoursite.com/2019/07/19/day6-字符串/</id>
+    <published>2019-07-19T09:31:51.863Z</published>
+    <updated>2019-07-19T09:31:51.863Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;day6-字符串&quot;&gt;&lt;a href=&quot;#day6-字符串&quot; class=&quot;headerlink&quot; title=&quot;day6-字符串&quot;&gt;&lt;/a&gt;day6-字符串&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&quot;一、认识字符串&quot;&gt;&lt;a href=&quot;#一、认识字符串&quot; class=&quot;h
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/07/19/day4-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2019/07/19/day4-循环结构/</id>
+    <published>2019-07-19T09:31:36.493Z</published>
+    <updated>2019-07-19T09:31:36.493Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;day4-循环结构&quot;&gt;&lt;a href=&quot;#day4-循环结构&quot; class=&quot;headerlink&quot; title=&quot;day4-循环结构&quot;&gt;&lt;/a&gt;day4-循环结构&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&quot;一、for循环&quot;&gt;&lt;a href=&quot;#一、for循环&quot; clas
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/07/19/day3-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://yoursite.com/2019/07/19/day3-运算符和数据类型/</id>
+    <published>2019-07-19T09:30:31.876Z</published>
+    <updated>2019-07-19T09:30:31.876Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;day3-运算符、数据类型和if语句&quot;&gt;&lt;a href=&quot;#day3-运算符、数据类型和if语句&quot; class=&quot;headerlink&quot; title=&quot;day3-运算符、数据类型和if语句&quot;&gt;&lt;/a&gt;day3-运算符、数据类型和if语句&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/07/19/day2-pyhton%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/07/19/day2-pyhton基础语法/</id>
+    <published>2019-07-19T09:30:15.433Z</published>
+    <updated>2019-07-19T09:30:15.433Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;day2-Python基础语法&quot;&gt;&lt;a href=&quot;#day2-Python基础语法&quot; class=&quot;headerlink&quot; title=&quot;day2-Python基础语法&quot;&gt;&lt;/a&gt;day2-Python基础语法&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&quot;一、基础语法&quot;&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/07/19/day1-markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/07/19/day1-markdown语法/</id>
+    <published>2019-07-19T09:30:11.814Z</published>
+    <updated>2019-07-19T09:30:11.814Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;day1-markdown语法&quot;&gt;&lt;a href=&quot;#day1-markdown语法&quot; class=&quot;headerlink&quot; title=&quot;day1-markdown语法&quot;&gt;&lt;/a&gt;day1-markdown语法&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&quot;1-markdo
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>类和对象2</title>
+    <link href="http://yoursite.com/2019/07/19/day15-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A12/"/>
+    <id>http://yoursite.com/2019/07/19/day15-类和对象2/</id>
+    <published>2019-07-19T06:45:20.000Z</published>
+    <updated>2019-08-02T12:34:34.793Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一部分主要讲了Python中类方法和静态方法、私有属性、getter和setter以及继承。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="getter和setter" scheme="http://yoursite.com/tags/getter%E5%92%8Csetter/"/>
+    
+      <category term="继承" scheme="http://yoursite.com/tags/%E7%BB%A7%E6%89%BF/"/>
+    
+      <category term="类方法和静态方法" scheme="http://yoursite.com/tags/%E7%B1%BB%E6%96%B9%E6%B3%95%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>类和对象1</title>
+    <link href="http://yoursite.com/2019/07/17/day14-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A11/"/>
+    <id>http://yoursite.com/2019/07/17/day14-类和对象1/</id>
+    <published>2019-07-17T06:45:20.000Z</published>
+    <updated>2019-08-02T12:36:51.619Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一部分主要讲了Python中面向对象的编程思想以及方法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="面向对象" scheme="http://yoursite.com/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>异常</title>
+    <link href="http://yoursite.com/2019/07/15/day13-%E5%BC%82%E5%B8%B8/"/>
+    <id>http://yoursite.com/2019/07/15/day13-异常/</id>
+    <published>2019-07-15T06:45:20.000Z</published>
+    <updated>2019-08-02T12:38:28.640Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一部分主要讲了Python中如何捕获异常和抛出异常。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="捕获异常" scheme="http://yoursite.com/tags/%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/"/>
+    
+      <category term="抛出异常" scheme="http://yoursite.com/tags/%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8/"/>
     
   </entry>
   

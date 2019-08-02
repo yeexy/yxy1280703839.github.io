@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    
+    <meta name="keywords" content="Python, HTML5, CSS, JavaScript, jQuery, Vue.js, Linux, MySQL, Redis, Django">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="叶小永的技术专栏" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          $(e).before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout with line number.
+              return trigger.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          $(e).parent().before("<button class=\"copy button\">Copy</button>");
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              // nextElementSibling is figure,highlight.
+              // And following is the sequence of Hexo's internal
+              // highlight layout without line number.
+              return trigger.nextElementSibling.firstChild;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "Copied";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "Copy";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>正则表达式 | 叶小永的技术专栏</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN" data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">叶小永的技术专栏</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/logo.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="Toggle Navbar"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">Archives</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">Categories</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">Tags</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">About</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/23/day17-正则表达式/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="叶小永">
+       <meta itemprop="description" content="技术宅，python新手">
+       <meta itemprop="image" content="/images/FutureGazerSmall.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="叶小永的技术专栏">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">正则表达式</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-07-23T14:45:20+08:00">2019-07-23 14:45:20</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>这一部分主要讲了Python中正则表达式和re模块部分。</p>
+<a id="more"></a>
+
+
+<h2 id="day17-正则表达式"><a href="#day17-正则表达式" class="headerlink" title="day17-正则表达式"></a>day17-正则表达式</h2><hr>
+<h3 id="一、正则符号"><a href="#一、正则符号" class="headerlink" title="一、正则符号"></a>一、正则符号</h3><hr>
+<h4 id="1-什么是正则"><a href="#1-什么是正则" class="headerlink" title="1. 什么是正则"></a>1. 什么是正则</h4><ul>
+<li>正则是字符串匹配的一种工具，拥有自己的语法。语法中主要包含各种符号的使用</li>
+<li>re中主要提供正则相关的方法</li>
+</ul>
+<hr>
+<h4 id="2-正则语法"><a href="#2-正则语法" class="headerlink" title="2. 正则语法"></a>2. 正则语法</h4><ul>
+<li><p>python中的正则表达式是写在引号中(可以是单引号也可以是双引号)，但是一般情况下会在引号前面加r(r’正则表达式’)</p>
+<h5 id="2-1-匹配符号"><a href="#2-1-匹配符号" class="headerlink" title="2.1 匹配符号"></a>2.1 匹配符号</h5></li>
+<li><p>1)普通字符</p>
+<ul>
+<li>除了正则中有特殊功能和特殊意义以外的其他所有的字符</li>
+<li>普通字符在正则中表示字符本身</li>
+</ul>
+</li>
+<li><p>2) .  -  匹配任意字符</p>
+<ul>
+<li>正则中出现.的位置可以匹配任意字符，除了’\n’</li>
+<li>一个.只能匹配一个任意字符</li>
+</ul>
+</li>
+<li><p>3) \w  -  匹配字母、数字或下划线(只针对ASCII码有效)</p>
+<ul>
+<li>一个\w只能匹配一个字符</li>
+<li>注意：Unicode码中除了ASCII表以外的其他字符都能匹配</li>
+</ul>
+</li>
+<li><p>4) \s  -  匹配一个空白字符</p>
+<ul>
+<li>空白：空格、回车、换行、制表符(\t、\n、\r、\v、\f)</li>
+</ul>
+</li>
+<li><p>5) \d  -  匹配一个数字字符</p>
+</li>
+<li><p>6) \大写字母  -  匹配非\小写字母匹配到的内容</p>
+<ul>
+<li>\W：匹配非数字、字母、下划线字符</li>
+<li>\S：匹配非空白字符</li>
+<li>\D：匹配非数字字符</li>
+</ul>
+</li>
+<li><p>7) []  -  匹配字符集</p>
+<ul>
+<li>a.普通用法<ul>
+<li>[字符集]：匹配字符集中的任意一个字符</li>
+</ul>
+</li>
+<li>b.表示范围的字符集<ul>
+<li>[字符1-字符2]：从字符1到字符2中的任意一个字符</li>
+<li>注意：字符2的编码值必须大于字符1</li>
+</ul>
+</li>
+<li>c.反向选中<ul>
+<li>[^字符集]：选中除了字符集以外的其他任意一个字符<h5 id="2-2-检测符号"><a href="#2-2-检测符号" class="headerlink" title="2.2 检测符号"></a>2.2 检测符号</h5></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>一个匹配符号必须对应一个具体的字符；检测符号只是对符号所在的位置进行检查，不会影响字符串长度</p>
+</li>
+<li><p>1) \b  -  检测是否是单词边界</p>
+<ul>
+<li>单词边界：一切可以将两个单词区分开的符号都是单词边界，例如：单词开头、单词结尾、空白、标点符号等</li>
+</ul>
+</li>
+<li><p>2) ^  -  检测^所在的位置是否是字符开头</p>
+</li>
+<li><p>3) <code>$</code>  -  检测<code>$</code>所在的位置是否是字符串结尾</p>
+</li>
+</ul>
+<h5 id="2-3-匹配次数"><a href="#2-3-匹配次数" class="headerlink" title="2.3 匹配次数"></a>2.3 匹配次数</h5><ul>
+<li>1) *  -  匹配0次或无限次<ul>
+<li>字符<code>*</code>：*前的字符出现0次或无限次</li>
+</ul>
+</li>
+<li>2) +  -  匹配1次或无限次<ul>
+<li>字符+：+前的字符出现1次或无限次</li>
+</ul>
+</li>
+<li>3) ?  -  匹配0次或1次<ul>
+<li>字符?：?前的字符出现0次或1次</li>
+</ul>
+</li>
+<li>4) {}语法<ul>
+<li>{N}：匹配N次</li>
+<li>{M,N}：匹配M到N次</li>
+<li>{M,}：匹配至少M次</li>
+<li>{,N}：匹配至多N次</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-贪婪和非贪婪"><a href="#3-贪婪和非贪婪" class="headerlink" title="3. 贪婪和非贪婪"></a>3. 贪婪和非贪婪</h4><ul>
+<li>*,+,?,{}对应的匹配次数是贪婪的</li>
+<li>在匹配次数不确定的时候才有贪婪和非贪婪的分区</li>
+<li>在匹配不确定的符号后面加?,就会变成非贪婪：*?, +?, ??, {M,N}?, {M,}?, {,N}?</li>
+<li>贪婪：在匹配成功的前提下，尽可能多的匹配</li>
+<li>非贪婪：在匹配成功的前提下，尽可能少的匹配</li>
+</ul>
+<hr>
+<h4 id="4-分支结构"><a href="#4-分支结构" class="headerlink" title="4. 分支结构"></a>4. 分支结构</h4><ul>
+<li>正则表达式1|正则表达式2</li>
+</ul>
+<hr>
+<h4 id="5-分组"><a href="#5-分组" class="headerlink" title="5. () - 分组"></a>5. () - 分组</h4><ul>
+<li>1)分组：将正则中的一部分看成一个整体进行操作</li>
+<li>2)重复：添加分组后，可以在分组的后面通过’\M’来重复前面第M个分组匹配到的结果</li>
+</ul>
+<hr>
+<h4 id="6-转义字符"><a href="#6-转义字符" class="headerlink" title="6. 转义字符"></a>6. 转义字符</h4><ul>
+<li>在正则符号前加\，然后让符号的功能消失</li>
+<li>独立的特殊符号是放在[]中特殊意义会自动消失，但是-,[]…</li>
+<li>正则中的转义字符和字符串的转义字符是两回事</li>
+</ul>
+<hr>
+<h3 id="二、re，模块"><a href="#二、re，模块" class="headerlink" title="二、re，模块"></a>二、re，模块</h3><hr>
+<h4 id="1-创建正则对象-compile"><a href="#1-创建正则对象-compile" class="headerlink" title="1. 创建正则对象 - compile()"></a>1. 创建正则对象 - compile()</h4><ul>
+<li>先要<code>from re import *</code></li>
+<li><code>compile(正则表达式)</code>：根据正则表达式创建正则对象</li>
+</ul>
+<hr>
+<h4 id="2-匹配"><a href="#2-匹配" class="headerlink" title="2. 匹配"></a>2. 匹配</h4><ul>
+<li><code>fullmatch(正则表达式,字符串)</code>：让整个字符串和正则表达式进行匹配</li>
+<li><code>match(正则表达式,字符串)</code>：匹配字符串开头</li>
+<li>返回值：匹配成功是结果对象，匹配失败是None</li>
+<li>匹配结果：1)匹配结果对应的字符串<ul>
+<li>匹配对象.group()：获取整个正则匹配到结果</li>
+<li>匹配对象.group(N)：获取第N个分组匹配到的结果</li>
+</ul>
+</li>
+<li>2)获取匹配位置<ul>
+<li>匹配对象.span(group=0)</li>
+<li>匹配对象.start(group=0)</li>
+<li>匹配对象.end(group=0)</li>
+</ul>
+</li>
+<li>3)获取原字符串<ul>
+<li>匹配对象.string</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-查找"><a href="#3-查找" class="headerlink" title="3. 查找"></a>3. 查找</h4><ul>
+<li><code>search(正则表达式,字符串)</code>：匹配出字符串中第一个满足正则表达式的子串，结果是匹配对象</li>
+<li><code>findall(正则表达式,字符串)</code>：获取字符串中所有满足正则表达式的子串；结果是列表，列表中元素是字符串</li>
+<li><code>finditer(正则表达式,字符串)</code>：获取字符中满足正则表达式的所有的子串；结果是迭代器，迭代器中的元素是匹配对象</li>
+</ul>
+<hr>
+<h4 id="4-切割"><a href="#4-切割" class="headerlink" title="4. 切割"></a>4. 切割</h4><ul>
+<li><code>split(正则表达式,字符串)</code>：将字符串按照满足正则表达式的子串进行切割，返回列表</li>
+</ul>
+<hr>
+<h4 id="5-替换"><a href="#5-替换" class="headerlink" title="5. 替换"></a>5. 替换</h4><ul>
+<li><code>sub(正则表达式,字符串1,字符串2,替换次数=0)</code>：将字符串2满足正则表达式的子串替换为字符串1，替换次数为0时就是全部替换</li>
+</ul>
+<hr>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/正则表达式/" rel="tag"><i class="fas fa-tags"></i>正则表达式</a>
+        
+        <a class="post-tag button" href="/tags/re模块/" rel="tag"><i class="fas fa-tags"></i>re模块</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+<div class="reward" id="reward">
+  <p>坚持原创技术分享，您的支持是我前进的动力！</p>
+  <button id="reward-button" class="button" disable="enable">Reward</button>
+  <div id="qr" class="qr" style="display: none;" aria-hidden="true">
+    
+    <div id="wechat">
+      <img id="wechat_qr" src="/images/WeChatPay.jpg" alt="WechatPay">
+      <span>WechatPay</span>
+    </div>
+    
+    
+    <div id="alipay">
+      <img id="alipay_qr" src="/images/AliPay.jpg" alt="AliPay">
+      <span>AliPay</span>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/07/21/day16-内存管理和拷贝/" rel="next" title="内存管理和拷贝"><i class="fas fa-angle-left"></i><span class="nav-title">内存管理和拷贝</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2019/07/25/day18-网络编程/" rel="prev" title="网络编程"><span class="nav-title">网络编程</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/FutureGazerSmall.png" alt="叶小永">
+  
+  <h1 class="author-name">叶小永</h1>
+  <h2 class="author-description">技术宅，python新手</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">Archives</div>
+      <div><a href="/archives/">19</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">Categories</div>
+      <div><a href="/categories/">1</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">Tags</div>
+      <div><a href="/tags/">18</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>Table of Contents</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#day17-正则表达式"><span class="toc-text">day17-正则表达式</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#一、正则符号"><span class="toc-text">一、正则符号</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-什么是正则"><span class="toc-text">1. 什么是正则</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-正则语法"><span class="toc-text">2. 正则语法</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-5"><a class="list-group-item toc-link" href="#2-1-匹配符号"><span class="toc-text">2.1 匹配符号</span></a></li><li class="toc-item toc-level-5"><a class="list-group-item toc-link" href="#2-2-检测符号"><span class="toc-text">2.2 检测符号</span></a></li><li class="toc-item toc-level-5"><a class="list-group-item toc-link" href="#2-3-匹配次数"><span class="toc-text">2.3 匹配次数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-贪婪和非贪婪"><span class="toc-text">3. 贪婪和非贪婪</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#4-分支结构"><span class="toc-text">4. 分支结构</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#5-分组"><span class="toc-text">5. () - 分组</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#6-转义字符"><span class="toc-text">6. 转义字符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#二、re，模块"><span class="toc-text">二、re，模块</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#1-创建正则对象-compile"><span class="toc-text">1. 创建正则对象 - compile()</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2-匹配"><span class="toc-text">2. 匹配</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#3-查找"><span class="toc-text">3. 查找</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#4-切割"><span class="toc-text">4. 切割</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#5-替换"><span class="toc-text">5. 替换</span></a></li></ol></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>Social Links<p></p></div>
+      <ul>
+        
+        <li><i class="fab fa-qq"></i><a href target="_blank">787271413</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/yxy1280703839/yxy1280703839.github.io" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weixin"></i><a href target="_blank">cdut201413040119</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>Blogroll</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="Back to Top"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">叶小永</span><span class="year"><i class="far fa-copyright"></i>2019 - 2019</span><span class="creative-commons"><i class="fab fa-creative-commons"></i><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">BY-NC-SA 4.0</a></span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="Site Visit Count" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="Site User Count" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="Page Click Count" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+           
+        </div>
+        <div class="powered-by">
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="http://www.beian.miit.gov.cn/" target="_blank">蜀ICP备19023847号</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
